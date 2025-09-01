@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  1 SEP 2025 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  1 SEP 2025 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -430,14 +430,14 @@ LaTeX Font Info:    ... okay on input line 154.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* v-part:(T,H,B)=(28.45274pt, 738.0645pt, 28.45274pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=500.484pt
-* \textheight=681.15898pt
+* \textheight=738.0645pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
+* \topmargin=-80.81725pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=0.0pt
@@ -493,21 +493,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 160.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 160.
+
+./main.tex:169: Leaders not followed by proper glue.
+<to be read again> 
+                   \hskip 
+l.169         \AND
+                  %
+You should say `\leaders <box or rule><hskip or vskip>'.
+I found the <box or rule>, but there's no suitable
+<hskip or vskip>, so I'm ignoring these leaders.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 217.
+(Font)              <9> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 217.
+(Font)              <6> on input line 233.
 
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.387 \end{document}
+l.430 \end{document}
                      [2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 
@@ -522,18 +532,18 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15498 strings out of 475136
- 259782 string characters out of 5766292
- 678563 words of memory out of 5000000
- 38287 multiletter control sequences out of 15000+600000
- 597793 words of font info for 66 fonts, out of 8000000 for 9000
+ 15481 strings out of 475136
+ 259507 string characters out of 5766292
+ 679549 words of memory out of 5000000
+ 38278 multiletter control sequences out of 15000+600000
+ 591350 words of font info for 62 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 75i,7n,79p,332b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on main.pdf (2 pages, 108643 bytes).
+ 75i,7n,79p,307b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
+Output written on main.pdf (2 pages, 45677 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
