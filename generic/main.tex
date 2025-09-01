@@ -2,13 +2,13 @@
 
 % Packages:
 \usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=1 cm, % seperation between body and page edge from the top
-    bottom=1 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
-    footskip=1.0 cm, % seperation between body and footer
-    % showframe % for debugging 
+ignoreheadfoot, % set margins without considering header and footer
+top=1 cm, % seperation between body and page edge from the top
+bottom=1 cm, % seperation between body and page edge from the bottom
+left=2 cm, % seperation between body and page edge from the left
+right=2 cm, % seperation between body and page edge from the right
+footskip=1.0 cm, % seperation between body and footer
+% showframe % for debugging 
 ]{geometry} % for adjusting page geometry
 \usepackage{titlesec} % for customizing section titles
 \usepackage{tabularx} % for making tables with fixed width columns
@@ -19,11 +19,11 @@
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
 \usepackage[
-    pdftitle={Iheb Belhadj's CV},
-    pdfauthor={Iheb Belhadj},
-    pdfcreator={Iheb Belhadj},
-    colorlinks=true,
-    urlcolor=primaryColor
+pdftitle={Iheb Belhadj's CV},
+pdfauthor={Iheb Belhadj},
+pdfcreator={Iheb Belhadj},
+colorlinks=true,
+urlcolor=primaryColor
 ]{hyperref} % for links, metadata and bookmarks
 \usepackage[pscoord]{eso-pic} % for floating text on the page
 \usepackage{calc} % for calculating lengths
@@ -37,11 +37,11 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \usepackage[T1]{fontenc}
-    \usepackage[utf8]{inputenc}
-    \usepackage{lmodern}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
 \fi
 
 \usepackage{charter}
@@ -59,88 +59,88 @@
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{
-    % left space:
-    -1pt
+% left space:
+  -1pt
 }{
-    % top space:
-    0.3 cm
+% top space:
+  0.3 cm
 }{
-    % bottom space:
-    0.2 cm
+% bottom space:
+  0.2 cm
 } % section title spacing
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
 \newenvironment{highlights}{
-    \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
-        partopsep=0pt,
-        itemsep=0pt,
-        leftmargin=0 cm + 10pt
+  \begin{itemize}[
+    topsep=0.10 cm,
+    parsep=0.10 cm,
+    partopsep=0pt,
+    itemsep=0pt,
+    leftmargin=0 cm + 10pt
     ]
-}{
-    \end{itemize}
+  }{
+\end{itemize}
 } % new environment for highlights
 
 
 \newenvironment{highlightsforbulletentries}{
-    \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
-        partopsep=0pt,
-        itemsep=0pt,
-        leftmargin=10pt
+  \begin{itemize}[
+    topsep=0.10 cm,
+    parsep=0.10 cm,
+    partopsep=0pt,
+    itemsep=0pt,
+    leftmargin=10pt
     ]
-}{
-    \end{itemize}
+  }{
+\end{itemize}
 } % new environment for highlights for bullet entries
 
 \newenvironment{onecolentry}{
-    \begin{adjustwidth}{
-        0 cm + 0.00001 cm
+  \begin{adjustwidth}{
+      0 cm + 0.00001 cm
     }{
-        0 cm + 0.00001 cm
+      0 cm + 0.00001 cm
     }
-}{
-    \end{adjustwidth}
+  }{
+  \end{adjustwidth}
 } % new environment for one column entries
 
 \newenvironment{twocolentry}[2][]{
-    \onecolentry
-    \def\secondColumn{#2}
-    \setcolumnwidth{\fill, 4.5 cm}
-    \begin{paracol}{2}
-}{
+  \onecolentry
+  \def\secondColumn{#2}
+  \setcolumnwidth{\fill, 4.5 cm}
+  \begin{paracol}{2}
+  }{
     \switchcolumn \raggedleft \secondColumn
-    \end{paracol}
-    \endonecolentry
+  \end{paracol}
+  \endonecolentry
 } % new environment for two column entries
 
 \newenvironment{threecolentry}[3][]{
-    \onecolentry
-    \def\thirdColumn{#3}
-    \setcolumnwidth{, \fill, 4.5 cm}
-    \begin{paracol}{3}
+  \onecolentry
+  \def\thirdColumn{#3}
+  \setcolumnwidth{, \fill, 4.5 cm}
+  \begin{paracol}{3}
     {\raggedright #2} \switchcolumn
-}{
+  }{
     \switchcolumn \raggedleft \thirdColumn
-    \end{paracol}
-    \endonecolentry
+  \end{paracol}
+  \endonecolentry
 } % new environment for three column entries
 
 \newenvironment{header}{
-    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+  \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
 }{
-    \par\kern\topsep
+  \par\kern\topsep
 } % new environment for the header
 
 \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
   \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
     \put(
-        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
-        \LenToUnit{\paperheight-1.0 cm}
+    \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+    \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+          \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
     }}}%
   }%
 }%
@@ -152,279 +152,295 @@
 
 
 \begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
+\newcommand{\AND}{\unskip
+  \cleaders\copy\ANDbox\hskip\wd\ANDbox
+  \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \vspace{5 pt}
+
+  \normalsize
+  \kern 5.0 pt%
+  \AND%
+  \kern 5.0 pt%
+  \AND%
+  \mbox{\hrefWithoutArrow{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \kern 5.0 pt%
+  \AND%
+  \mbox{\hrefWithoutArrow{tel:+21695611874}{+216 95 611 874}}%
+
+  \AND%
+  \kern 5.0 pt%
+  \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{iheb.belhadj.com}}%
+  \kern 5.0 pt%
+  \AND%
+  \kern 5.0 pt%
+  \mbox{\hrefWithoutArrow{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \kern 5.0 pt%
+  \AND%
+  \kern 5.0 pt%
+  \mbox{\hrefWithoutArrow{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+
+
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+
+\section{Summary}
+
+
+\begin{onecolentry}
+Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
+\end{onecolentry}
+
+
+\section{Experience}
+
+
+
+
+\begin{twocolentry}{
+    Feb 2025 – Aug 2025
+  }
+\textbf{Software Engineering Intern}, Talan -- Tunis,TN\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+\item Designed and implemented an AI-first analytics platform enabling business users to explore and analyze data through natural language queries.
+  \item Integrated a multi-agent system with LangGraph, dynamically generating SQL queries and visualizations, with support for RAG pipelines and MCP integrations.
+  \item Built a real-time change data capture (CDC) system, automatically refreshing charts when source data changed, improving analytics freshness.
+  \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to streamline ingestion, transformation, and storage, while orchestrating ML forecasting jobs.
+  \item Secured the platform using Keycloak IAM, implementing role- and group-based fine-grained access control for both application and data access using row-level security (RLS).
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Kubernetes, Nginx
+    \end{highlightsforbulletentries}
+\end{highlights}
+    \end{highlights}
+  \end{onecolentry}
+
+
+  \vspace{0.2 cm}
+
+  \begin{twocolentry}{
+      Dec 2024 - Feb 2025
     }
-    \newsavebox\ANDbox
-    \sbox\ANDbox{$|$}
-
-    \begin{header}
-        \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
-
-        \vspace{5 pt}
-
-        \normalsize
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{iheb.belhadj.com}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
-    \end{header}
+  \textbf{Freelance Job}, Nexits  -- Paris, FR\end{twocolentry}
 
-    \vspace{5 pt - 0.3 cm}
+  \vspace{0.10 cm}
+  \begin{onecolentry}
+    \begin{highlights}
+    \item Architected and developed CMS solution,
+      leveraging Payload CMS and a custom-built, block-based page builder enabling nexits team to create new pages and edit content Nexits landing website with no code
+    \item 
+      Instantaneous Preview system that dynamically build components from declarative config from the CMS using Astro.js for minimal JS on build
+    \item Dual rendering strategy with SSR for preview mode and SSG for production build
+    \item Achieved 100 performance score on Google Lighthouse 95 accessibility and 100 seo score on production landing website using this architecture 
 
+          \begin{highlightsforbulletentries}
+    \item Technologies used: Astro.js, Payload CMS, React, TypeScript, Vercel, SQLite, Turborepo
+    \end{highlightsforbulletentries}
 
-    \section{Summary}
+    \end{highlights}
 
+  \end{onecolentry}
 
-        \begin{onecolentry}
-An engineer specializing in backend systems and data pipelines. I thrive in complexity, designing scalable, resilient architectures that keep systems running smoothly and teams moving forward.
-        \end{onecolentry}
 
 
-    
-    % \section{Quick Guide}
-    %
-    % \begin{onecolentry}
-    %     \begin{highlightsforbulletentries}
-    %
-    %
-    %     \item Each section title is arbitrary and each section contains a list of entries.
-    %
-    %     \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
-    %
-    %     \item Select a section title, pick an entry type, and start writing your section!
-    %
-    %     \item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
-    %
-    %
-    %     \end{highlightsforbulletentries}
-    % \end{onecolentry}
-    %
 
 
+  \begin{twocolentry}{
+      Aug 2023 - Sep 2024
+    }
+  \textbf{Software engineer}, Nexits  -- Paris, FR\end{twocolentry}
 
+  \vspace{0.10 cm}
+  \begin{onecolentry}
+    \begin{highlights}
 
-    \section{Experience}
+    \item Implemented product state historization with full audit trail, enabling edits, rollbacks, and time-travel of product data.
 
+    \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo.
 
+    \item Contributed in the deployment and management of monorepo services on AWS as well as CI/CD pipelines using GitHub Actions.
 
-        
-        \begin{twocolentry}{
-            Feb 2025 – Aug 2025
-        }
-            \textbf{Software Engineering Intern}, Talan -- Tunis,TN\end{twocolentry}
+                \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, S3, RDS), Docker, GitHub Actions, Turborepo
+    \end{highlightsforbulletentries}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item End of masters project which is AI first analytics platform for business users to explore and analyze data with natural language 
-                \item Integrated a multi-agent system using LangGraph for natural language querying and chart creation that works with any type of data and can integrate rag systems and other inputs using MCP
-                \item A change data capture system to automatically update generated charts upon data update for real-time analytics
 
-                \item Developed an end to end data pipeline using minio, delta lake, airflow and dbt for data ingestion, transformation and storage as well as orchestrating other jobs like launching ML predictions and forecasting jobs 
+    \end{highlights}
 
-                \item Using Keycloak as a centralized IAM solution for both the client application as well as data access management with fine grained access control using roles and groups
-                \end{highlights}
-        \end{onecolentry}
+  \end{onecolentry}
 
 
-        \vspace{0.2 cm}
+    \begin{twocolentry}{
+      Oct 2023 - Nov 2023
+    }
+  \textbf{Freelance instructor}, ENET’Com Junior Entreprise  -- Sfax, TN\end{twocolentry}
 
-        \begin{twocolentry}{
-            Dec 2024 - Feb 2025
-        }
-            \textbf{Freelance Job}, Nexits  -- Paris, FR\end{twocolentry}
+  \vspace{0.10 cm}
+  \begin{onecolentry}
+    \begin{highlights}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Architected and developed CMS solution,
-     leveraging Payload CMS and a custom-built, block-based page builder enabling nexits team to create new pages and edit content Nexits landing website with no code
-                \item 
-                  Instantaneous Preview system that dynamically build components from declarative config from the CMS using Astro.js for minimal JS on build
-                \item Dual rendering strategy with SSR for preview mode and SSG for production build
-                \item Achieved 100 performance score on Google Lighthouse 95 accessibility and 100 seo score on production landing website using this architecture 
-            \end{highlights}
+    \item Conducted workshops over the weekends on web development using the MERN stack (MongoDB, Express.js, React, Node.js) teaching more than 30 junior club members.
 
-        \end{onecolentry}
 
-                \begin{twocolentry}{
-            Aug 2023 - Sep 2024
-        }
-            \textbf{Software engineer}, Nexits  -- Paris, FR\end{twocolentry}
+    \end{highlights}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
+  \end{onecolentry}
 
-                \item Implemented product state historization with full audit trail, enabling edits, rollbacks, and time-travel of product data.
 
-                \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo.
 
-                \item Contributed in the deployment and management of monorepo services on AWS as well as CI/CD pipelines using GitHub Actions.
-                \end{highlights}
 
-        \end{onecolentry}
 
-                        \begin{twocolentry}{
-            Aug 2023 - Sep 2024
-        }
-            \textbf{web dev intern}, Nexits  -- Paris, FR\end{twocolentry}
+  \begin{twocolentry}{
+      June 2023 - Aug 2023
+    }
+  \textbf{Software Engineering Intern}, Nexits  -- Paris, FR\end{twocolentry}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
+  \vspace{0.10 cm}
 
-                \item Worked on a dashboard feature to extract and visualize data using chart js and integrating the feature in the client interface
-                \item Implemented data export functionality to csv or xlsx formats with the formatting and structure of choice
+  \section{Projects}
 
-                \end{highlights}
 
-        \end{onecolentry}
+  % \begin{twocolentry}{
+  %     \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
+  %   }
+  % \textbf{Dev env portfolio}\end{twocolentry}
+  %
+  % \vspace{0.10 cm}
+  % \begin{onecolentry}
+  %   \begin{highlights}
+  %   \item My portfolio website built with Next.js , showcasing my projects and experiences in a dev environment looking UI  
+  %   \item Responsive design, as well as 100 performance score on Google Lighthouse, 93 accessibility and 100 seo score
+  %   \end{highlights}
+  % \end{onecolentry}
 
-    
-    \section{Projects}
 
+  % \begin{twocolentry}{
+  %     \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
+  %   }
+  % \textbf{OpsForge}\end{twocolentry}
+  %
+  % \vspace{0.10 cm}
+  % \begin{onecolentry}
+  %   \begin{highlights}
+  %   \item A running ops management system on a vagrant VM containing up and running tools for monitoring, log management and a Jenkins server for CI/CD operations listening to GitHub webhooks to trigger jobs on new commits
+  %
+  %   \end{highlights}
+  % \end{onecolentry}
 
-                \begin{twocolentry}{
-            \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
-        }
-            \textbf{Dev env portfolio}\end{twocolentry}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-            \item My portfolio website built with Next.js , showcasing my projects and experiences in a dev environment looking UI  
-            \item Responsive design, as well as 100 performance score on Google Lighthouse, 93 accessibility and 100 seo score
-               \end{highlights}
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-        
-        \begin{twocolentry}{
-            \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
-        }
-            \textbf{OpsForge}\end{twocolentry}
+  \begin{twocolentry}{
+      \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
+    }
+  \textbf{Playpex}\end{twocolentry}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-               \item A running ops management system on a vagrant VM containing up and running tools for monitoring, log management and a Jenkins server for CI/CD operations listening to GitHub webhooks to trigger jobs on new commits
+  \vspace{0.10 cm}
+  \begin{onecolentry}
+    \begin{highlights}
+\item Built a streaming torrent client in Node.js with a backend wrapper leveraging Media Source Extensions API for seamless browser playback.
+\item Designed a TV-like Angular interface optimized for remote and keyboard navigation, delivering a living-room experience.
+\item Bundled torrent streaming backend and services into a unified Electron application for cross-platform desktop use.
+\item Developed a companion Ionic mobile controller app, enabling real-time playback control via WebSockets.
 
-            \end{highlights}
-        \end{onecolentry}
+                \begin{highlightsforbulletentries}
+    \item Technologies used: Node.js, Angular, Ionic, Electron
+    \end{highlightsforbulletentries}
 
+    \end{highlights}
+  \end{onecolentry}
 
-        \vspace{0.2 cm}
 
-        \begin{twocolentry}{
-            \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
-        }
-            \textbf{Playpex}\end{twocolentry}
+  \section{Technologies}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-            \item Built a streaming torrent client on running in a node js runtime with a wrapper backend that utilizes media source extensions API to stream any torrent in a web player
-            \item Developed a TV like user interface in Angular, optimized for remote and keyboard navigation for a living-room experience.
-            \item bundling the torrent streamer and other backend services with the client application using electron 
-            \item Created a companion mobile controller app with Ionic, communicating over WebSockets for remote playback control.
-                \end{highlights}
-        \end{onecolentry}
 
-    
-    \section{Technologies}
 
 
+  \begin{onecolentry}
+    \textbf{Languages:} JavaScript, Typescript, Python, C\#, C, SQL, Java, PHP, Bash
+  \end{onecolentry}
 
-        
-        \begin{onecolentry}
-            \textbf{Languages:} JavaScript, Typescript, Python, C\#, C, SQL, Java, PHP, Bash
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-        \vspace{0.2 cm}
+  \begin{onecolentry}
+    \textbf{Backend dev} Spring, .NET, Express.js, Django, Flask, FastAPI
+  \end{onecolentry}
 
-        \begin{onecolentry}
-            \textbf{Backend dev} Spring, .NET, Express.js, Django, Flask, FastAPI
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-                \vspace{0.2 cm}
 
+  \begin{onecolentry}
+    \textbf{Frontend dev} React, Next.js, Astro.js, Angular, Vue.js
+  \end{onecolentry}
 
-                \begin{onecolentry}
-            \textbf{Frontend dev} React, Next.js, Astro.js, Angular, Vue.js
-        \end{onecolentry}
 
+  \vspace{0.2 cm}
 
-        \vspace{0.2 cm}
+  \begin{onecolentry}
+    \textbf{Databases:} MySQL, PostgreSQL, MongoDB, Redis, DuckDB, MinIO, RDS, S3
+  \end{onecolentry}
 
-        \begin{onecolentry}
-          \textbf{Databases:} MySQL, PostgreSQL, MongoDB, Redis, DuckDB, MinIO, RDS, S3
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-        \vspace{0.2 cm}
+  \begin{onecolentry}
+    \textbf{Data eng: }  Airflow, Airbyte, dbt, Kafka, Spark
+  \end{onecolentry}
 
-        \begin{onecolentry}
-          \textbf{Data eng: }  Airflow, Airbyte, dbt, Kafka, Spark
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-        \vspace{0.2 cm}
+  \begin{onecolentry}
+    \textbf{Agentic AI:} LangChain, LangGraph, CrewAI, AutoGen
+  \end{onecolentry}
 
-                \begin{onecolentry}
-          \textbf{Agentic AI:} LangChain, LangGraph, CrewAI, AutoGen
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-        \vspace{0.2 cm}
 
+  \begin{onecolentry}
+    \textbf{Cloud:} AWS (EC2, S3, RDS, Lambda), GCP (Compute Engine, Cloud Storage, Cloud SQL)
+  \end{onecolentry}
 
-        \begin{onecolentry}
-          \textbf{Cloud:} AWS (EC2, S3, RDS, Lambda), GCP (Compute Engine, Cloud Storage, Cloud SQL)
-        \end{onecolentry}
+  \vspace{0.2 cm}
 
-                \vspace{0.2 cm}
 
+  \begin{onecolentry}
+    \textbf{Infrastructure \& DevOps:} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions
+  \end{onecolentry}
 
-        \begin{onecolentry}
-          \textbf{Infrastructure \& DevOps:} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions
-        \end{onecolentry}
 
 
 
 
 
+  \section{Education}
 
-            \section{Education}
 
 
 
-        
-        \begin{twocolentry}{
-            Sept 2022 – Sep 2025
-        }
-            \textbf{Masters in software engineering}, ESPRIT
-        \end{twocolentry}
+  \begin{twocolentry}{
+      Sept 2022 – Sep 2025
+    }
+    \textbf{Masters in software engineering}, ESPRIT
+  \end{twocolentry}
 
-        \vspace{0.10 cm}
+  \vspace{0.10 cm}
 
-                \begin{twocolentry}{
-            Sept 2020 – Juin 2022
-        }
-            \textbf{Bachelor in applied math and physics}, IPEIM
-          \end{twocolentry}
+  \begin{twocolentry}{
+      Sept 2020 – Juin 2022
+    }
+    \textbf{Bachelor in applied math and physics}, IPEIM
+  \end{twocolentry}
 
 
-    
 
-\end{document}
+
+  \end{document}

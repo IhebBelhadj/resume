@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  1 SEP 2025 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  1 SEP 2025 23:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -497,16 +497,286 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ./main.tex:169: Leaders not followed by proper glue.
 <to be read again> 
                    \hskip 
-l.169         \AND
-                  %
+l.169   \AND
+            %
+You should say `\leaders <box or rule><hskip or vskip>'.
+I found the <box or rule>, but there's no suitable
+<hskip or vskip>, so I'm ignoring these leaders.
+
+./main.tex:177: Leaders not followed by proper glue.
+<to be read again> 
+                   \hskip 
+l.177   \AND
+            %
 You should say `\leaders <box or rule><hskip or vskip>'.
 I found the <box or rule>, but there's no suitable
 <hskip or vskip>, so I'm ignoring these leaders.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 233.
+(Font)              <9> on input line 216.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 233.
+(Font)              <6> on input line 216.
+./main.tex:225: Undefined control sequence.
+\enit@enditemize ->\enit@after 
+                               \endlist \ifx \enit@series \relax \else \ifnu...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@enditemize ...x \else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.225     \end{highlights}
+                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.225     \end{highlights}
+                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:225: Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.225     \end{highlights}
+                          
+I'm forgetting what you said and using zero instead.
+
+./main.tex:225: Undefined control sequence.
+\enit@enditemize ...ist \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.225     \end{highlights}
+                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.225     \end{highlights}
+                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.225     \end{highlights}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:225: You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.225     \end{highlights}
+                          
+I'm forgetting what you said and using zero instead.
+
+
+./main.tex:225: LaTeX Error: \begin{list} on input line 214 ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225     \end{highlights}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./main.tex:225: LaTeX Error: \begin{adjustwidth} on input line 214 ended by \end{highlights}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225     \end{highlights}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./main.tex:226: LaTeX Error: \begin{onecolentry} on input line 214 ended by \end{list}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226   \end{onecolentry}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./main.tex:226: LaTeX Error: \begin{document} ended by \end{adjustwidth}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226   \end{onecolentry}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./main.tex:226: Extra \endgroup.
+\end  ...end#1\endcsname \@checkend {#1}\endgroup 
+                                                  \UseHook {env/#1/after}\if...
+l.226   \end{onecolentry}
+                         
+Things are pretty mixed up, but I think the worst is over.
+
+
+./main.tex:226: LaTeX Error: \begin{document} ended by \end{onecolentry}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226   \end{onecolentry}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./main.tex:226: Extra \endgroup.
+\end  ...end#1\endcsname \@checkend {#1}\endgroup 
+                                                  \UseHook {env/#1/after}\if...
+l.226   \end{onecolentry}
+                         
+Things are pretty mixed up, but I think the worst is over.
+
 
 
 [1
@@ -517,8 +787,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430 \end{document}
-                     [2] 
+l.446   \end{document}
+                       [2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 
 Package lastpage Warning: \@currentHpage is
@@ -532,18 +802,18 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15481 strings out of 475136
- 259507 string characters out of 5766292
- 679549 words of memory out of 5000000
- 38278 multiletter control sequences out of 15000+600000
+ 15488 strings out of 475136
+ 259665 string characters out of 5766292
+ 677549 words of memory out of 5000000
+ 38285 multiletter control sequences out of 15000+600000
  591350 words of font info for 62 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 75i,7n,79p,307b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,307b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on main.pdf (2 pages, 45677 bytes).
+Output written on main.pdf (2 pages, 46417 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
