@@ -5,8 +5,8 @@
 ignoreheadfoot, % set margins without considering header and footer
 top=1 cm, % seperation between body and page edge from the top
 bottom=1 cm, % seperation between body and page edge from the bottom
-left=2 cm, % seperation between body and page edge from the left
-right=2 cm, % seperation between body and page edge from the right
+left=1 cm, % seperation between body and page edge from the left
+right=1 cm, % seperation between body and page edge from the right
 footskip=1.0 cm, % seperation between body and footer
 % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
@@ -69,7 +69,7 @@ urlcolor=primaryColor
   0.2 cm
 } % section title spacing
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\renewcommand\labelitemi{\vcenter{\hbox{\small$\bullet$}}} % custom bullet points
 \newenvironment{highlights}{
   \begin{itemize}[
     topsep=0.10 cm,
@@ -80,7 +80,7 @@ urlcolor=primaryColor
     ]
   }{
 \end{itemize}
-} % new environment for highlights
+}
 
 
 \newenvironment{highlightsforbulletentries}{
@@ -113,7 +113,7 @@ urlcolor=primaryColor
   }{
     \switchcolumn \raggedleft \secondColumn
   \end{paracol}
-  \endonecolentry
+  \end{onecolentry}
 } % new environment for two column entries
 
 \newenvironment{threecolentry}[3][]{
@@ -125,7 +125,7 @@ urlcolor=primaryColor
   }{
     \switchcolumn \raggedleft \thirdColumn
   \end{paracol}
-  \endonecolentry
+  \end{onecolentry}
 } % new environment for three column entries
 
 \newenvironment{header}{
@@ -135,15 +135,15 @@ urlcolor=primaryColor
 } % new environment for the header
 
 \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
-  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+  \AddToShipoutPictureFG*{
     \put(
     \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
     \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
           \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
-    }}}%
-  }%
-}%
+    }}}
+  }
+}
 
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
@@ -192,12 +192,61 @@ urlcolor=primaryColor
 \vspace{5 pt - 0.3 cm}
 
 
-\section{Summary}
+% \section{Summary}
+%
+%
+% \begin{onecolentry}
+% Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
+% \end{onecolentry}
+
+  \section{Technologies}
 
 
-\begin{onecolentry}
-Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
-\end{onecolentry}
+
+
+  \begin{onecolentry}
+    \textbf{Languages:} JavaScript, Typescript, Python, C\\#, C, SQL, Java, PHP, Bash
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+  \begin{onecolentry}
+    \textbf{Fullstack dev} Spring, Express.js, Flask, FastAPI,  React, Next.js, Astro.js, Angular, Vue.js
+  \end{onecolentry}
+
+
+
+  \vspace{0.2 cm}
+
+  \begin{onecolentry}
+    \textbf{Databases:} MySQL, PostgreSQL, MongoDB, Redis, DuckDB, MinIO, RDS, S3
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+  \begin{onecolentry}
+    \textbf{Data eng: }  Airflow, Airbyte, dbt, Kafka, Spark
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+  \begin{onecolentry}
+    \textbf{Agentic AI frameworks:} LangChain, LangGraph, CrewAI, AutoGen
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+
+  \begin{onecolentry}
+    \textbf{Cloud:} AWS (EC2, S3, RDS, Lambda), GCP (Compute Engine, Cloud Storage, Cloud SQL)
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+
+  \begin{onecolentry}
+    \textbf{Infrastructure & DevOps:} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions
+  \end{onecolentry}
 
 
 \section{Experience}
@@ -217,9 +266,9 @@ Software engineer specializing in backend systems, data pipelines, and productio
   \item Integrated a multi-agent system with LangGraph, dynamically generating SQL queries and visualizations, with support for RAG pipelines and MCP integrations.
   \item Built a real-time change data capture (CDC) system, automatically refreshing charts when source data changed, improving analytics freshness.
   \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to streamline ingestion, transformation, and storage, while orchestrating ML forecasting jobs.
-  \item Secured the platform using Keycloak IAM, implementing role- and group-based fine-grained access control for both application and data access using row-level security (RLS).
+  \item Secured the platform using Keycloak IAM, implementing role- and group-based fine-grained access control.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Kubernetes, Nginx
+    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Nginx
     \end{highlightsforbulletentries}
 \end{highlights}
     \end{highlights}
@@ -240,8 +289,7 @@ Software engineer specializing in backend systems, data pipelines, and productio
       leveraging Payload CMS and a custom-built, block-based page builder enabling nexits team to create new pages and edit content Nexits landing website with no code
     \item 
       Instantaneous Preview system that dynamically build components from declarative config from the CMS using Astro.js for minimal JS on build
-    \item Dual rendering strategy with SSR for preview mode and SSG for production build
-    \item Achieved 100 performance score on Google Lighthouse 95 accessibility and 100 seo score on production landing website using this architecture 
+    \item Dual rendering strategy with SSR for preview mode and SSG for production build achieving 100 performance score on Google Lighthouse 95 accessibility and 100 seo score on production landing website using this architecture 
 
           \begin{highlightsforbulletentries}
     \item Technologies used: Astro.js, Payload CMS, React, TypeScript, Vercel, SQLite, Turborepo
@@ -250,7 +298,6 @@ Software engineer specializing in backend systems, data pipelines, and productio
     \end{highlights}
 
   \end{onecolentry}
-
 
 
 
@@ -266,9 +313,7 @@ Software engineer specializing in backend systems, data pipelines, and productio
 
     \item Implemented product state historization with full audit trail, enabling edits, rollbacks, and time-travel of product data.
 
-    \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo.
-
-    \item Contributed in the deployment and management of monorepo services on AWS as well as CI/CD pipelines using GitHub Actions.
+    \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo as well as its deployment on AWS.
 
                 \begin{highlightsforbulletentries}
     \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, S3, RDS), Docker, GitHub Actions, Turborepo
@@ -295,7 +340,6 @@ Software engineer specializing in backend systems, data pipelines, and productio
     \end{highlights}
 
   \end{onecolentry}
-
 
 
 
@@ -331,64 +375,6 @@ Software engineer specializing in backend systems, data pipelines, and productio
 
     \end{highlights}
   \end{onecolentry}
-
-
-  \section{Technologies}
-
-
-
-
-  \begin{onecolentry}
-    \textbf{Languages:} JavaScript, Typescript, Python, C\#, C, SQL, Java, PHP, Bash
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Backend dev} Spring, .NET, Express.js, Django, Flask, FastAPI
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-
-  \begin{onecolentry}
-    \textbf{Frontend dev} React, Next.js, Astro.js, Angular, Vue.js
-  \end{onecolentry}
-
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Databases:} MySQL, PostgreSQL, MongoDB, Redis, DuckDB, MinIO, RDS, S3
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Data eng: }  Airflow, Airbyte, dbt, Kafka, Spark
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Agentic AI:} LangChain, LangGraph, CrewAI, AutoGen
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-
-  \begin{onecolentry}
-    \textbf{Cloud:} AWS (EC2, S3, RDS, Lambda), GCP (Compute Engine, Cloud Storage, Cloud SQL)
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-
-  \begin{onecolentry}
-    \textbf{Infrastructure \& DevOps:} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions
-  \end{onecolentry}
-
-
 
 
 
