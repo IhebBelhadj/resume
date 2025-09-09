@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 00:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -512,77 +512,55 @@ You should say `\leaders <box or rule><hskip or vskip>'.
 I found the <box or rule>, but there's no suitable
 <hskip or vskip>, so I'm ignoring these leaders.
 
-./main.tex:208: You can't use `macro parameter character #' in vertical mode.
-<recently read> ##
-                  
-l.208 ...es:} JavaScript, Typescript, Python, C\\#
-                                                  , C, SQL, Java, PHP, Bash
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
-./main.tex:248: Misplaced alignment tab character &.
-<argument> Infrastructure &
-                            DevOps:
-l.248     \textbf{Infrastructure & DevOps:}
-                                            Docker, Kubernetes, Terraform, A...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-./main.tex:260: LaTeX Error: \begin{twocolentry} on input line 257 ended by \end{onecolentry}.
+./main.tex:246: LaTeX Error: \begin{twocolentry} on input line 243 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.260 ...tern}, Talan -- Tunis,TN\end{twocolentry}
+l.246 ...tern}, Talan -- Tunis,TN\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:260: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:246: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.260 ...tern}, Talan -- Tunis,TN\end{twocolentry}
+l.246 ...tern}, Talan -- Tunis,TN\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:260: Extra \endgroup.
+./main.tex:246: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.260 ...tern}, Talan -- Tunis,TN\end{twocolentry}
+l.246 ...tern}, Talan -- Tunis,TN\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:265: Missing $ inserted.
+./main.tex:251: Missing $ inserted.
 <inserted text> 
                 $
-l.265 \item D
+l.251 \item D
              esigned and implemented an AI-first analytics platform enabling...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 265.
+(Font)              <9> on input line 251.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 265.
-./main.tex:265: Extra }, or forgotten $.
+(Font)              <6> on input line 251.
+./main.tex:251: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.265 \item D
+l.251 \item D
              esigned and implemented an AI-first analytics platform enabling...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -590,18 +568,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:265: Missing $ inserted.
+./main.tex:251: Missing $ inserted.
 <inserted text> 
                 $
-l.265 \item D
+l.251 \item D
              esigned and implemented an AI-first analytics platform enabling...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:265: Missing } inserted.
+./main.tex:251: Missing } inserted.
 <inserted text> 
                 }
-l.265 \item D
+l.251 \item D
              esigned and implemented an AI-first analytics platform enabling...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -609,18 +587,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:266: Missing $ inserted.
+./main.tex:252: Missing $ inserted.
 <inserted text> 
                 $
-l.266   \item I
+l.252   \item I
                ntegrated a multi-agent system with LangGraph, dynamically ge...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:266: Extra }, or forgotten $.
+./main.tex:252: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.266   \item I
+l.252   \item I
                ntegrated a multi-agent system with LangGraph, dynamically ge...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -628,18 +606,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:266: Missing $ inserted.
+./main.tex:252: Missing $ inserted.
 <inserted text> 
                 $
-l.266   \item I
+l.252   \item I
                ntegrated a multi-agent system with LangGraph, dynamically ge...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:266: Missing } inserted.
+./main.tex:252: Missing } inserted.
 <inserted text> 
                 }
-l.266   \item I
+l.252   \item I
                ntegrated a multi-agent system with LangGraph, dynamically ge...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -647,18 +625,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:267: Missing $ inserted.
+./main.tex:253: Missing $ inserted.
 <inserted text> 
                 $
-l.267   \item B
+l.253   \item B
                uilt a real-time change data capture (CDC) system, automatica...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:267: Extra }, or forgotten $.
+./main.tex:253: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.267   \item B
+l.253   \item B
                uilt a real-time change data capture (CDC) system, automatica...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -666,18 +644,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:267: Missing $ inserted.
+./main.tex:253: Missing $ inserted.
 <inserted text> 
                 $
-l.267   \item B
+l.253   \item B
                uilt a real-time change data capture (CDC) system, automatica...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:267: Missing } inserted.
+./main.tex:253: Missing } inserted.
 <inserted text> 
                 }
-l.267   \item B
+l.253   \item B
                uilt a real-time change data capture (CDC) system, automatica...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -685,18 +663,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:268: Missing $ inserted.
+./main.tex:254: Missing $ inserted.
 <inserted text> 
                 $
-l.268   \item D
+l.254   \item D
                eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:268: Extra }, or forgotten $.
+./main.tex:254: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.268   \item D
+l.254   \item D
                eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -704,18 +682,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:268: Missing $ inserted.
+./main.tex:254: Missing $ inserted.
 <inserted text> 
                 $
-l.268   \item D
+l.254   \item D
                eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:268: Missing } inserted.
+./main.tex:254: Missing } inserted.
 <inserted text> 
                 }
-l.268   \item D
+l.254   \item D
                eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -723,18 +701,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:269: Missing $ inserted.
+./main.tex:255: Missing $ inserted.
 <inserted text> 
                 $
-l.269   \item S
+l.255   \item S
                ecured the platform using Keycloak IAM, implementing role- an...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:269: Extra }, or forgotten $.
+./main.tex:255: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.269   \item S
+l.255   \item S
                ecured the platform using Keycloak IAM, implementing role- an...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -742,18 +720,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:269: Missing $ inserted.
+./main.tex:255: Missing $ inserted.
 <inserted text> 
                 $
-l.269   \item S
+l.255   \item S
                ecured the platform using Keycloak IAM, implementing role- an...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:269: Missing } inserted.
+./main.tex:255: Missing } inserted.
 <inserted text> 
                 }
-l.269   \item S
+l.255   \item S
                ecured the platform using Keycloak IAM, implementing role- an...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -761,10 +739,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@enditemize ->\enit@after 
                                \endlist \ifx \enit@series \relax \else \ifnu...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -772,10 +750,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@enditemize ...x \else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -783,19 +761,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Missing number, treated as zero.
+./main.tex:260: Missing number, treated as zero.
 <to be read again> 
                    =
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -803,10 +781,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -814,19 +792,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Missing number, treated as zero.
+./main.tex:260: Missing number, treated as zero.
 <to be read again> 
                    =
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -834,10 +812,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -845,10 +823,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -856,17 +834,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: You can't use `\relax' after \the.
+./main.tex:260: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 I'm forgetting what you said and using zero instead.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@enditemize ...ist \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -874,19 +852,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Missing number, treated as zero.
+./main.tex:260: Missing number, treated as zero.
 <to be read again> 
                    =
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -894,10 +872,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -905,19 +883,19 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Missing number, treated as zero.
+./main.tex:260: Missing number, treated as zero.
 <to be read again> 
                    =
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -925,10 +903,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: Undefined control sequence.
+./main.tex:260: Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -936,137 +914,137 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:274: You can't use `\relax' after \the.
+./main.tex:260: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 I'm forgetting what you said and using zero instead.
 
 
-./main.tex:274: LaTeX Error: \begin{list} on input line 263 ended by \end{itemize}.
+./main.tex:260: LaTeX Error: \begin{list} on input line 249 ended by \end{itemize}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:274: LaTeX Error: \begin{adjustwidth} on input line 263 ended by \end{highlights}.
+./main.tex:260: LaTeX Error: \begin{adjustwidth} on input line 249 ended by \end{highlights}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.274     \end{highlights}
+l.260     \end{highlights}
                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:275: LaTeX Error: \begin{onecolentry} on input line 263 ended by \end{list}.
+./main.tex:261: LaTeX Error: \begin{onecolentry} on input line 249 ended by \end{list}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.275   \end{onecolentry}
+l.261   \end{onecolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:275: LaTeX Error: \begin{document} ended by \end{adjustwidth}.
+./main.tex:261: LaTeX Error: \begin{document} ended by \end{adjustwidth}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.275   \end{onecolentry}
+l.261   \end{onecolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:275: Extra \endgroup.
+./main.tex:261: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.275   \end{onecolentry}
+l.261   \end{onecolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:275: LaTeX Error: \begin{document} ended by \end{onecolentry}.
+./main.tex:261: LaTeX Error: \begin{document} ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.275   \end{onecolentry}
+l.261   \end{onecolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:275: Extra \endgroup.
+./main.tex:261: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.275   \end{onecolentry}
+l.261   \end{onecolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:283: LaTeX Error: \begin{twocolentry} on input line 280 ended by \end{onecolentry}.
+./main.tex:269: LaTeX Error: \begin{twocolentry} on input line 266 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.283 ...b}, Nexits  -- Paris, FR\end{twocolentry}
+l.269 ...b}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:283: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:269: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.283 ...b}, Nexits  -- Paris, FR\end{twocolentry}
+l.269 ...b}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:283: Extra \endgroup.
+./main.tex:269: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.283 ...b}, Nexits  -- Paris, FR\end{twocolentry}
+l.269 ...b}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:288: Missing $ inserted.
+./main.tex:274: Missing $ inserted.
 <inserted text> 
                 $
-l.288     \item A
+l.274     \item A
                  rchitected and developed CMS solution,
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:288: Extra }, or forgotten $.
+./main.tex:274: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.288     \item A
+l.274     \item A
                  rchitected and developed CMS solution,
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1074,18 +1052,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:288: Missing $ inserted.
+./main.tex:274: Missing $ inserted.
 <inserted text> 
                 $
-l.288     \item A
+l.274     \item A
                  rchitected and developed CMS solution,
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:288: Missing } inserted.
+./main.tex:274: Missing } inserted.
 <inserted text> 
                 }
-l.288     \item A
+l.274     \item A
                  rchitected and developed CMS solution,
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1093,18 +1071,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:291: Missing $ inserted.
+./main.tex:277: Missing $ inserted.
 <inserted text> 
                 $
-l.291       I
+l.277       I
              nstantaneous Preview system that dynamically build components f...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:291: Extra }, or forgotten $.
+./main.tex:277: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.291       I
+l.277       I
              nstantaneous Preview system that dynamically build components f...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1112,18 +1090,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:291: Missing $ inserted.
+./main.tex:277: Missing $ inserted.
 <inserted text> 
                 $
-l.291       I
+l.277       I
              nstantaneous Preview system that dynamically build components f...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:291: Missing } inserted.
+./main.tex:277: Missing } inserted.
 <inserted text> 
                 }
-l.291       I
+l.277       I
              nstantaneous Preview system that dynamically build components f...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1131,18 +1109,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:292: Missing $ inserted.
+./main.tex:278: Missing $ inserted.
 <inserted text> 
                 $
-l.292     \item D
+l.278     \item D
                  ual rendering strategy with SSR for preview mode and SSG fo...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:292: Extra }, or forgotten $.
+./main.tex:278: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.292     \item D
+l.278     \item D
                  ual rendering strategy with SSR for preview mode and SSG fo...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1150,18 +1128,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:292: Missing $ inserted.
+./main.tex:278: Missing $ inserted.
 <inserted text> 
                 $
-l.292     \item D
+l.278     \item D
                  ual rendering strategy with SSR for preview mode and SSG fo...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:292: Missing } inserted.
+./main.tex:278: Missing } inserted.
 <inserted text> 
                 }
-l.292     \item D
+l.278     \item D
                  ual rendering strategy with SSR for preview mode and SSG fo...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1170,50 +1148,50 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:308: LaTeX Error: \begin{twocolentry} on input line 305 ended by \end{onecolentry}.
+./main.tex:294: LaTeX Error: \begin{twocolentry} on input line 291 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 ...r}, Nexits  -- Paris, FR\end{twocolentry}
+l.294 ...r}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:308: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:294: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 ...r}, Nexits  -- Paris, FR\end{twocolentry}
+l.294 ...r}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:308: Extra \endgroup.
+./main.tex:294: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.308 ...r}, Nexits  -- Paris, FR\end{twocolentry}
+l.294 ...r}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:314: Missing $ inserted.
+./main.tex:300: Missing $ inserted.
 <inserted text> 
                 $
-l.314     \item I
+l.300     \item I
                  mplemented product state historization with full audit trai...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:314: Extra }, or forgotten $.
+./main.tex:300: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.314     \item I
+l.300     \item I
                  mplemented product state historization with full audit trai...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1221,18 +1199,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:314: Missing $ inserted.
+./main.tex:300: Missing $ inserted.
 <inserted text> 
                 $
-l.314     \item I
+l.300     \item I
                  mplemented product state historization with full audit trai...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:314: Missing } inserted.
+./main.tex:300: Missing } inserted.
 <inserted text> 
                 }
-l.314     \item I
+l.300     \item I
                  mplemented product state historization with full audit trai...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1240,18 +1218,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:316: Missing $ inserted.
+./main.tex:302: Missing $ inserted.
 <inserted text> 
                 $
-l.316     \item C
+l.302     \item C
                  ontributed to the migration from a legacy system to a moder...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:316: Extra }, or forgotten $.
+./main.tex:302: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.316     \item C
+l.302     \item C
                  ontributed to the migration from a legacy system to a moder...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1259,18 +1237,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:316: Missing $ inserted.
+./main.tex:302: Missing $ inserted.
 <inserted text> 
                 $
-l.316     \item C
+l.302     \item C
                  ontributed to the migration from a legacy system to a moder...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:316: Missing } inserted.
+./main.tex:302: Missing } inserted.
 <inserted text> 
                 }
-l.316     \item C
+l.302     \item C
                  ontributed to the migration from a legacy system to a moder...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1279,50 +1257,50 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:331: LaTeX Error: \begin{twocolentry} on input line 328 ended by \end{onecolentry}.
+./main.tex:317: LaTeX Error: \begin{twocolentry} on input line 314 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.331 ... Entreprise  -- Sfax, TN\end{twocolentry}
+l.317 ... Entreprise  -- Sfax, TN\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:331: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:317: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.331 ... Entreprise  -- Sfax, TN\end{twocolentry}
+l.317 ... Entreprise  -- Sfax, TN\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:331: Extra \endgroup.
+./main.tex:317: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.331 ... Entreprise  -- Sfax, TN\end{twocolentry}
+l.317 ... Entreprise  -- Sfax, TN\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:337: Missing $ inserted.
+./main.tex:323: Missing $ inserted.
 <inserted text> 
                 $
-l.337     \item C
+l.323     \item C
                  onducted workshops over the weekends on web development usi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:337: Extra }, or forgotten $.
+./main.tex:323: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.337     \item C
+l.323     \item C
                  onducted workshops over the weekends on web development usi...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1330,18 +1308,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:337: Missing $ inserted.
+./main.tex:323: Missing $ inserted.
 <inserted text> 
                 $
-l.337     \item C
+l.323     \item C
                  onducted workshops over the weekends on web development usi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:337: Missing } inserted.
+./main.tex:323: Missing } inserted.
 <inserted text> 
                 }
-l.337     \item C
+l.323     \item C
                  onducted workshops over the weekends on web development usi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1350,103 +1328,70 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:350: LaTeX Error: \begin{twocolentry} on input line 347 ended by \end{onecolentry}.
+./main.tex:336: LaTeX Error: \begin{twocolentry} on input line 333 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.350 ...n}, Nexits  -- Paris, FR\end{twocolentry}
+l.336 ...n}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:350: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:336: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.350 ...n}, Nexits  -- Paris, FR\end{twocolentry}
+l.336 ...n}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:350: Extra \endgroup.
+./main.tex:336: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.350 ...n}, Nexits  -- Paris, FR\end{twocolentry}
+l.336 ...n}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-
-./main.tex:362: LaTeX Error: \begin{twocolentry} on input line 359 ended by \end{onecolentry}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.362   \textbf{Playpex}\end{twocolentry}
-                                         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./main.tex:362: LaTeX Error: \begin{document} ended by \end{twocolentry}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.362   \textbf{Playpex}\end{twocolentry}
-                                         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./main.tex:362: Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.362   \textbf{Playpex}\end{twocolentry}
-                                         
-Things are pretty mixed up, but I think the worst is over.
-
-./main.tex:367: Missing $ inserted.
+./main.tex:353: Missing $ inserted.
 <inserted text> 
                 $
-l.367 \item B
-             uilt a streaming torrent client in Node.js with a backend wrapp...
+l.353     \item \textbf
+                       {Playpex: } Built a torrent streamer in Node.js with ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:367: Extra }, or forgotten $.
+./main.tex:353: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.367 \item B
-             uilt a streaming torrent client in Node.js with a backend wrapp...
+l.353     \item \textbf
+                       {Playpex: } Built a torrent streamer in Node.js with ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:367: Missing $ inserted.
+./main.tex:353: Missing $ inserted.
 <inserted text> 
                 $
-l.367 \item B
-             uilt a streaming torrent client in Node.js with a backend wrapp...
+l.353     \item \textbf
+                       {Playpex: } Built a torrent streamer in Node.js with ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:367: Missing } inserted.
+./main.tex:353: Missing } inserted.
 <inserted text> 
                 }
-l.367 \item B
-             uilt a streaming torrent client in Node.js with a backend wrapp...
+l.353     \item \textbf
+                       {Playpex: } Built a torrent streamer in Node.js with ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1458,183 +1403,69 @@ my insertion and my current dilemma will both disappear.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-./main.tex:368: Missing $ inserted.
-<inserted text> 
-                $
-l.368 \item D
-             esigned a TV-like Angular interface optimized for remote and ke...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./main.tex:368: Extra }, or forgotten $.
-\llap  #1->\hb@xt@ \z@ {\hss #1}
-                                
-l.368 \item D
-             esigned a TV-like Angular interface optimized for remote and ke...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./main.tex:368: Missing $ inserted.
-<inserted text> 
-                $
-l.368 \item D
-             esigned a TV-like Angular interface optimized for remote and ke...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:368: Missing } inserted.
-<inserted text> 
-                }
-l.368 \item D
-             esigned a TV-like Angular interface optimized for remote and ke...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./main.tex:369: Missing $ inserted.
-<inserted text> 
-                $
-l.369 \item B
-             undled torrent streaming backend and services into a unified El...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:369: Extra }, or forgotten $.
-\llap  #1->\hb@xt@ \z@ {\hss #1}
-                                
-l.369 \item B
-             undled torrent streaming backend and services into a unified El...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./main.tex:369: Missing $ inserted.
-<inserted text> 
-                $
-l.369 \item B
-             undled torrent streaming backend and services into a unified El...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:369: Missing } inserted.
-<inserted text> 
-                }
-l.369 \item B
-             undled torrent streaming backend and services into a unified El...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./main.tex:370: Missing $ inserted.
-<inserted text> 
-                $
-l.370 \item D
-             eveloped a companion Ionic mobile controller app, enabling real...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:370: Extra }, or forgotten $.
-\llap  #1->\hb@xt@ \z@ {\hss #1}
-                                
-l.370 \item D
-             eveloped a companion Ionic mobile controller app, enabling real...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./main.tex:370: Missing $ inserted.
-<inserted text> 
-                $
-l.370 \item D
-             eveloped a companion Ionic mobile controller app, enabling real...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./main.tex:370: Missing } inserted.
-<inserted text> 
-                }
-l.370 \item D
-             eveloped a companion Ionic mobile controller app, enabling real...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./main.tex:391: LaTeX Error: \begin{twocolentry} on input line 387 ended by \end{onecolentry}.
+./main.tex:375: LaTeX Error: \begin{twocolentry} on input line 371 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.391   \end{twocolentry}
+l.375   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:391: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:375: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.391   \end{twocolentry}
+l.375   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:391: Extra \endgroup.
+./main.tex:375: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.391   \end{twocolentry}
+l.375   \end{twocolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:399: LaTeX Error: \begin{twocolentry} on input line 395 ended by \end{onecolentry}.
+./main.tex:383: LaTeX Error: \begin{twocolentry} on input line 379 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.399   \end{twocolentry}
+l.383   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:399: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./main.tex:383: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.399   \end{twocolentry}
+l.383   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:399: Extra \endgroup.
+./main.tex:383: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.399   \end{twocolentry}
+l.383   \end{twocolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
@@ -1644,7 +1475,7 @@ Things are pretty mixed up, but I think the worst is over.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.404   \end{document}
+l.388   \end{document}
                        [2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 
@@ -1665,12 +1496,12 @@ Here is how much of TeX's memory you used:
  38284 multiletter control sequences out of 15000+600000
  591350 words of font info for 62 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 75i,7n,79p,307b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,307b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on main.pdf (2 pages, 45476 bytes).
+Output written on main.pdf (2 pages, 45638 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
