@@ -1,5 +1,6 @@
 \documentclass[10pt, letterpaper]{article}
 
+
 % Packages:
 \usepackage[
 ignoreheadfoot, % set margins without considering header and footer
@@ -176,7 +177,7 @@ urlcolor=primaryColor
 
   \AND%
   \kern 5.0 pt%
-  \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{iheb.belhadj.com}}%
+  \mbox{\hrefWithoutArrow{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
   \kern 5.0 pt%
   \AND%
   \kern 5.0 pt%
@@ -192,12 +193,12 @@ urlcolor=primaryColor
 \vspace{5 pt - 0.3 cm}
 
 
-% \section{Summary}
-%
-%
-% \begin{onecolentry}
-% Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
-% \end{onecolentry}
+\section{Summary}
+
+
+\begin{onecolentry}
+Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
+\end{onecolentry}
 
   \section{Technologies}
 
@@ -231,7 +232,7 @@ urlcolor=primaryColor
   \vspace{0.2 cm}
 
   \begin{onecolentry}
-    \textbf{Infrastructure, DevOps \& Cloud :} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions, AWS (EC2, S3, RDS, Lamdba)
+    \textbf{Infrastructure, DevOps \& Cloud :} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions, AWS
   \end{onecolentry}
 
 
@@ -248,9 +249,9 @@ urlcolor=primaryColor
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-\item Designed and implemented an AI-first analytics platform enabling business users to explore and analyze data through natural language queries.
-  \item Integrated a multi-agent system with LangGraph, dynamically generating SQL queries and visualizations, with support for RAG pipelines and MCP integrations.
-  \item Built a real-time change data capture (CDC) system, automatically refreshing charts when source data changed, improving analytics freshness.
+
+  \item Integrated a multi-agent system with LangGraph, dynamically generating SQL queries and charts enabling no code data exploration and visualization.
+  \item Built a real-time change data capture (CDC) system, automatically refreshing generated charts when source data changed, enabling live data monitoring.
   \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to streamline ingestion, transformation, and storage, while orchestrating ML forecasting jobs.
   \item Secured the platform using Keycloak IAM, implementing role- and group-based fine-grained access control.
     \begin{highlightsforbulletentries}
@@ -302,7 +303,7 @@ urlcolor=primaryColor
     \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo as well as its deployment on AWS.
 
                 \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, S3, RDS), Docker, GitHub Actions, Turborepo
+    \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, ECR, S3, RDS), Docker, GitHub Actions, Turborepo
     \end{highlightsforbulletentries}
 
 
@@ -343,14 +344,11 @@ urlcolor=primaryColor
 
   \section{Projects}
 
-  \vspace{0.2 cm}
 
 
-
-  \vspace{0.10 cm}
   \begin{onecolentry}
     \begin{highlights}
-    \item \textbf{Playpex: } Built a torrent streamer in Node.js with a backend wrapper utilizing MSE API for seamless browser playback. Frontend developped in Angular. Electron to bundle the app for cross-platform and an ionic mobile app as a remote control.
+    \item \textbf{Playpex: } Built a torrent streamer in Node.js with a backend wrapper utilizing MSE API for seamless browser playback. Frontend developped in Angular. Electron to bundle the app for cross-platform and an ionic mobile app as a remote controller.
 
                 \begin{highlightsforbulletentries}
     \item Technologies used: Node.js, Angular, Ionic, Electron
@@ -359,6 +357,31 @@ urlcolor=primaryColor
     \end{highlights}
   \end{onecolentry}
   \vspace{0.2 cm}
+
+    \begin{onecolentry}
+    \begin{highlights}
+    \item \textbf{OpsForge: } A self-contained local devlops environemnt to simulate a production evironment using provisioned VMs with Vagrant and Ansible. It includes a private docker registry, a jenkins CI/CD server, a monitoring stack with Prometheus and Grafana and a SonarQube service. 
+
+                \begin{highlightsforbulletentries}
+    \item Technologies used: Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash
+    \end{highlightsforbulletentries}
+
+    \end{highlights}
+  \end{onecolentry}
+
+  \vspace{0.2 cm}
+
+    \begin{onecolentry}
+    \begin{highlights}
+    \item \textbf{\_my\_portfolio: } A personal portfolio built on next.js. It utilizes mdx files for easy content management, uses lazy loading and server components as much as possible achieving 100 performance score and 100 best practices score on Google Lighthouse. It also has an Agent in langchain that can answer questions about me, my projects and my experience.
+
+                \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, langchain, Vercel
+    \end{highlightsforbulletentries}
+
+    \end{highlights}
+  \end{onecolentry}
+
 
 
 
