@@ -4,10 +4,10 @@
 % Packages:
 \usepackage[
 ignoreheadfoot, % set margins without considering header and footer
-top=1 cm, % seperation between body and page edge from the top
-bottom=1 cm, % seperation between body and page edge from the bottom
-left=1 cm, % seperation between body and page edge from the left
-right=1 cm, % seperation between body and page edge from the right
+top= 0.3 cm, % seperation between body and page edge from the top
+bottom=0 cm, % seperation between body and page edge from the bottom
+left=.8 cm, % seperation between body and page edge from the left
+right=.8 cm, % seperation between body and page edge from the right
 footskip=1.0 cm, % seperation between body and footer
 % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
@@ -86,7 +86,7 @@ urlcolor=primaryColor
 
 \newenvironment{highlightsforbulletentries}{
   \begin{itemize}[
-    topsep=0.10 cm,
+    topsep=0 cm,
     parsep=0.10 cm,
     partopsep=0pt,
     itemsep=0pt,
@@ -130,7 +130,7 @@ urlcolor=primaryColor
 } % new environment for three column entries
 
 \newenvironment{header}{
-  \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+  \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1}
 }{
   \par\kern\topsep
 } % new environment for the header
@@ -163,7 +163,6 @@ urlcolor=primaryColor
 \begin{header}
   \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
 
-  \vspace{5 pt}
 
   \normalsize
   \kern 5.0 pt%
@@ -187,7 +186,6 @@ urlcolor=primaryColor
   \kern 5.0 pt%
   \mbox{\hrefWithoutArrow{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
 
-
 \end{header}
 
 \vspace{5 pt - 0.3 cm}
@@ -196,45 +194,33 @@ urlcolor=primaryColor
 \section{Summary}
 
 
+
 \begin{onecolentry}
-Software engineer specializing in backend systems, data pipelines, and production-grade agentic systems. Experienced in architecting scalable backend services, building cloud-native applications, and developing agentic AI pipelines.
+Fullstack Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced in building cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven solutions.
 \end{onecolentry}
 
-  \section{Technologies}
+% Technologies
+\section{Technologies}
 
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, Python, JavaScript, Java, C\#, C, SQL, PHP, Bash
+\end{onecolentry}
 
+\begin{onecolentry}
+\textbf{Web/Fullstack:} Next.js, React, Astro.js, Angular, Vue.js, Express.js, Spring, Flask, FastAPI
+\end{onecolentry}
 
+\begin{onecolentry}
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, MinIO, AWS RDS, S3
+\end{onecolentry}
 
-  \begin{onecolentry}
-    \textbf{Languages:} JavaScript, Typescript, Python, C\#, C, SQL, Java, PHP, Bash
-  \end{onecolentry}
+\begin{onecolentry}
+\textbf{Data Eng \& AI:} Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow
+\end{onecolentry}
 
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Fullstack dev} Spring, Express.js, Flask, FastAPI,  React, Next.js, Astro.js, Angular, Vue.js
-  \end{onecolentry}
-
-
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Databases:} MySQL, PostgreSQL, MongoDB, Redis, DuckDB, MinIO, RDS, S3
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Data eng \& Agentic AI: }  Airflow, Airbyte, dbt, Kafka, Spark, Langchain, LangGraph
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-  \begin{onecolentry}
-    \textbf{Infrastructure, DevOps \& Cloud :} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions, AWS
-  \end{onecolentry}
-
+\begin{onecolentry}
+\textbf{Infrastructure:} Docker, Kubernetes, Ansible, Vagrant, Jenkins, GitHub Actions, AWS
+\end{onecolentry}
 
 \section{Experience}
 
@@ -250,12 +236,12 @@ Software engineer specializing in backend systems, data pipelines, and productio
 \begin{onecolentry}
   \begin{highlights}
 
-  \item Integrated a multi-agent system with LangGraph, dynamically generating SQL queries and charts enabling no code data exploration and visualization.
-  \item Built a real-time change data capture (CDC) system, automatically refreshing generated charts when source data changed, enabling live data monitoring.
-  \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to streamline ingestion, transformation, and storage, while orchestrating ML forecasting jobs.
-  \item Secured the platform using Keycloak IAM, implementing role- and group-based fine-grained access control.
+  \item Integrated a multi-agent system with LangGraph for dynamic SQL and chart generation, enabling no-code data exploration.
+  \item Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring.
+  \item Developed an end-to-end data pipeline with MinIO, Airflow, Airbyte, and dbt to manage ingestion, transformation, and ML forecasting.
+  \item Secured the platform with Keycloak IAM using role- and group-based access control , and built an Nginx gateway to secure the private services network.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Nginx
+    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Airflow, Airbyte, dbt, PostgreSQL, Keycloak, Docker, Nginx
     \end{highlightsforbulletentries}
 \end{highlights}
     \end{highlights}
@@ -265,21 +251,19 @@ Software engineer specializing in backend systems, data pipelines, and productio
   \vspace{0.2 cm}
 
   \begin{twocolentry}{
-      Dec 2024 - Feb 2025
+      Dec 2024 - Jan 2025
     }
   \textbf{Freelance Job}, Nexits  -- Paris, FR\end{twocolentry}
 
   \vspace{0.10 cm}
   \begin{onecolentry}
     \begin{highlights}
-    \item Architected and developed CMS solution,
-      leveraging Payload CMS and a custom-built, block-based page builder enabling nexits team to create new pages and edit content Nexits landing website with no code
-    \item 
-      Instantaneous Preview system that dynamically build components from declarative config from the CMS using Astro.js for minimal JS on build
-    \item Dual rendering strategy with SSR for preview mode and SSG for production build achieving 100 performance score on Google Lighthouse 95 accessibility and 100 seo score on production landing website using this architecture 
+  \item Architected a CMS solution with Payload CMS and a custom block-based page builder, enabling no-code content updates for the landing site.
+  \item Built an instantaneous preview system using Astro.js for dynamic component rendering with minimal JS.
+  \item Designed a dual rendering strategy (SSR for preview, SSG for production), achieving 100 performance, 95 accessibility, and 100 SEO score on Lighthouse.
 
           \begin{highlightsforbulletentries}
-    \item Technologies used: Astro.js, Payload CMS, React, TypeScript, Vercel, SQLite, Turborepo
+    \item Technologies used: Astro.js, Payload CMS, Next.js, React, TypeScript, SQLite, Turborepo
     \end{highlightsforbulletentries}
 
     \end{highlights}
@@ -298,9 +282,8 @@ Software engineer specializing in backend systems, data pipelines, and productio
   \begin{onecolentry}
     \begin{highlights}
 
-    \item Implemented product state historization with full audit trail, enabling edits, rollbacks, and time-travel of product data.
-
-    \item Contributed to the migration from a legacy system to a modern stack using Next.js, tRPC, and a monorepo architecture with Turborepo as well as its deployment on AWS.
+  \item Implemented product state historization with audit trail, enabling edits, rollbacks, and time-travel of product data.
+  \item Contributed to migration from legacy stack to Next.js, tRPC, and Turborepo monorepo with AWS deployment.
 
                 \begin{highlightsforbulletentries}
     \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, ECR, S3, RDS), Docker, GitHub Actions, Turborepo
@@ -315,7 +298,7 @@ Software engineer specializing in backend systems, data pipelines, and productio
     \begin{twocolentry}{
       Oct 2023 - Nov 2023
     }
-  \textbf{Freelance instructor}, ENET’Com Junior Entreprise  -- Sfax, TN\end{twocolentry}
+  \textbf{Freelance instructor (Weekends)}, ENET’Com Junior Entreprise  -- Sfax, TN\end{twocolentry}
 
   \vspace{0.10 cm}
   \begin{onecolentry}
@@ -339,51 +322,39 @@ Software engineer specializing in backend systems, data pipelines, and productio
   % \vspace{0.10 cm}
 
 
+% Projects
+\section{Projects}
 
-  % Projects section 
-
-  \section{Projects}
-
-
-
-  \begin{onecolentry}
-    \begin{highlights}
-    \item \textbf{Playpex: } Built a torrent streamer in Node.js with a backend wrapper utilizing MSE API for seamless browser playback. Frontend developped in Angular. Electron to bundle the app for cross-platform and an ionic mobile app as a remote controller.
-
-                \begin{highlightsforbulletentries}
-    \item Technologies used: Node.js, Angular, Ionic, Electron
+\vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Built on Next.js with MDX-based content management, lazy loading, and server components. Integrated a LangChain agent that answers questions about my experience. Achieved 100 performance and best practices scores on Lighthouse.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, LangChain, Vercel
     \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
 
-    \end{highlights}
-  \end{onecolentry}
-  \vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/elder_care_saas}{EldSync:}} Contributed to building a Java microservices application with Spring Boot, Spring Security, and an API Gateway, integrating Angular with Apollo Client and NgRx for state management.
+  \end{highlights}
+\end{onecolentry}
 
-    \begin{onecolentry}
-    \begin{highlights}
-    \item \textbf{OpsForge: } A self-contained local devlops environemnt to simulate a production evironment using provisioned VMs with Vagrant and Ansible. It includes a private docker registry, a jenkins CI/CD server, a monitoring stack with Prometheus and Grafana and a SonarQube service. 
 
-                \begin{highlightsforbulletentries}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/devops_playground}{OpsForge:}} A self-contained local DevOps environment simulating production using Vagrant and Ansible. Includes a private Docker registry, Jenkins CI/CD, monitoring stack with Prometheus/Grafana, and SonarQube.
+    \begin{highlightsforbulletentries}
     \item Technologies used: Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash
     \end{highlightsforbulletentries}
-
-    \end{highlights}
-  \end{onecolentry}
-
-  \vspace{0.2 cm}
-
-    \begin{onecolentry}
-    \begin{highlights}
-    \item \textbf{\_my\_portfolio: } A personal portfolio built on next.js. It utilizes mdx files for easy content management, uses lazy loading and server components as much as possible achieving 100 performance score and 100 best practices score on Google Lighthouse. It also has an Agent in langchain that can answer questions about me, my projects and my experience.
-
-                \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, langchain, Vercel
-    \end{highlightsforbulletentries}
-
-    \end{highlights}
-  \end{onecolentry}
-
-
-
+  \end{highlights}
+\end{onecolentry}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}} Torrent streamer in Node.js with backend wrapper using MSE API for seamless browser playback. Angular frontend, Electron desktop app to bundle the engine and the frontend, and Ionic mobile controller.
+  \end{highlights}
+\end{onecolentry}
 
 
   \section{Education}
@@ -391,10 +362,11 @@ Software engineer specializing in backend systems, data pipelines, and productio
 
 
 
+
   \begin{twocolentry}{
       Sept 2022 – Sep 2025
     }
-    \textbf{Masters in software engineering}, ESPRIT
+    \textbf{Software engineering}, ESPRIT
   \end{twocolentry}
 
   \vspace{0.10 cm}
@@ -402,10 +374,11 @@ Software engineer specializing in backend systems, data pipelines, and productio
   \begin{twocolentry}{
       Sept 2020 – Juin 2022
     }
-    \textbf{Bachelor in applied math and physics}, IPEIM
+    \textbf{Pre-engineering school}, IPEIM
   \end{twocolentry}
 
 
 
 
   \end{document}
+

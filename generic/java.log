@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.7)  10 SEP 2025 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**java.tex
+(./java.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -399,8 +399,8 @@ Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa)
 LaTeX Font Info:    Trying to load font information for T1+bch on input line 155.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
-) (./main.aux)
-\openout1 = `main.aux'.
+) (./java.aux)
+\openout1 = `java.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
 LaTeX Font Info:    ... okay on input line 155.
@@ -429,15 +429,15 @@ LaTeX Font Info:    ... okay on input line 155.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(28.45274pt, 557.38951pt, 28.45274pt)
-* v-part:(T,H,B)=(14.22636pt, 766.51726pt, 14.22636pt)
+* h-part:(L,W,R)=(22.76228pt, 568.77043pt, 22.76228pt)
+* v-part:(T,H,B)=(8.5359pt, 786.43408pt, 0.0pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=557.38951pt
-* \textheight=766.51726pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-95.04362pt
+* \textwidth=568.77043pt
+* \textheight=786.43408pt
+* \oddsidemargin=-49.5077pt
+* \evensidemargin=-49.5077pt
+* \topmargin=-100.73409pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=0.0pt
@@ -494,7 +494,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 161.
 
-./main.tex:169: Leaders not followed by proper glue.
+./java.tex:169: Leaders not followed by proper glue.
 <to be read again> 
                    \hskip 
 l.169   \AND
@@ -503,7 +503,7 @@ You should say `\leaders <box or rule><hskip or vskip>'.
 I found the <box or rule>, but there's no suitable
 <hskip or vskip>, so I'm ignoring these leaders.
 
-./main.tex:177: Leaders not followed by proper glue.
+./java.tex:177: Leaders not followed by proper glue.
 <to be read again> 
                    \hskip 
 l.177   \AND
@@ -513,7 +513,7 @@ I found the <box or rule>, but there's no suitable
 <hskip or vskip>, so I'm ignoring these leaders.
 
 
-./main.tex:233: LaTeX Error: \begin{twocolentry} on input line 230 ended by \end{onecolentry}.
+./java.tex:233: LaTeX Error: \begin{twocolentry} on input line 230 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -526,7 +526,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:233: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:233: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -538,14 +538,14 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:233: Extra \endgroup.
+./java.tex:233: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.233 ...tern}, Talan -- Tunis,TN\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:239: Missing $ inserted.
+./java.tex:239: Missing $ inserted.
 <inserted text> 
                 $
 l.239   \item I
@@ -557,7 +557,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 239.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 239.
-./main.tex:239: Extra }, or forgotten $.
+./java.tex:239: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.239   \item I
@@ -568,7 +568,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:239: Missing $ inserted.
+./java.tex:239: Missing $ inserted.
 <inserted text> 
                 $
 l.239   \item I
@@ -576,7 +576,7 @@ l.239   \item I
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:239: Missing } inserted.
+./java.tex:239: Missing } inserted.
 <inserted text> 
                 }
 l.239   \item I
@@ -587,7 +587,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:240: Missing $ inserted.
+./java.tex:240: Missing $ inserted.
 <inserted text> 
                 $
 l.240   \item B
@@ -595,7 +595,7 @@ l.240   \item B
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:240: Extra }, or forgotten $.
+./java.tex:240: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.240   \item B
@@ -606,7 +606,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:240: Missing $ inserted.
+./java.tex:240: Missing $ inserted.
 <inserted text> 
                 $
 l.240   \item B
@@ -614,7 +614,7 @@ l.240   \item B
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:240: Missing } inserted.
+./java.tex:240: Missing } inserted.
 <inserted text> 
                 }
 l.240   \item B
@@ -625,45 +625,45 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:241: Missing $ inserted.
+./java.tex:241: Missing $ inserted.
 <inserted text> 
                 $
 l.241   \item D
-               eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
+               eveloped an end-to-end data pipeline with MinIO, Airflow, Air...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:241: Extra }, or forgotten $.
+./java.tex:241: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.241   \item D
-               eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
+               eveloped an end-to-end data pipeline with MinIO, Airflow, Air...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:241: Missing $ inserted.
+./java.tex:241: Missing $ inserted.
 <inserted text> 
                 $
 l.241   \item D
-               eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
+               eveloped an end-to-end data pipeline with MinIO, Airflow, Air...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:241: Missing } inserted.
+./java.tex:241: Missing } inserted.
 <inserted text> 
                 }
 l.241   \item D
-               eveloped an end-to-end data pipeline with MinIO, Delta Lake, ...
+               eveloped an end-to-end data pipeline with MinIO, Airflow, Air...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:242: Missing $ inserted.
+./java.tex:242: Missing $ inserted.
 <inserted text> 
                 $
 l.242   \item S
@@ -671,7 +671,7 @@ l.242   \item S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:242: Extra }, or forgotten $.
+./java.tex:242: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.242   \item S
@@ -682,7 +682,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:242: Missing $ inserted.
+./java.tex:242: Missing $ inserted.
 <inserted text> 
                 $
 l.242   \item S
@@ -690,7 +690,7 @@ l.242   \item S
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:242: Missing } inserted.
+./java.tex:242: Missing } inserted.
 <inserted text> 
                 }
 l.242   \item S
@@ -701,7 +701,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@enditemize ->\enit@after 
                                \endlist \ifx \enit@series \relax \else \ifnu...
 l.247     \end{highlights}
@@ -712,7 +712,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@enditemize ...x \else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
 l.247     \end{highlights}
@@ -723,7 +723,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Missing number, treated as zero.
+./java.tex:247: Missing number, treated as zero.
 <to be read again> 
                    =
 l.247     \end{highlights}
@@ -732,7 +732,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
 l.247     \end{highlights}
@@ -743,7 +743,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
 l.247     \end{highlights}
@@ -754,7 +754,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Missing number, treated as zero.
+./java.tex:247: Missing number, treated as zero.
 <to be read again> 
                    =
 l.247     \end{highlights}
@@ -763,7 +763,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
 l.247     \end{highlights}
@@ -774,7 +774,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
 l.247     \end{highlights}
@@ -785,7 +785,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
 l.247     \end{highlights}
@@ -796,14 +796,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: You can't use `\relax' after \the.
+./java.tex:247: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
 l.247     \end{highlights}
                           
 I'm forgetting what you said and using zero instead.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@enditemize ...ist \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
 l.247     \end{highlights}
@@ -814,7 +814,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Missing number, treated as zero.
+./java.tex:247: Missing number, treated as zero.
 <to be read again> 
                    =
 l.247     \end{highlights}
@@ -823,7 +823,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
 l.247     \end{highlights}
@@ -834,7 +834,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
 l.247     \end{highlights}
@@ -845,7 +845,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Missing number, treated as zero.
+./java.tex:247: Missing number, treated as zero.
 <to be read again> 
                    =
 l.247     \end{highlights}
@@ -854,7 +854,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
 l.247     \end{highlights}
@@ -865,7 +865,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: Undefined control sequence.
+./java.tex:247: Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
 l.247     \end{highlights}
@@ -876,7 +876,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:247: You can't use `\relax' after \the.
+./java.tex:247: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
 l.247     \end{highlights}
@@ -884,7 +884,7 @@ l.247     \end{highlights}
 I'm forgetting what you said and using zero instead.
 
 
-./main.tex:247: LaTeX Error: \begin{list} on input line 236 ended by \end{itemize}.
+./java.tex:247: LaTeX Error: \begin{list} on input line 236 ended by \end{itemize}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -897,7 +897,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:247: LaTeX Error: \begin{adjustwidth} on input line 236 ended by \end{highlights}.
+./java.tex:247: LaTeX Error: \begin{adjustwidth} on input line 236 ended by \end{highlights}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -910,7 +910,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:248: LaTeX Error: \begin{onecolentry} on input line 236 ended by \end{list}.
+./java.tex:248: LaTeX Error: \begin{onecolentry} on input line 236 ended by \end{list}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -923,7 +923,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:248: LaTeX Error: \begin{document} ended by \end{adjustwidth}.
+./java.tex:248: LaTeX Error: \begin{document} ended by \end{adjustwidth}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -935,7 +935,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:248: Extra \endgroup.
+./java.tex:248: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.248   \end{onecolentry}
@@ -943,7 +943,7 @@ l.248   \end{onecolentry}
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:248: LaTeX Error: \begin{document} ended by \end{onecolentry}.
+./java.tex:248: LaTeX Error: \begin{document} ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -955,7 +955,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:248: Extra \endgroup.
+./java.tex:248: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.248   \end{onecolentry}
@@ -963,7 +963,7 @@ l.248   \end{onecolentry}
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:256: LaTeX Error: \begin{twocolentry} on input line 253 ended by \end{onecolentry}.
+./java.tex:256: LaTeX Error: \begin{twocolentry} on input line 253 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -976,7 +976,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:256: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:256: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -988,14 +988,14 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:256: Extra \endgroup.
+./java.tex:256: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.256 ...b}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:261: Missing $ inserted.
+./java.tex:261: Missing $ inserted.
 <inserted text> 
                 $
 l.261   \item A
@@ -1003,7 +1003,7 @@ l.261   \item A
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:261: Extra }, or forgotten $.
+./java.tex:261: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.261   \item A
@@ -1014,7 +1014,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:261: Missing $ inserted.
+./java.tex:261: Missing $ inserted.
 <inserted text> 
                 $
 l.261   \item A
@@ -1022,7 +1022,7 @@ l.261   \item A
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:261: Missing } inserted.
+./java.tex:261: Missing } inserted.
 <inserted text> 
                 }
 l.261   \item A
@@ -1033,7 +1033,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:262: Missing $ inserted.
+./java.tex:262: Missing $ inserted.
 <inserted text> 
                 $
 l.262   \item B
@@ -1041,7 +1041,7 @@ l.262   \item B
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:262: Extra }, or forgotten $.
+./java.tex:262: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.262   \item B
@@ -1052,7 +1052,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:262: Missing $ inserted.
+./java.tex:262: Missing $ inserted.
 <inserted text> 
                 $
 l.262   \item B
@@ -1060,7 +1060,7 @@ l.262   \item B
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:262: Missing } inserted.
+./java.tex:262: Missing } inserted.
 <inserted text> 
                 }
 l.262   \item B
@@ -1071,7 +1071,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:263: Missing $ inserted.
+./java.tex:263: Missing $ inserted.
 <inserted text> 
                 $
 l.263   \item D
@@ -1079,7 +1079,7 @@ l.263   \item D
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:263: Extra }, or forgotten $.
+./java.tex:263: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.263   \item D
@@ -1090,7 +1090,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:263: Missing $ inserted.
+./java.tex:263: Missing $ inserted.
 <inserted text> 
                 $
 l.263   \item D
@@ -1098,7 +1098,7 @@ l.263   \item D
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:263: Missing } inserted.
+./java.tex:263: Missing } inserted.
 <inserted text> 
                 }
 l.263   \item D
@@ -1110,7 +1110,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:279: LaTeX Error: \begin{twocolentry} on input line 276 ended by \end{onecolentry}.
+./java.tex:279: LaTeX Error: \begin{twocolentry} on input line 276 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1123,7 +1123,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:279: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:279: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1135,14 +1135,14 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:279: Extra \endgroup.
+./java.tex:279: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.279 ...r}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:285: Missing $ inserted.
+./java.tex:285: Missing $ inserted.
 <inserted text> 
                 $
 l.285   \item I
@@ -1150,7 +1150,7 @@ l.285   \item I
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:285: Extra }, or forgotten $.
+./java.tex:285: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.285   \item I
@@ -1161,7 +1161,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:285: Missing $ inserted.
+./java.tex:285: Missing $ inserted.
 <inserted text> 
                 $
 l.285   \item I
@@ -1169,7 +1169,7 @@ l.285   \item I
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:285: Missing } inserted.
+./java.tex:285: Missing } inserted.
 <inserted text> 
                 }
 l.285   \item I
@@ -1180,7 +1180,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:286: Missing $ inserted.
+./java.tex:286: Missing $ inserted.
 <inserted text> 
                 $
 l.286   \item C
@@ -1188,7 +1188,7 @@ l.286   \item C
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:286: Extra }, or forgotten $.
+./java.tex:286: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.286   \item C
@@ -1199,7 +1199,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:286: Missing $ inserted.
+./java.tex:286: Missing $ inserted.
 <inserted text> 
                 $
 l.286   \item C
@@ -1207,7 +1207,7 @@ l.286   \item C
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:286: Missing } inserted.
+./java.tex:286: Missing } inserted.
 <inserted text> 
                 }
 l.286   \item C
@@ -1219,7 +1219,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:301: LaTeX Error: \begin{twocolentry} on input line 298 ended by \end{onecolentry}.
+./java.tex:301: LaTeX Error: \begin{twocolentry} on input line 298 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1232,7 +1232,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:301: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:301: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1244,14 +1244,14 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:301: Extra \endgroup.
+./java.tex:301: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.301 ... Entreprise  -- Sfax, TN\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:307: Missing $ inserted.
+./java.tex:307: Missing $ inserted.
 <inserted text> 
                 $
 l.307     \item C
@@ -1259,7 +1259,7 @@ l.307     \item C
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:307: Extra }, or forgotten $.
+./java.tex:307: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
 l.307     \item C
@@ -1270,7 +1270,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:307: Missing $ inserted.
+./java.tex:307: Missing $ inserted.
 <inserted text> 
                 $
 l.307     \item C
@@ -1278,7 +1278,7 @@ l.307     \item C
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:307: Missing } inserted.
+./java.tex:307: Missing } inserted.
 <inserted text> 
                 }
 l.307     \item C
@@ -1290,7 +1290,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:320: LaTeX Error: \begin{twocolentry} on input line 317 ended by \end{onecolentry}.
+./java.tex:320: LaTeX Error: \begin{twocolentry} on input line 317 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1303,7 +1303,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:320: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:320: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1315,121 +1315,159 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:320: Extra \endgroup.
+./java.tex:320: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
 l.320 ...n}, Nexits  -- Paris, FR\end{twocolentry}
                                                   
 Things are pretty mixed up, but I think the worst is over.
 
-./main.tex:332: Missing $ inserted.
+./java.tex:331: Missing $ inserted.
 <inserted text> 
                 $
-l.332   \item \textbf
-                     {Portfolio:} Built on Next.js with MDX-based content ma...
+l.331   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Bu...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:332: Extra }, or forgotten $.
+./java.tex:331: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.332   \item \textbf
-                     {Portfolio:} Built on Next.js with MDX-based content ma...
+l.331   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Bu...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:332: Missing $ inserted.
+./java.tex:331: Missing $ inserted.
 <inserted text> 
                 $
-l.332   \item \textbf
-                     {Portfolio:} Built on Next.js with MDX-based content ma...
+l.331   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Bu...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:332: Missing } inserted.
+./java.tex:331: Missing } inserted.
 <inserted text> 
                 }
-l.332   \item \textbf
-                     {Portfolio:} Built on Next.js with MDX-based content ma...
+l.331   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Bu...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:341: Missing $ inserted.
+./java.tex:340: Missing $ inserted.
 <inserted text> 
                 $
-l.341   \item \textbf
-                     {OpsForge:} A self-contained local DevOps environment s...
+l.340   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/elder_ca...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:341: Extra }, or forgotten $.
+./java.tex:340: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.341   \item \textbf
-                     {OpsForge:} A self-contained local DevOps environment s...
+l.340   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/elder_ca...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:341: Missing $ inserted.
+./java.tex:340: Missing $ inserted.
 <inserted text> 
                 $
-l.341   \item \textbf
-                     {OpsForge:} A self-contained local DevOps environment s...
+l.340   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/elder_ca...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:341: Missing } inserted.
+./java.tex:340: Missing } inserted.
 <inserted text> 
                 }
-l.341   \item \textbf
-                     {OpsForge:} A self-contained local DevOps environment s...
+l.340   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/elder_ca...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:349: Missing $ inserted.
+./java.tex:347: Missing $ inserted.
 <inserted text> 
                 $
-l.349   \item \textbf
-                     {Playpex:} Torrent streamer in Node.js with backend wra...
+l.347   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/devops_p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:349: Extra }, or forgotten $.
+./java.tex:347: Extra }, or forgotten $.
 \llap  #1->\hb@xt@ \z@ {\hss #1}
                                 
-l.349   \item \textbf
-                     {Playpex:} Torrent streamer in Node.js with backend wra...
+l.347   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/devops_p...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:349: Missing $ inserted.
+./java.tex:347: Missing $ inserted.
 <inserted text> 
                 $
-l.349   \item \textbf
-                     {Playpex:} Torrent streamer in Node.js with backend wra...
+l.347   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/devops_p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:349: Missing } inserted.
+./java.tex:347: Missing } inserted.
 <inserted text> 
                 }
-l.349   \item \textbf
-                     {Playpex:} Torrent streamer in Node.js with backend wra...
+l.347   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/devops_p...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./java.tex:355: Missing $ inserted.
+<inserted text> 
+                $
+l.355   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/torrent-...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./java.tex:355: Extra }, or forgotten $.
+\llap  #1->\hb@xt@ \z@ {\hss #1}
+                                
+l.355   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/torrent-...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./java.tex:355: Missing $ inserted.
+<inserted text> 
+                $
+l.355   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/torrent-...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./java.tex:355: Missing } inserted.
+<inserted text> 
+                }
+l.355   \item \textbf
+                     {\href{https://ihebbelhadj.vercel.app/projects/torrent-...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1437,68 +1475,68 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./main.tex:364: LaTeX Error: \begin{twocolentry} on input line 360 ended by \end{onecolentry}.
+./java.tex:370: LaTeX Error: \begin{twocolentry} on input line 366 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.364   \end{twocolentry}
+l.370   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:364: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:370: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.364   \end{twocolentry}
+l.370   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:364: Extra \endgroup.
+./java.tex:370: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.364   \end{twocolentry}
+l.370   \end{twocolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
 
-./main.tex:372: LaTeX Error: \begin{twocolentry} on input line 368 ended by \end{onecolentry}.
+./java.tex:378: LaTeX Error: \begin{twocolentry} on input line 374 ended by \end{onecolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.372   \end{twocolentry}
+l.378   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./main.tex:372: LaTeX Error: \begin{document} ended by \end{twocolentry}.
+./java.tex:378: LaTeX Error: \begin{document} ended by \end{twocolentry}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.372   \end{twocolentry}
+l.378   \end{twocolentry}
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./main.tex:372: Extra \endgroup.
+./java.tex:378: Extra \endgroup.
 \end  ...end#1\endcsname \@checkend {#1}\endgroup 
                                                   \UseHook {env/#1/after}\if...
-l.372   \end{twocolentry}
+l.378   \end{twocolentry}
                          
 Things are pretty mixed up, but I think the worst is over.
 
@@ -1513,7 +1551,7 @@ Package lastpage Warning: \@currentHpage is
 (lastpage)                just "page." without number,
 (lastpage)                \lastpage@lastpageHy is now let empty.
 
-(./main.aux)
+(./java.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1522,16 +1560,16 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  15488 strings out of 475136
  259665 string characters out of 5766292
- 682591 words of memory out of 5000000
+ 684586 words of memory out of 5000000
  38285 multiletter control sequences out of 15000+600000
  591350 words of font info for 62 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 75i,7n,79p,307b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,334b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on main.pdf (1 page, 45674 bytes).
+Output written on java.pdf (1 page, 45321 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

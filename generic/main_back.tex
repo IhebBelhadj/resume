@@ -1,0 +1,226 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages:
+\usepackage[
+ignoreheadfoot,
+top=1 cm,
+bottom=1 cm,
+left=1 cm,
+right=1 cm,
+footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+pdftitle={Iheb Belhadj's CV},
+pdfauthor={Iheb Belhadj},
+pdfcreator={Iheb Belhadj},
+colorlinks=true,
+urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% ATS readable PDF
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Settings:
+\raggedright
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{\vcenter{\hbox{\small$\bullet$}}}
+\newenvironment{highlights}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=0 cm + 10pt]}{\end{itemize}}
+
+\newenvironment{highlightsforbulletentries}{\begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt]}{\end{itemize}}
+
+\newenvironment{onecolentry}{\begin{adjustwidth}{0cm}{0cm}}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{\onecolentry \def\secondColumn{#2} \setcolumnwidth{\fill, 4.5 cm} \begin{paracol}{2}}{\switchcolumn \raggedleft \secondColumn \end{paracol} \end{onecolentry}}
+
+\newenvironment{header}{\centering\linespread{1.5}}{}
+
+\begin{document}
+\newcommand{\AND}{\unskip \cleaders\copy\ANDbox\hskip\wd\ANDbox \ignorespaces}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+% Header
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \vspace{5 pt}
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}} \AND
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}} \AND
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}} \AND
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}} \AND
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}
+\end{header}
+
+% Summary
+\section{Summary}
+\begin{onecolentry}
+Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced in building cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven solutions.
+\end{onecolentry}
+
+% Technologies
+\section{Technologies}
+
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, Python, JavaScript, Java, C\#, C, SQL, PHP, Bash
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Web/Fullstack:} Next.js, React, Astro.js, Angular, Vue.js, Express.js, Spring, Flask, FastAPI
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, DuckDB, MinIO, AWS RDS, S3
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Data Eng \& AI:} Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Infrastructure:} Docker, Kubernetes, Terraform, Ansible, Vagrant, Jenkins, GitHub Actions, AWS
+\end{onecolentry}
+
+% Experience
+\section{Experience}
+
+\begin{twocolentry}{Feb 2025 -- Aug 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item Integrated a multi-agent system with LangGraph for dynamic SQL and chart generation, enabling no-code data exploration.
+  \item Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring.
+  \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to manage ingestion, transformation, and ML forecasting.
+  \item Secured the platform with Keycloak IAM using role- and group-based access control.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Nginx
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{Dec 2024 -- Feb 2025}
+\textbf{Freelance Software Engineer}, Nexits -- Paris, FR\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item Architected a CMS solution with Payload CMS and a custom block-based page builder, enabling no-code content updates for the landing site.
+  \item Built an instantaneous preview system using Astro.js for dynamic component rendering with minimal JS.
+  \item Designed a dual rendering strategy (SSR for preview, SSG for production), achieving 100 performance, 95 accessibility, and 100 SEO score on Lighthouse.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Astro.js, Payload CMS, React, TypeScript, Vercel, SQLite, Turborepo
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{Aug 2023 -- Sep 2024}
+\textbf{Software Engineer}, Nexits -- Paris, FR\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item Implemented product state historization with audit trail, enabling edits, rollbacks, and time-travel of product data.
+  \item Contributed to migration from legacy stack to Next.js, tRPC, and Turborepo monorepo with AWS deployment.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, ECR, S3, RDS), Docker, GitHub Actions, Turborepo
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{Oct 2023 -- Nov 2023}
+\textbf{Freelance Instructor }, ENET’Com Junior Entreprise -- Sfax, TN\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item Delivered weekend workshops on MERN stack (MongoDB, Express.js, React, Node.js) for 30+ student club members.
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{Jun 2023 -- Aug 2023}
+\textbf{Software Engineering Intern}, Nexits -- Paris, FR\end{twocolentry}
+
+% Projects
+\section{Projects}
+
+\vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{Portfolio:} Built on Next.js with MDX-based content management, lazy loading, and server components. Integrated a LangChain agent that answers questions about my experience. Achieved 100 performance and best practices scores on Lighthouse.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, LangChain, Vercel
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{OpsForge:} A self-contained local DevOps environment simulating production using Vagrant and Ansible. Includes a private Docker registry, Jenkins CI/CD, monitoring stack with Prometheus/Grafana, and SonarQube.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{Playpex:} Torrent streamer in Node.js with backend wrapper using MSE API for seamless browser playback. Angular frontend, Electron desktop app, and Ionic mobile controller.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Node.js, Angular, Ionic, Electron
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+% Education
+\section{Education}
+
+\begin{twocolentry}{Sep 2022 -- Sep 2025}
+\textbf{Master in Software Engineering}, ESPRIT\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{twocolentry}{Sep 2020 -- Jun 2022}
+\textbf{Bachelor in Applied Math and Physics}, IPEIM\end{twocolentry}
+
+\end{document}
