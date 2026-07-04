@@ -211,11 +211,11 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
 \end{onecolentry}
 
 \begin{onecolentry}
-\textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, MinIO, AWS RDS, S3
+\textbf{Databases:} PostgreSQL, Oracle DB, MySQL, MongoDB, Redis, MinIO, AWS RDS, S3
 \end{onecolentry}
 
 \begin{onecolentry}
-\textbf{Data Eng \& AI:} Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow
+\textbf{Data Eng \& AI:} Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow, Snowflake, Databricks
 \end{onecolentry}
 
 \begin{onecolentry}
@@ -224,11 +224,58 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
 
 \section{Experience}
 
+\begin{twocolentry}{
+    feb 2026 – may 2026
+  }
+\textbf{Freelance Job}, K-Rose -- Tunis,TN\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+
+    \item Lead the architecture and development of a B2B e-commerce platform for the floral industry \textbf{\href{https://www.kairouanrose.com/}{ kairouanrose.com }}, integrating a headless CMS as the backbone for both business operations (order, delivery, and product management) and content delivery (dynamic SEO rule sets, automated sitemap, and CMS-managed pages compiled as SSGs) — achieving Lighthouse scores of 98 SEO and 100 Accessibility.
+    \item Implemented role-based access control with row-level ownership enforcement, mapping Clerk authentication to CMS domain entities across two independent layers
+    \item  Worked on full i18n support with server-side dictionary fetching enabling ease of access for end users  
+    \item Structured error logging via next-axiom with contextual metadata to inspect production errors 
+    \item Configured tag-scoped ISR cache invalidation tied to CMS publish events, with bulk-import-safe revalidation suppression
+    \item Built a field-level audit logging system capturing structured diffs, actor metadata, and request context across all CMS collections
+
+      \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js , Payload CMS, React , Typescript, Tailwind, Vercel, Neon Postgres, Next-axiom, Clerk, Vitest, Playwright, Vercel Blob 
+    \end{highlightsforbulletentries}
+\end{highlights}
+    \end{highlights}
+  \end{onecolentry}
 
 
+  \vspace{0.2 cm}
 
 \begin{twocolentry}{
-    Feb 2025 – Aug 2025
+    Oct 2025 – currently
+  }
+\textbf{Data Eng Consultant}, Talan -- Tunis,TN\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+
+
+    \item Lead the migration of a CRM data integration project to dbt and snowflake 
+    \item Developed a native tool in snowflake for writing xml ingestion code based on a given xsd schema and a defined config by the end user, eliminating the need for external ingestion tools
+    \item Working closely with GRDF to fix detected production anomalies in their legacy data pipelines.
+    \item Developing an agentic AI system to automate the migration of Informatica mappings to dbt models, drastically reducing conversion time.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, FastAPI, React, LangGraph,  Redis, dbt, Docker, Informatica, VTOM, Oracle DB, Snowflake
+    \end{highlightsforbulletentries}
+\end{highlights}
+    \end{highlights}
+  \end{onecolentry}
+
+
+  \vspace{0.2 cm}
+
+\begin{twocolentry}{
+    Feb 2025 – Oct 2025
   }
 \textbf{Software Engineering Intern}, Talan -- Tunis,TN\end{twocolentry}
 
@@ -237,11 +284,12 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{highlights}
 
   \item Integrated a multi-agent system with LangGraph for dynamic SQL and chart generation, enabling no-code data exploration.
-  \item Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring.
-  \item Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to manage ingestion, transformation, and ML forecasting.
+  \item Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring through the AI first client interface.
+  \item Developed an end-to-end data pipeline with MinIO, Nessie, Airflow, and dbt to manage ingestion, transformation, and ML forecasting.
   \item Secured the platform with Keycloak IAM using role- and group-based access control.
+  \item Implemented a caching system through Redis reducing network I/O calls for the agentic system for context retrieval.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, MLflow, MinIO, Delta Lake, Airflow, dbt, PostgreSQL, Keycloak, Docker, Nginx
+    \item Technologies used: Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Nessie, Trino, Airflow, dbt, PostgreSQL, Keycloak, Docker, Nginx
     \end{highlightsforbulletentries}
 \end{highlights}
     \end{highlights}
@@ -253,7 +301,7 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{twocolentry}{
       Dec 2024 - Jan 2025
     }
-  \textbf{Freelance Job}, Nexits  -- Paris, FR\end{twocolentry}
+  \textbf{Freelance Job}, Nexits  -- Paris, FR (Remote)\end{twocolentry}
 
   \vspace{0.10 cm}
   \begin{onecolentry}
@@ -276,7 +324,7 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{twocolentry}{
       Aug 2023 - Sep 2024
     }
-  \textbf{Software engineer}, Nexits  -- Paris, FR\end{twocolentry}
+  \textbf{Software engineer}, Nexits  -- Paris, FR (Remote)\end{twocolentry}
 
   \vspace{0.10 cm}
   \begin{onecolentry}
@@ -317,7 +365,7 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{twocolentry}{
       June 2023 - Aug 2023
     }
-  \textbf{Software Engineering Intern}, Nexits  -- Paris, FR\end{twocolentry}
+  \textbf{Software Engineering Intern}, Nexits  -- Paris, FR (Remote)\end{twocolentry}
 
   % \vspace{0.10 cm}
 
@@ -326,30 +374,37 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
 % Projects
 \section{Projects}
 
-\vspace{0.2 cm}
 \begin{onecolentry}
   \begin{highlights}
-  \item \textbf{Portfolio:} Built on Next.js with MDX-based content management, lazy loading, and server components. Integrated a LangChain agent that answers questions about my experience. Achieved 100 performance and best practices scores on Lighthouse.
-    \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, LangChain, Vercel
-    \end{highlightsforbulletentries}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex (Link): }}  Torrent streamer in Node.js with backend wrapper using MSE API for seamless browser playback. Angular frontend, Electron desktop app to bundle the engine and the frontend, and Ionic mobile controller.
   \end{highlights}
 \end{onecolentry}
 
+\vspace{0.1 cm}
 \begin{onecolentry}
   \begin{highlights}
-  \item \textbf{OpsForge:} A self-contained local DevOps environment simulating production using Vagrant and Ansible. Includes a private Docker registry, Jenkins CI/CD, monitoring stack with Prometheus/Grafana, and SonarQube.
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/devops_playground}{OpsForge (Link): }}  A self-contained local DevOps environment simulating production using Vagrant and Ansible. Includes a private Docker registry, Jenkins CI/CD, monitoring stack with Prometheus/Grafana, and SonarQube.
     \begin{highlightsforbulletentries}
     \item Technologies used: Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
+
+
+\vspace{0.1 cm}
 \begin{onecolentry}
   \begin{highlights}
-  \item \textbf{Playpex:} Torrent streamer in Node.js with backend wrapper using MSE API for seamless browser playback. Angular frontend, Electron desktop app to bundle the engine and the frontend, and Ionic mobile controller.
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/elder_care_saas}{EldSync (Link):}} Contributed to the frontend development of a Java microservices platform, building Angular components with NgRx for state management, integrated with Spring Boot backend services.
   \end{highlights}
 \end{onecolentry}
 
+\vspace{0.2 cm}
+\begin{onecolentry}
+  \begin{highlights}
+  \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/elder_care_saas}{Portfolio (Link): }} Built on Next.js with MDX-based content management, lazy loading, and server components. Integrated a LangChain agent that answers questions about my experience. Achieved 100 performance and best practices scores on Lighthouse.
+
+  \end{highlights}
+\end{onecolentry}
 
   \section{Education}
 
@@ -360,7 +415,7 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{twocolentry}{
       Sept 2022 – Sep 2025
     }
-    \textbf{Software engineering}, ESPRIT
+    \textbf{Software Engineering Master}, ESPRIT
   \end{twocolentry}
 
   \vspace{0.10 cm}
@@ -368,7 +423,7 @@ Software engineer specializing in backend systems, data pipelines, and agentic A
   \begin{twocolentry}{
       Sept 2020 – Juin 2022
     }
-    \textbf{Pre-engineering school (Math-Physics: Rank 626 )}, IPEIM
+    \textbf{Pre-engineering Bachelor}, IPEIM
   \end{twocolentry}
 
 
