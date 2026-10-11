@@ -1,0 +1,37 @@
+id: krose-freelance
+company: K-Rose
+titles: [Freelance Job, Freelance Software Engineer, Lead Full-stack Engineer (Freelance)]
+location: Tunis, TN
+start: 2026-02
+dates: Feb 2026 – May 2026
+tags: [fullstack, frontend, nextjs, cms, ecommerce, b2b]
+stack: [Next.js, Payload CMS, React, TypeScript, Tailwind, Vercel, Neon Postgres, Next-axiom, Clerk, Vitest, Playwright, Vercel Blob]
+bullets:
+  - id: kr-platform-architecture
+    tags: [fullstack, architecture, cms, seo, performance]
+    text: >-
+      Lead the architecture and development of a B2B e-commerce platform for the floral industry
+      **[kairouanrose.com](https://www.kairouanrose.com/)**, integrating a headless CMS as the backbone
+      for both business operations (order, delivery, and product management) and content delivery
+      (dynamic SEO rule sets, automated sitemap, and CMS-managed pages compiled as SSGs) — achieving
+      Lighthouse scores of 98 SEO and 100 Accessibility.
+  - id: kr-rbac
+    tags: [backend, security, auth]
+    text: >-
+      Implemented role-based access control with row-level ownership enforcement, mapping Clerk
+      authentication to CMS domain entities across two independent layers
+  - id: kr-logging
+    tags: [backend, observability]
+    text: Structured error logging via next-axiom with contextual metadata to inspect production errors
+  - id: kr-isr-cache
+    tags: [nextjs, performance, caching]
+    text: >-
+      Configured tag-scoped ISR cache invalidation tied to CMS publish events, with bulk-import-safe
+      revalidation suppression
+  - id: kr-audit-log
+    tags: [backend, data, audit]
+    text: >-
+      Built a field-level audit logging system capturing structured diffs, actor metadata, and
+      request context across all CMS collections
+notes: |
+  Client: Kairouan Rose (kairouanrose.com). Repo path: TODO (add with /ingest-project).

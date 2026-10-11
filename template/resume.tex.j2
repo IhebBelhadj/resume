@@ -1,0 +1,113 @@
+<#- Jinja2 template rendered by pipeline/core/render.py.
+    Delimiters (chosen to not clash with LaTeX): double-angle for variables,
+    angle-percent for blocks, angle-hash for comments. See render.py.
+    All free text goes through the `tex` filter (escaping + **bold** + [link](url)). -#>
+% GENERATED FILE: do not edit by hand.
+% Source: << selection_path >>
+\documentclass{resume}
+\hypersetup{
+  pdftitle={<< profile.name >> - Resume},
+  pdfauthor={<< profile.name >>},
+  pdfcreator={<< profile.name >>},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont << profile.name >>
+
+  \normalsize
+  \kern 5.0 pt%
+<% for c in profile.contacts %>
+<% if c.get("newline") %>
+
+<% elif not loop.first %>
+  \AND%
+<% endif %>
+  \mbox{\href{<< c.url | url >>}{<< c.label | tex >>}}%
+<% endfor %>
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+<% for section in sections %>
+<% if section == "summary" and summary %>
+
+\section{Summary}
+\begin{onecolentry}
+<< summary | tex >>
+\end{onecolentry}
+<% elif section == "skills" and skills %>
+
+\section{Technologies}
+<% for cat in skills %>
+\begin{onecolentry}
+\textbf{<< cat.label | tex >>:} << cat["items"] | map("tex") | join(", ") >>
+\end{onecolentry}
+<% endfor %>
+<% elif section == "experience" and experiences %>
+
+\section{Experience}
+<% for e in experiences %>
+
+\begin{twocolentry}{<< e.dates | tex >>}
+\textbf{<< e.title | tex >>}, << e.company | tex >> -- << e.location | tex >>\end{twocolentry}
+<% if e.bullets or e.stack %>
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+<% for b in e.bullets %>
+    \item << b | tex >>
+<% endfor %>
+<% if e.stack %>
+    \begin{highlightsforbulletentries}
+    \item Technologies used: << e.stack | map("tex") | join(", ") >>
+    \end{highlightsforbulletentries}
+<% endif %>
+  \end{highlights}
+\end{onecolentry}
+<% endif %>
+<% if not loop.last %>
+\entryspace
+<% endif %>
+<% endfor %>
+<% elif section == "projects" and projects %>
+
+\section{Projects}
+<% for p in projects %>
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{<% if p.url %>\href{<< p.url | url >>}{<< p.name | tex >>:}<% else %><< p.name | tex >>:<% endif %>} << p.bullets | map("tex") | join(" ") >>
+<% if p.stack %>
+    \begin{highlightsforbulletentries}
+    \item Technologies used: << p.stack | map("tex") | join(", ") >>
+    \end{highlightsforbulletentries}
+<% endif %>
+  \end{highlights}
+\end{onecolentry}
+<% if not loop.last %>
+\vspace{0.1 cm}
+<% endif %>
+<% endfor %>
+<% elif section == "education" and education %>
+
+\section{Education}
+<% for s in education %>
+\begin{twocolentry}{<< s.dates | tex >>}
+\textbf{<< s.degree | tex >>}, << s.school | tex >>\end{twocolentry}
+<% if s.bullets %>
+\begin{onecolentry}
+  \begin{highlights}
+<% for b in s.bullets %>
+    \item << b | tex >>
+<% endfor %>
+  \end{highlights}
+\end{onecolentry}
+<% endif %>
+<% if not loop.last %>
+\vspace{0.10 cm}
+<% endif %>
+<% endfor %>
+<% endif %>
+<% endfor %>
+
+\end{document}

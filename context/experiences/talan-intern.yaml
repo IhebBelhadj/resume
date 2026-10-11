@@ -1,0 +1,79 @@
+id: talan-intern
+company: Talan
+titles: [Software Engineering Intern]
+location: Tunis, TN
+start: 2025-02
+dates: Feb 2025 – Oct 2025
+tags: [ai, agents, data, backend, fullstack, devops]
+# Full stack across all past resume variants; pick a subset that matches the chosen bullets.
+stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Nessie, Trino, Delta Lake, Airflow, Airbyte, dbt, PostgreSQL, Keycloak, Docker, Nginx]
+bullets:
+  - id: ti-multiagent-sql-charts
+    tags: [ai, agents, langgraph, sql]
+    text: >-
+      Integrated a multi-agent system with LangGraph for dynamic SQL and chart generation, enabling
+      no-code data exploration.
+  - id: ti-cdc-live-charts
+    tags: [data, realtime, cdc]
+    text: >-
+      Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring through the
+      AI first client interface.
+  - id: ti-cdc-live-charts-short
+    variant_of: ti-cdc-live-charts
+    tags: [data, realtime, cdc]
+    text: Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring.
+  - id: ti-pipeline-nessie
+    tags: [data, airflow, dbt, ml, lakehouse]
+    text: >-
+      Developed an end-to-end data pipeline with MinIO, Nessie, Airflow, and dbt to manage ingestion,
+      transformation, and ML forecasting.
+  - id: ti-pipeline-airbyte
+    variant_of: ti-pipeline-nessie
+    tags: [data, airflow, dbt, airbyte, ml]
+    text: >-
+      Developed an end-to-end data pipeline with MinIO, Airflow, Airbyte, and dbt to manage ingestion,
+      transformation, and ML forecasting.
+  - id: ti-pipeline-deltalake
+    variant_of: ti-pipeline-nessie
+    tags: [data, airflow, dbt, lakehouse, ml]
+    text: >-
+      Developed an end-to-end data pipeline with MinIO, Delta Lake, Airflow, and dbt to manage
+      ingestion, transformation, and ML forecasting.
+  - id: ti-pipeline-docker-scaling
+    variant_of: ti-pipeline-nessie
+    tags: [devops, data, docker, airflow, dbt]
+    text: >-
+      Built and deployed an end-to-end data pipeline with Airflow and dbt on Dockerized infrastructure,
+      ensuring reproducible workflows and enabling easy scaling of replicas under load.
+  - id: ti-keycloak
+    tags: [security, iam, backend]
+    text: Secured the platform with Keycloak IAM using role- and group-based access control.
+  - id: ti-keycloak-nginx
+    variant_of: ti-keycloak
+    tags: [security, iam, devops, networking]
+    text: >-
+      Secured the platform with Keycloak IAM using role- and group-based access control, and built an
+      Nginx gateway to secure the private services network.
+  - id: ti-redis-cache
+    tags: [backend, caching, performance, ai]
+    text: >-
+      Implemented a caching system through Redis reducing network I/O calls for the agentic system for
+      context retrieval.
+  - id: ti-gh-webhook-deploy
+    tags: [devops, cicd, bash, docker]
+    text: >-
+      Automated deployments via GitHub webhooks and Bash scripts on a Docker Compose cluster, improving
+      release consistency.
+  - id: ti-nextjs-websockets
+    tags: [frontend, nextjs, realtime]
+    text: >-
+      Built a Next.js frontend leveraging WebSockets to deliver instant feedback and live chart updates
+      for a seamless user experience.
+  - id: ti-frontend-perf
+    tags: [frontend, performance, offline]
+    text: >-
+      Optimized frontend performance with persisted state to reduce network calls and enable offline
+      viewing, and implemented optimistic updates for a faster, more responsive user experience.
+notes: |
+  Older resume variants listed the end date as Aug 2025; the latest generic resume says Oct 2025.
+  Lakehouse wording differs across variants (Nessie / Delta Lake / Airbyte); choose ONE pipeline bullet.

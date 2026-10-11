@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX intermediates (aux files go to build/)
+build/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+
+# Pipeline runtime state (phase 3)
+pipeline/state/
+.env
+*.egg-info/
+
+# Offer PDFs are committed only once sent (`pipeline mark-sent` force-adds them)
+offers/*/*.pdf

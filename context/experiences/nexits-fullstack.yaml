@@ -1,0 +1,30 @@
+id: nexits-fullstack
+company: Nexits
+titles: [Full-stack Developer, Software Engineer]
+location: Paris, FR (Remote)
+start: 2023-08
+dates: Aug 2023 - Sep 2024
+tags: [fullstack, nextjs, trpc, aws, monorepo]
+stack: [Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, ECR, S3, RDS), Docker, GitHub Actions, Turborepo, Zustand]
+bullets:
+  - id: nfs-product-historization
+    tags: [backend, data, audit]
+    text: >-
+      Implemented product state historization with audit trail, enabling edits, rollbacks, and
+      time-travel of product data.
+  - id: nfs-legacy-migration
+    tags: [fullstack, migration, aws, monorepo]
+    text: >-
+      Contributed to migration from legacy stack to Next.js, tRPC, and Turborepo monorepo with AWS
+      deployment.
+  - id: nfs-gha-cicd
+    tags: [devops, cicd, monorepo]
+    text: >-
+      Contributed to GitHub Actions CI/CD pipelines for the Turborepo monorepo, orchestrating builds,
+      tests, and deployments across multiple services, enabling faster consistent environment delivery
+      for the entire team.
+  - id: nfs-frontend-state
+    tags: [frontend, state-management, performance]
+    text: >-
+      Contributed to a frontend platform by building reusable components and a hybrid state management
+      system with route-based state and Zustand, optimizing load times and UX.

@@ -1,0 +1,27 @@
+id: talan-data-consultant
+company: Talan
+titles: [Data engineering Consultant, Data Engineering Consultant]
+location: Tunis, TN
+start: 2025-10
+dates: Oct 2025 – currently
+tags: [data, dbt, snowflake, ai, consulting]
+stack: [Python, FastAPI, React, LangGraph, Redis, dbt, Docker, Informatica, VTOM, Oracle DB, Snowflake]
+bullets:
+  - id: tdc-dbt-snowflake-migration
+    tags: [data, dbt, snowflake, migration]
+    text: Lead the migration of a CRM data integration project to dbt and snowflake
+  - id: tdc-xml-ingestion-tool
+    tags: [data, snowflake, tooling]
+    text: >-
+      Developed a native tool in snowflake for writing xml ingestion code based on a given xsd schema
+      and a defined config by the end user, eliminating the need for external ingestion tools
+  - id: tdc-grdf-prod-anomalies
+    tags: [data, production, support]
+    text: Working closely with GRDF to fix detected production anomalies in their legacy data pipelines.
+  - id: tdc-agentic-informatica-dbt
+    tags: [ai, agents, langgraph, data, migration]
+    text: >-
+      Contributing to the development of an agentic AI system to automate the migration of Informatica
+      mappings to dbt models, drastically reducing conversion time.
+notes: |
+  Client mentioned: GRDF. Scheduler: VTOM.

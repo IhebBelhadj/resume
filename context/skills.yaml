@@ -1,0 +1,96 @@
+# Every skill the agent may list. A selection can regroup/reorder/relabel,
+# but every item it renders must appear somewhere in this file.
+# `level` is optional guidance for the agent (strong | working | familiar); never rendered.
+categories:
+  - id: languages
+    label: Languages
+    items:
+      - TypeScript
+      - Python
+      - JavaScript
+      - Java
+      - C#
+      - C
+      - SQL
+      - PHP
+      - Bash
+      - Groovy
+      - Lua
+  - id: web
+    label: Web/Fullstack
+    items:
+      - Next.js
+      - React
+      - Astro.js
+      - Angular
+      - Vue.js
+      - Node.js
+      - Express.js
+      - tRPC
+      - Spring
+      - Spring Boot
+      - Flask
+      - FastAPI
+      - Payload CMS
+      - Tailwind
+      - NgRx
+      - Zustand
+  - id: databases
+    label: Databases
+    items:
+      - PostgreSQL
+      - Oracle DB
+      - MySQL
+      - MongoDB
+      - Redis
+      - DuckDB
+      - SQLite
+      - MinIO
+      - AWS RDS
+      - S3
+      - Vercel Blob
+      - Neon Postgres
+  - id: data-ai
+    label: Data Eng & AI
+    items:
+      - Airflow
+      - Airbyte
+      - dbt
+      - Kafka
+      - Spark
+      - Trino
+      - Nessie
+      - Delta Lake
+      - Snowflake
+      - Databricks
+      - Informatica
+      - LangChain
+      - LangGraph
+      - MLflow
+  - id: infra
+    label: Infrastructure
+    items:
+      - Docker
+      - Kubernetes
+      - Terraform
+      - Ansible
+      - Vagrant
+      - Jenkins
+      - GitHub Actions
+      - AWS
+      - Vercel
+      - Nginx
+      - Keycloak
+      - Prometheus
+      - Grafana
+      - Turborepo
+  - id: testing
+    label: Testing
+    items:
+      - Vitest
+      - Playwright
+      - Jest
+      - Jasmine
+      - Karma
+      - Pytest
+      - SonarQube
