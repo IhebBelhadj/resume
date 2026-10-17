@@ -1,0 +1,143 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: KPMG Tunisie
+  role: Consultant Débutant Data Engineer F/H
+  url: ''
+max_pages: 1
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Data Engineering Consultant at Talan, migrating client data integrations to dbt and Snowflake and leading
+  the design of multi-environment Airflow orchestration. Also builds full-stack applications (React, Next.js,
+  FastAPI, PostgreSQL) and deploys them on AWS with Docker. Works directly with clients on production
+  data pipelines.
+skills:
+- label: Programming languages
+  items: [Python, SQL, Java, C#, TypeScript, JavaScript, Bash]
+- label: Data engineering & Big Data
+  items: ['ETL / ELT (dbt, Airbyte, Informatica)', 'Orchestration (Airflow, VTOM)', Snowflake, Spark,
+    Databricks, Kafka, Trino, Delta Lake]
+- label: Machine learning & AI
+  items: [LangGraph, LangChain, MLflow]
+- label: Databases
+  items: [PostgreSQL, Oracle DB, MySQL, MongoDB, Redis, SQLite]
+- label: Cloud
+  items: [AWS, AWS EC2, S3, AWS RDS, AWS CloudFront, AWS IAM, Vercel]
+- label: Full-stack (Front-End / Back-End)
+  items: [React, Next.js, Angular, FastAPI, Spring Boot, Node.js, Tailwind CSS]
+- label: DevOps & CI/CD
+  items: [Docker, Docker Compose, GitHub Actions, Terraform, Jenkins]
+experiences:
+- title: Lead Full-stack Engineer (Freelance)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Feb 2026 – May 2026
+  bullets:
+  - >-
+    Led a three-developer team building a B2B ordering platform for [kairouanrose.com](https://www.kairouanrose.com/):
+    wrote the architecture document, reviewed and merged pull requests, and deployed it end to end on
+    Vercel.
+  - >-
+    Turned the client's request → negotiation → confirmed-order process into a Next.js app with a client
+    portal and a Payload CMS back office on PostgreSQL, replacing email, phone calls and spreadsheets.
+  stack: [Next.js, React, TypeScript, PostgreSQL, Payload CMS, Drizzle ORM, Vercel, Docker]
+- title: Data Engineering Consultant
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – currently
+  bullets:
+  - Leading the migration of a CRM data integration project to dbt and Snowflake.
+  - >-
+    Led the architecture and development of multi-environment Airflow orchestration, with a custom library
+    that keeps DAGs declarative: source-agnostic config builder, asset-based triggering, shared state store.
+  - >-
+    Helped build a Python tool that runs natively in Snowflake and generates XML parsing SQL from Informatica's
+    exported workflows: models with 100+ columns, lineage, an enforced XML schema and input validation.
+  - >-
+    Work directly with the client GRDF to fix production anomalies in their legacy data pipelines.
+  - >-
+    Contributing to an agentic AI system (LangGraph) that automates the conversion of Informatica mappings
+    into dbt models.
+  stack: [Python, SQL, dbt, Snowflake, Airflow, Informatica, Oracle DB, LangGraph, Docker]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Built an end-to-end data pipeline (MinIO, Airbyte, Airflow, dbt) on Dockerized infrastructure for
+    ingestion, transformation and ML forecasting.
+  - >-
+    Built a real-time CDC pipeline and a Next.js front end that pushes live chart updates over WebSockets
+    for instant monitoring.
+  - >-
+    Integrated a LangGraph multi-agent system that generates SQL and charts on the fly, enabling no-code
+    data exploration.
+  stack: [Python, FastAPI, Airflow, Airbyte, dbt, MinIO, PostgreSQL, LangGraph, MLflow, Next.js, Docker]
+- title: Freelance Software Engineer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 - Feb 2025
+  bullets:
+  - >-
+    Worked with the team on Terraform-defined AWS hosting: S3 + CloudFront, Docker on EC2, GitHub Actions.
+  stack: [AWS, Terraform, Docker, GitHub Actions, Payload CMS, React, TypeScript]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 - Sep 2024
+  bullets:
+  - >-
+    Contributed to the migration from a legacy Vue.js product to Next.js, tRPC and a Turborepo monorepo
+    deployed on AWS.
+  - >-
+    Worked with the team on the SaaS deployment: containers on EC2, RDS PostgreSQL, GitHub Actions CI/CD.
+  stack: [Next.js, React, TypeScript, PostgreSQL, AWS, Docker, Terraform, GitHub Actions]
+projects: []
+education:
+- degree: Software Engineering Master
+  school: ESPRIT
+  dates: Sept 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sept 2020 – June 2022
+  bullets: []
+gaps:
+- 'Azure: not used; closest is AWS (EC2, S3, RDS, CloudFront) and Snowflake'
+- 'GCP: not used; closest is AWS'
+- 'Azure DevOps: not used; closest is GitHub Actions CI/CD'
+- >-
+  Git: not in skills.yaml (implied by GitHub Actions and PR reviews); add it to context if confirmed
+- >-
+  D3.js: not used; closest is live chart generation in the Talan intern platform (charting library not
+  recorded)
+- >-
+  Spark and Databricks: listed in SKILLS but no experience or project body backs them; add the usage to
+  context or drop them from skills
+- >-
+  MySQL / MongoDB: in SKILLS, but the only backing is the MERN workshop; no project uses them
+- >-
+  Requirements gathering with business teams (Finance, HR, Risk...) and writing functional specifications:
+  not documented; closest is the K-Rose architecture document and the GRDF client work. Add facts to context
+  if any exist
+- >-
+  Machine learning: only 'ML forecasting' in the Talan intern pipeline and MLflow; no model details in
+  context
+- 'Spoken languages (French level matters for this offer): TODO in profile notes'
+- Nexits internship (Jun–Aug 2023) has no recorded content
+- 'Talan XML tool: no numbers (models migrated, time saved) yet'

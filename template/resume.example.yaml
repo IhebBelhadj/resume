@@ -1,0 +1,48 @@
+# resume.yaml: everything the resume prints. `pipeline tailor` writes it (model picks entries
+# and writes bullets; dates, titles, contacts, etc. are copied from context/). `pipeline build`
+# renders only this file, so edits here are exactly what ends up in the PDF.
+# Text fields support **bold** and [label](url).
+
+offer:                      # not rendered
+  company: Acme
+  role: Backend Engineer
+  url: https://example.com/jobs/1
+lang: en                    # en | fr: the offer's language (section headings, dates)
+max_pages: 2                # build fails if the PDF is longer
+# sections: [summary, skills, experience, projects, education]   # optional order override
+
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME          # output PDF filename
+  contacts:
+    - {label: iheb.belhadj.dev@gmail.com, url: "mailto:iheb.belhadj.dev@gmail.com"}
+    - {label: github.com/IhebBelhadj, url: "https://github.com/IhebBelhadj", newline: true}
+
+summary: Software engineer specializing in backend systems, data pipelines, and agentic AI.
+
+skills:                     # printed in this order
+  - {label: Languages, items: [TypeScript, Python]}
+
+experiences:                # printed in this order (tailor writes them newest-first)
+  - title: Data Engineer Intern
+    company: Talan
+    location: Tunis, Tunisia
+    dates: Feb 2025 – Jul 2025
+    bullets:
+      - Built a real-time CDC pipeline that refreshes charts live for instant monitoring.
+    stack: [Kafka, Debezium]   # [] for none
+
+projects:                   # printed in this order (most relevant first)
+  - name: OpsForge
+    url: https://github.com/IhebBelhadj/opsforge   # optional
+    bullets:
+      - Self-contained local DevOps environment simulating production with Vagrant and Ansible.
+    stack: []
+
+education:
+  - degree: Engineering degree, Software Engineering
+    school: ESPRIT
+    dates: 2020 – 2025
+    bullets: []
+
+gaps: []                    # not rendered: what the offer asks for that context/ lacks

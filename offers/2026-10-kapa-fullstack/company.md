@@ -1,0 +1,10 @@
+# kapa.ai: research for the cover letter
+
+_Found by claude-opus-5-5 on 2026-10-17; check before sending._
+
+- kapa.ai is an ingestion and retrieval platform that turns a company's unstructured knowledge (docs, tickets, wikis, PDFs, community threads) into AI agents. It offers a Retrieval API, a hosted MCP server and prebuilt agents: a website widget, Slack/Discord bots, a Zendesk agent and an in-product agent. ([source](https://www.kapa.ai/))
+- The homepage says kapa.ai is trusted by 200+ companies and names OpenAI, Logitech, monday.com, Nokia, Raspberry Pi and Nordic Semiconductor. For Nokia it reports 300k+ queries answered from 125+ integrated sources. ([source](https://www.kapa.ai/))
+- Seed round of $3.2M led by Initialized Capital with Y Combinator participating. Angels include Douwe Kiela (an author of the original RAG paper), Amjad Masad (Replit) and Solomon Hykes (Docker founder). Customers named include Docker, OpenAI, Grafana, CircleCI and Mapbox. ([source](https://kapa.ai/blog/kapa-ai-secures-3-2m-to-advance-technical-ai-assistants))
+- The founders met as postgrad students at Imperial College London. A large part of kapa's engineering effort goes into evaluating answer quality using customer feedback and usage patterns, and its 30+ data source integrations (crawlers, Slack, wiki and forum readers) refresh automatically. ([source](https://kapa.ai/blog/kapa-ai-secures-3-2m-to-advance-technical-ai-assistants))
+- The full-stack posting describes a fully remote team of 22 people (YC S23, founders Finn Bauer and Emil Soerensen). The stack is Python for the RAG engine, data integrations and backend, and React for the analytics platform, client integrations and the React SDK. ([source](https://www.ycombinator.com/companies/kapa-ai/jobs/JPE2ofG-software-engineer-full-stack))
+- kapa's developer offerings include a Chat SDK published as @kapaai/react-sdk for building chat interfaces in React apps, and an Agent SDK (@kapaai/agent-core, @kapaai/agent-react) with streaming, custom tools and human-in-the-loop approval. ([source](https://docs.kapa.ai/dev/))

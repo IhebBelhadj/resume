@@ -1,4 +1,4 @@
-"""Compile a generated .tex into a PDF and run post-build checks."""
+"""Compile a generated .tex into a PDF."""
 
 from __future__ import annotations
 
@@ -22,7 +22,6 @@ class BuildError(RuntimeError):
 class BuildResult:
     pdf: Path
     pages: int
-    text: str  # extracted text, for ATS/keyword checks
 
 
 def compile_pdf(tex_path: Path, jobname: str) -> BuildResult:
@@ -44,12 +43,4 @@ def compile_pdf(tex_path: Path, jobname: str) -> BuildResult:
     info = subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True).stdout
     m = re.search(r"^Pages:\s+(\d+)", info, re.M)
     pages = int(m.group(1)) if m else -1
-    text = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True).stdout
-    return BuildResult(pdf=pdf, pages=pages, text=text)
-
-
-def keyword_coverage(text: str, keywords: list[str]) -> tuple[list[str], list[str]]:
-    """Split keywords into (found, missing) in the extracted PDF text, case-insensitive."""
-    low = " ".join(text.split()).lower()
-    found = [k for k in keywords if k.lower() in low]
-    return found, [k for k in keywords if k not in found]
+    return BuildResult(pdf=pdf, pages=pages)

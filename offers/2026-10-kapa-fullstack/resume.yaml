@@ -1,0 +1,125 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: kapa.ai
+  role: Software Engineer (Full-stack)
+  url: https://www.linkedin.com/jobs/view/4231625058
+max_pages: 1
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Fullstack Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced
+  in building cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven
+  solutions.
+skills:
+- label: Languages
+  items: [Python, TypeScript, JavaScript, SQL]
+- label: Web/Fullstack
+  items: [React, Next.js, FastAPI, Flask, Node.js, Express.js, tRPC, Payload CMS, Tailwind]
+- label: Data Eng & AI
+  items: [LangGraph, LangChain, MLflow, Airflow, dbt, Snowflake, Kafka, Spark]
+- label: Databases
+  items: [PostgreSQL, Redis, MongoDB, S3]
+- label: Infrastructure
+  items: [Docker, Kubernetes, AWS, Terraform, GitHub Actions, Vercel, Nginx]
+- label: Testing
+  items: [Pytest, Vitest, Playwright, Jest]
+experiences:
+- title: Lead Full-stack Engineer (Freelance)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Feb 2026 – May 2026
+  bullets:
+  - >-
+    Led architecture and end-to-end delivery of a B2B ordering platform: one Next.js 15 / React 19 / TypeScript
+    app with public site, client portal and Payload CMS back office; ~140 of 164 commits, reviewed and
+    merged the team's PRs.
+  - >-
+    Built a three-step React order wizard (react-hook-form, Zod) with a ready-date calendar coloured by
+    production load.
+  - >-
+    Enforced an order state machine with separate admin/client transition matrices in Payload hooks, plus
+    server-side filtering so clients only see their own data.
+  stack: [React, Next.js, TypeScript, Payload CMS, PostgreSQL, Vercel]
+- title: Data Engineering Consultant
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – currently
+  bullets:
+  - >-
+    Contributing to an agentic AI system that automates the migration of Informatica mappings to dbt models,
+    drastically reducing conversion time.
+  - >-
+    Led the architecture of multi-environment data pipeline orchestration on Airflow, building a custom
+    library that keeps DAG code clean and declarative.
+  - >-
+    Helped build a Python tool running natively in Snowflake that generates XML parsing SQL from Informatica
+    workflow mappings, removing the need for an external ingestion tool.
+  stack: [Python, LangGraph, Airflow, Snowflake, dbt, SQL]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Integrated a LangGraph multi-agent system for dynamic SQL and chart generation, enabling no-code data
+    exploration.
+  - Built a Next.js frontend using WebSockets for instant feedback and live chart updates.
+  stack: [Python, FastAPI, LangGraph, LangChain, Redis, Next.js]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 - Sep 2024
+  bullets:
+  - >-
+    Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel
+    of product data.
+  - >-
+    Contributed reusable components and hybrid state management (route-based state and Zustand), optimizing
+    load times.
+  stack: [TypeScript, React, Next.js, tRPC, AWS]
+projects:
+- name: Portfolio
+  url: https://ihebbelhadj.vercel.app/
+  bullets:
+  - >-
+    Next.js site with a LangChain agent that answers questions about my experience; 100 Lighthouse performance
+    score.
+  stack: [Next.js, LangChain, TypeScript]
+education:
+- degree: Software Engineering Master
+  school: ESPRIT
+  dates: Sept 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sept 2020 – June 2022
+  bullets: []
+gaps:
+- >-
+  RAG engine work (retrieval-augmented generation, scaling RAG infrastructure): CONTEXT has LangGraph
+  multi-agent systems, Redis caching for context retrieval and a LangChain Q&A agent, but no RAG pipeline
+  is described explicitly
+- 'Maintaining a React SDK or published library: not in CONTEXT'
+- >-
+  Analytics platform product work and customer-facing client integrations / embeddable widgets: not in
+  CONTEXT
+- >-
+  Deep learning and natural language processing (beyond using LLM agent frameworks): not in CONTEXT
+- >-
+  3+ years of experience: professional experience runs Jun 2023 – present, including internships and freelance
+  work (about 3 years)
+- 'Netherlands location / work authorization / relocation: profile notes say this is TODO'

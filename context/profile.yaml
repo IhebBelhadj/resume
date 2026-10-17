@@ -13,33 +13,9 @@ contacts:
   - label: github.com/IhebBelhadj
     url: https://github.com/IhebBelhadj
 
-summaries:
-  - id: sum-backend-data-ai
-    tags: [generic, backend, data, ai]
-    text: >-
-      Software engineer specializing in backend systems, data pipelines, and agentic AI.
-      Experienced in building cloud-native applications, multi-agent systems, and scalable
-      infrastructure for data-driven solutions.
-  - id: sum-fullstack-backend-data-ai
-    tags: [fullstack, java, backend, data, ai]
-    text: >-
-      Fullstack Software engineer specializing in backend systems, data pipelines, and agentic AI.
-      Experienced in building cloud-native applications, multi-agent systems, and scalable
-      infrastructure for data-driven solutions.
-  - id: sum-devops
-    tags: [devops, backend]
-    text: >-
-      Software engineer specializing in backend systems and DevOps practices. Experienced in
-      building scalable software, designing and automating CI/CD pipelines, managing cloud
-      infrastructure, and ensuring reliable, reproducible deployments.
-  - id: sum-frontend
-    tags: [frontend]
-    text: >-
-      Software engineer who enjoys looking at the frontend from a backend engineer's perspective,
-      focusing on performance, scalability, and optimizations to deliver seamless user experiences.
-
 # Free-form context for the tailoring agent (never rendered).
 notes: |
-  - Based in Tunisia (Tunis). Has worked remotely for a Paris-based company (Nexits).
+  - Open to relocation. Never state where he is currently based (irrelevant to applications).
+  - Has worked remotely for a Paris-based company (Nexits).
   - Languages spoken: TODO (fill in: e.g. Arabic native, French, English levels).
-  - Availability / work authorization / relocation preferences: TODO.
+  - Availability date / work authorization: TODO.

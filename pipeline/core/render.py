@@ -1,4 +1,4 @@
-"""Render a resolved selection into LaTeX using template/resume.tex.j2."""
+"""Render resume.yaml into LaTeX using template/resume.tex.j2."""
 
 from __future__ import annotations
 
@@ -49,6 +49,16 @@ def tex(s) -> str:
     return re.sub(r"\x00(\d+)\x00", lambda m: links[int(m.group(1))], s)
 
 
+# printed headings, by resume.yaml `lang`
+LABELS = {
+    "en": {"resume": "Resume", "summary": "Summary", "skills": "Technologies", "experience": "Experience",
+           "projects": "Projects", "education": "Education", "stack": "Technologies used"},
+    "fr": {"resume": "CV", "summary": "Profil", "skills": "Compétences techniques",
+           "experience": "Expérience professionnelle", "projects": "Projets", "education": "Formation",
+           "stack": "Technologies utilisées"},
+}
+
+
 def _env() -> Environment:
     env = Environment(
         loader=FileSystemLoader(TEMPLATE_DIR),
@@ -69,5 +79,5 @@ def _env() -> Environment:
     return env
 
 
-def render_tex(model: dict, selection_path: str) -> str:
-    return _env().get_template("resume.tex.j2").render(**model, selection_path=selection_path)
+def render_tex(model: dict, source_path: str) -> str:
+    return _env().get_template("resume.tex.j2").render(**model, t=LABELS[model["lang"]], source_path=source_path)

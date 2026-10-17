@@ -1,9 +1,12 @@
 """Resume pipeline CLI.
 
     python -m pipeline check                 validate context/
-    python -m pipeline dump                  compact, id-annotated view of context/ (for LLM prompts)
-    python -m pipeline new <slug>            scaffold offers/<slug>/
-    python -m pipeline build <offer-dir>...  selection.yaml -> resume.tex -> PDF + checks
+    python -m pipeline dump                  all of context/ in one document (for LLM prompts)
+    python -m pipeline new <slug>            scaffold offers/<slug>/offer.md
+    python -m pipeline tailor <offer-dir>    context/ + offer.md -> resume.yaml (model), then build + score
+    python -m pipeline build <offer-dir>...  resume.yaml -> resume.tex -> PDF (deterministic, no model)
+    python -m pipeline score <offer-dir>     offer.md + resume.yaml -> score.md (model: x/10 + what to improve)
+    python -m pipeline cover-letter <dir>    context/ + offer.md + web research -> cover-letter.md, company.md
     python -m pipeline mark-sent <offer-dir> record as sent: commit offer files + PDF, tag sent/<slug>
 """
 
@@ -18,53 +21,39 @@ from pathlib import Path
 
 import yaml
 
-from .core.build import BuildError, compile_pdf, keyword_coverage
-from .core.context import ROOT, ContextError, load_context
+from .core.build import BuildError, compile_pdf
+from .core.context import ROOT, ContextError, dump_context, load_context
+from .core.cover_letter import cover_letter
+from .core.llm import LLMError
 from .core.render import render_tex
-from .core.selection import SelectionError, load_selection, resolve
+from .core.resume import ResumeError, load_resume, render_model
+from .core.score import score
+from .core.tailor import tailor
 
 OFFERS_DIR = ROOT / "offers"
 
 
 def cmd_check(_args) -> int:
     ctx = load_context()
+    items = [*ctx.experiences.values(), *ctx.projects.values(), *ctx.studies.values()]
+    def words(it: dict) -> int:
+        return len(re.sub(r"<!--.*?-->", "", it["raw"], flags=re.S).split())
+
+    total = sum(words(it) for it in items)
     print(
-        f"ok: {len(ctx.experiences)} experiences, {len(ctx.projects)} projects, "
-        f"{len(ctx.studies)} studies, {len(ctx.bullets)} bullets, {len(ctx.summaries)} summaries, "
-        f"{len(ctx.all_skills)} skills"
+        f"ok: {len(ctx.experiences)} experiences, {len(ctx.projects)} projects, {len(ctx.studies)} studies "
+        f"({total} words of raw facts), {len(ctx.all_skills)} skills"
     )
+    for it in items:
+        n = words(it)
+        todos = sum(str(v).count("TODO") for k, v in it.items() if not k.startswith("_"))
+        if n < 80 or todos:
+            print(f"  thin: {it['_path']} ({n} words" + (f", {todos} TODO" if todos else "") + ")")
     return 0
 
 
 def cmd_dump(_args) -> int:
-    """One compact document with every id the selection can reference."""
-    ctx = load_context()
-    out: list[str] = ["# SUMMARIES"]
-    for s in ctx.summaries.values():
-        out.append(f"- {s['id']} [{', '.join(s.get('tags', []))}]: {' '.join(s['text'].split())}")
-    out.append("\n# SKILLS (category id: items)")
-    for c in ctx.skills:
-        out.append(f"- {c['id']} ({c['label']}): {', '.join(c['items'])}")
-
-    def dump_items(title: str, items: dict, head) -> None:
-        out.append(f"\n# {title}")
-        for it in sorted(items.values(), key=lambda x: str(x.get("start", "")), reverse=True):
-            out.append(f"\n## {it['id']}: {head(it)}")
-            if it.get("stack"):
-                out.append(f"stack: {', '.join(it['stack'])}")
-            for b in it.get("bullets") or []:
-                v = f" (variant_of {b['variant_of']})" if b.get("variant_of") else ""
-                out.append(f"- {b['id']}{v} [{', '.join(b.get('tags', []))}]: {' '.join(b['text'].split())}")
-            if it.get("notes"):
-                out.append("notes: " + " ".join(it["notes"].split()))
-
-    dump_items("EXPERIENCES", ctx.experiences,
-               lambda e: f"{' | '.join(e['titles'])} @ {e['company']}, {e['location']} ({e['dates']})")
-    dump_items("PROJECTS", ctx.projects, lambda p: f"{p['name']} <{p.get('url', '')}>")
-    dump_items("STUDIES", ctx.studies, lambda s: f"{' | '.join(s['degrees'])} @ {s['school']} ({s['dates']})")
-    if ctx.profile.get("notes"):
-        out.append("\n# PROFILE NOTES\n" + ctx.profile["notes"].strip())
-    print("\n".join(out))
+    print(dump_context(load_context()))
     return 0
 
 
@@ -78,55 +67,112 @@ def cmd_new(args) -> int:
         "---\ncompany:\nrole:\nurl:\nfetched: \n---\n\n<!-- paste the job description here -->\n",
         encoding="utf-8",
     )
-    (d / "selection.yaml").write_text((ROOT / "template" / "selection.example.yaml").read_text(), encoding="utf-8")
-    print(f"created {d.relative_to(ROOT)}/ (offer.md, selection.yaml)")
+    print(f"created {d.relative_to(ROOT)}/offer.md; paste the offer, then `pipeline tailor {d.relative_to(ROOT)}`")
     return 0
 
 
 def build_one(offer_dir: Path, force: bool = False) -> int:
-    sel_path = offer_dir / "selection.yaml"
-    sel = load_selection(sel_path)
-    if sel.get("sent") and not force:
-        print(f"[{offer_dir.name}] skipped: sent on {sel['sent']}; its PDF is the record (use --force to rebuild)")
+    res_path = offer_dir / "resume.yaml"
+    if not res_path.exists():
+        print(f"[{offer_dir.name}] no resume.yaml; run `pipeline tailor` first", file=sys.stderr)
+        return 1
+    doc = load_resume(res_path)
+    if doc.get("sent") and not force:
+        print(f"[{offer_dir.name}] skipped: sent on {doc['sent']}; its PDF is the record (use --force to rebuild)")
         return 0
-    ctx = load_context()
     try:
-        res = resolve(sel, ctx)
-    except SelectionError as e:
-        print(f"[{offer_dir.name}] selection invalid:", file=sys.stderr)
+        model = render_model(doc)
+    except ResumeError as e:
+        print(f"[{offer_dir.name}] resume.yaml invalid:", file=sys.stderr)
         for err in e.errors:
             print(f"  - {err}", file=sys.stderr)
         return 1
 
     tex_path = offer_dir / "resume.tex"
-    tex_path.write_text(render_tex(res.model, str(sel_path.relative_to(ROOT))), encoding="utf-8")
+    tex_path.write_text(render_tex(model, str(res_path.relative_to(ROOT))), encoding="utf-8")
     try:
-        result = compile_pdf(tex_path, ctx.profile.get("pdf_name", "resume"))
+        result = compile_pdf(tex_path, doc["profile"].get("pdf_name", "resume"))
     except BuildError as e:
         print(e, file=sys.stderr)
         return 1
 
-    max_pages = sel.get("max_pages", 1)
-    status = 0
+    max_pages = doc.get("max_pages", 2)
     print(f"[{offer_dir.name}] {result.pdf.relative_to(ROOT)}: {result.pages} page(s)")
     if result.pages > max_pages:
-        print(f"  FAIL: exceeds max_pages={max_pages}; drop or shorten bullets", file=sys.stderr)
-        status = 2
-    for w in res.warnings:
-        print(f"  warn: {w}")
-    if res.rewrites:
-        print(f"  {len(res.rewrites)} rewrite(s) to review (must not add facts):")
-        for bid, orig, new in res.rewrites:
-            print(f"    - {bid}:\n        was: {' '.join(orig.split())}\n        now: {' '.join(new.split())}")
-    if kws := sel.get("keywords"):
-        found, missing = keyword_coverage(result.text, kws)
-        print(f"  keywords: {len(found)}/{len(kws)} present" + (f"; missing: {', '.join(missing)}" if missing else ""))
-    return status
+        print(f"  FAIL: exceeds max_pages={max_pages}; drop or shorten bullets in resume.yaml", file=sys.stderr)
+        return 2
+    return 0
 
 
 def cmd_build(args) -> int:
     dirs = [Path(p).resolve() for p in args.offers] or sorted(p for p in OFFERS_DIR.iterdir() if p.is_dir())
     return max((build_one(d, args.force) for d in dirs), default=0)
+
+
+def _offer_dir(arg: str, writes: str) -> Path | None:
+    """Resolve an offer dir; None (with an error printed) if offer.md is missing or it was sent."""
+    d = Path(arg).resolve()
+    if not (d / "offer.md").exists():
+        print(f"error: {d}/offer.md missing; run `pipeline new <slug>` and paste the offer", file=sys.stderr)
+        return None
+    if writes and (d / "resume.yaml").exists() and load_resume(d / "resume.yaml").get("sent"):
+        print(f"error: {d.name} was sent; {writes} would change its record. Create a new offer folder.", file=sys.stderr)
+        return None
+    return d
+
+
+def _run(info: dict) -> str:
+    return f"{info['model']}, {info['seconds']:.0f}s"
+
+
+def _score(offer_dir: Path, model: str | None) -> int:
+    print(f"[{offer_dir.name}] scoring resume.yaml against offer.md...", flush=True)
+    out, info = score(offer_dir, model)
+    print(f"[{offer_dir.name}] score {out['score']:g}/10 -> {(offer_dir / 'score.md').relative_to(ROOT)} ({_run(info)})")
+    return 0
+
+
+def cmd_tailor(args) -> int:
+    if not (offer_dir := _offer_dir(args.offer, "tailor")):
+        return 1
+    res_path = offer_dir / "resume.yaml"
+    max_pages = args.max_pages or (load_resume(res_path).get("max_pages", 2) if res_path.exists() else 2)
+    print(f"[{offer_dir.name}] writing resume.yaml...", flush=True)
+    try:
+        doc, info = tailor(offer_dir, load_context(), args.model, max_pages)
+    except ResumeError as e:
+        print(f"[{offer_dir.name}] the model referenced things not in context/ (re-run tailor):", file=sys.stderr)
+        for err in e.errors:
+            print(f"  - {err}", file=sys.stderr)
+        return 1
+    print(f"[{offer_dir.name}] wrote {res_path.relative_to(ROOT)} ({_run(info)})")
+    if doc.get("gaps"):
+        print("  gaps (offer asks, context lacks; add to context/ if true, then re-run):")
+        for g in doc["gaps"]:
+            print(f"    - {g}")
+    status = build_one(offer_dir)
+    if status == 0 and not args.no_score:
+        status = _score(offer_dir, args.model)
+    return status
+
+
+def cmd_score(args) -> int:
+    if not (offer_dir := _offer_dir(args.offer, "")):
+        return 1
+    if not (offer_dir / "resume.yaml").exists():
+        print(f"error: {offer_dir.name} has no resume.yaml; run `pipeline tailor` first", file=sys.stderr)
+        return 1
+    return _score(offer_dir, args.model)
+
+
+def cmd_cover_letter(args) -> int:
+    if not (offer_dir := _offer_dir(args.offer, "cover-letter")):
+        return 1
+    print(f"[{offer_dir.name}] researching the company and writing the cover letter...", flush=True)
+    out, info = cover_letter(offer_dir, load_context(), args.model)
+    print(f"[{offer_dir.name}] {(offer_dir / 'cover-letter.md').relative_to(ROOT)} "
+          f"({len(out['letter'].split())} words, {len(out['research'])} researched facts in company.md; {_run(info)})")
+    return 0
 
 
 def _git(*args: str) -> subprocess.CompletedProcess:
@@ -136,19 +182,19 @@ def _git(*args: str) -> subprocess.CompletedProcess:
 def cmd_mark_sent(args) -> int:
     offer_dir = Path(args.offer).resolve()
     slug = offer_dir.name
-    sel_path = offer_dir / "selection.yaml"
-    sel = load_selection(sel_path)
-    pdf = offer_dir / f"{load_context().profile.get('pdf_name', 'resume')}.pdf"
+    res_path = offer_dir / "resume.yaml"
+    doc = load_resume(res_path)
+    pdf = offer_dir / f"{(doc.get('profile') or {}).get('pdf_name', 'resume')}.pdf"
     tag = f"sent/{slug}"
 
-    if sel.get("sent"):
-        print(f"error: {slug} already marked sent on {sel['sent']}", file=sys.stderr)
+    if doc.get("sent"):
+        print(f"error: {slug} already marked sent on {doc['sent']}", file=sys.stderr)
         return 1
     if not pdf.exists():
         print(f"error: {pdf.relative_to(ROOT)} missing; run build first", file=sys.stderr)
         return 1
-    if sel_path.stat().st_mtime > pdf.stat().st_mtime:
-        print("error: selection.yaml is newer than the PDF; rebuild first so the PDF matches", file=sys.stderr)
+    if res_path.stat().st_mtime > pdf.stat().st_mtime:
+        print("error: resume.yaml is newer than the PDF; rebuild first so the PDF matches", file=sys.stderr)
         return 1
     if _git("rev-parse", "-q", "--verify", f"refs/tags/{tag}").returncode == 0:
         print(f"error: tag {tag} already exists", file=sys.stderr)
@@ -156,16 +202,17 @@ def cmd_mark_sent(args) -> int:
 
     date = args.date or dt.date.today().isoformat()
     # Insert/replace a top-level `sent:` line without rewriting the file (keeps comments).
-    text = sel_path.read_text(encoding="utf-8")
+    text = res_path.read_text(encoding="utf-8")
     line = f"sent: {date}\n"
     text, n = re.subn(r"^sent:.*\n", line, text, flags=re.M)
     if not n:
         text = line + text
-    sel_path.write_text(text, encoding="utf-8")
-    pdf.touch()  # keep the PDF newer than selection.yaml
+    res_path.write_text(text, encoding="utf-8")
+    pdf.touch()  # keep the PDF newer than resume.yaml
 
-    paths = [str(p.relative_to(ROOT)) for p in (offer_dir / "offer.md", sel_path, offer_dir / "resume.tex", pdf) if p.exists()]
-    company = (sel.get("offer") or {}).get("company") or slug
+    paths = [str(p.relative_to(ROOT)) for p in (offer_dir / "offer.md", res_path, offer_dir / "resume.tex", pdf,
+                                                     offer_dir / "cover-letter.md", offer_dir / "company.md", offer_dir / "score.md") if p.exists()]
+    company = (doc.get("offer") or {}).get("company") or slug
     steps = [
         ("add", "-f", "--", *paths),  # -f: offer PDFs are gitignored until sent
         ("commit", "-m", f"sent: {company} ({slug})", "--only", "--", *paths),
@@ -193,6 +240,20 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("offers", nargs="*", help="offer dirs (default: all under offers/)")
     p.add_argument("--force", action="store_true", help="rebuild offers already marked sent")
     p.set_defaults(fn=cmd_build)
+    p = sub.add_parser("tailor")
+    p.add_argument("offer", help="offer dir containing offer.md")
+    p.add_argument("--model", help="claude model alias or id (default: $RESUME_MODEL or opus)")
+    p.add_argument("--max-pages", type=int, help="page budget (default: the existing resume.yaml's, else 2)")
+    p.add_argument("--no-score", action="store_true", help="skip scoring after the build")
+    p.set_defaults(fn=cmd_tailor)
+    p = sub.add_parser("score")
+    p.add_argument("offer", help="offer dir with offer.md and resume.yaml")
+    p.add_argument("--model", help="claude model alias or id (default: $RESUME_MODEL or opus)")
+    p.set_defaults(fn=cmd_score)
+    p = sub.add_parser("cover-letter")
+    p.add_argument("offer", help="offer dir with offer.md (uses resume.yaml too if present)")
+    p.add_argument("--model", help="claude model alias or id (default: $RESUME_MODEL or opus)")
+    p.set_defaults(fn=cmd_cover_letter)
     p = sub.add_parser("mark-sent")
     p.add_argument("offer", help="offer dir, e.g. offers/2026-10-acme-backend")
     p.add_argument("--date", help="YYYY-MM-DD (default: today)")
@@ -202,6 +263,9 @@ def main(argv: list[str] | None = None) -> int:
         return args.fn(args)
     except (ContextError, yaml.YAMLError) as e:
         print(f"context error: {e}", file=sys.stderr)
+        return 1
+    except LLMError as e:
+        print(f"model error: {e}", file=sys.stderr)
         return 1
 
 

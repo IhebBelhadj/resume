@@ -1,5 +1,5 @@
-# Every skill the agent may list. A selection can regroup/reorder/relabel,
-# but every item it renders must appear somewhere in this file.
+# Every skill the agent may list. A resume can regroup/reorder/relabel them, and list a concept
+# backed by them ("Message brokers (Kafka)"), but every technology it names must be in this file.
 # `level` is optional guidance for the agent (strong | working | familiar); never rendered.
 categories:
   - id: languages
@@ -16,6 +16,7 @@ categories:
       - Bash
       - Groovy
       - Lua
+      - XML
   - id: web
     label: Web/Fullstack
     items:
@@ -27,14 +28,35 @@ categories:
       - Node.js
       - Express.js
       - tRPC
+      - GraphQL
+      - Apollo Client
       - Spring
       - Spring Boot
+      - Spring Security
       - Flask
       - FastAPI
       - Payload CMS
-      - Tailwind
+      - Tailwind CSS
+      - shadcn/ui
+      - Framer Motion
+      - GSAP
       - NgRx
+      - RxJS
       - Zustand
+      - TanStack Query
+      - TanStack Table
+      - SWR
+      - Zod
+      - Vite
+      - MDX
+      - Electron
+      - Clerk
+      - Better Auth
+      - Resend
+      - React Email
+      - OpenAPI
+      - WebSocket
+      - Jinja
   - id: databases
     label: Databases
     items:
@@ -43,8 +65,12 @@ categories:
       - MySQL
       - MongoDB
       - Redis
+      - Upstash Redis
       - DuckDB
       - SQLite
+      - Litestream
+      - Drizzle ORM
+      - pg-boss
       - MinIO
       - AWS RDS
       - S3
@@ -58,19 +84,36 @@ categories:
       - dbt
       - Kafka
       - Spark
-      - Trino
       - Nessie
-      - Delta Lake
       - Snowflake
       - Databricks
       - Informatica
+      - VTOM
       - LangChain
       - LangGraph
       - MLflow
+  - id: cloud
+    label: Cloud (AWS)
+    items:
+      - AWS
+      - AWS EC2
+      - AWS ECR
+      - AWS RDS
+      - S3
+      - AWS CloudFront
+      - AWS Route 53
+      - AWS IAM
+      - AWS SSM
+      - AWS CloudWatch
+      - AWS EventBridge
+      - AWS CloudTrail
+      - AWS GuardDuty
+      - Vercel
   - id: infra
     label: Infrastructure
     items:
       - Docker
+      - Docker Compose
       - Kubernetes
       - Terraform
       - Ansible
@@ -80,10 +123,22 @@ categories:
       - AWS
       - Vercel
       - Nginx
+      - Caddy
       - Keycloak
       - Prometheus
       - Grafana
+      - Sentry
+      - Axiom
       - Turborepo
+      - pnpm
+      - electron-builder
+      - ffmpeg
+  - id: networking
+    label: Networking
+    items:
+      - mDNS / DNS-SD
+      - UDP
+      - OAuth 2.0 Device Flow
   - id: testing
     label: Testing
     items:

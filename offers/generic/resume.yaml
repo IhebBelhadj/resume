@@ -1,0 +1,179 @@
+# Baseline resume, migrated from the legacy generic/generic.tex (past-resume phrasings).
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: (generic)
+  role: Software Engineer
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced in building
+  cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven solutions.
+skills:
+- label: Languages
+  items: [TypeScript, Python, JavaScript, Java, C#, C, SQL, PHP, Bash]
+- label: Web/Fullstack
+  items: [Next.js, React, Astro.js, Angular, Vue.js, Express.js, Spring, Flask, FastAPI]
+- label: Databases
+  items: [PostgreSQL, Oracle DB, MySQL, MongoDB, Redis, MinIO, AWS RDS, S3, Vercel Blob, Neon Postgres]
+- label: Data Eng & AI
+  items: [Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow, Snowflake, Databricks]
+- label: Infrastructure
+  items: [Docker, Kubernetes, Ansible, Vagrant, Jenkins, GitHub Actions, AWS]
+- label: Testing
+  items: [Vitest, Playwright, Jest, Jasmine, Pytest, SonarQube]
+experiences:
+- title: Freelance Job
+  company: K-Rose
+  location: Tunis, TN
+  dates: Feb 2026 – May 2026
+  bullets:
+  - >-
+    Lead the architecture and development of a B2B e-commerce platform for the floral industry **[kairouanrose.com](https://www.kairouanrose.com/)**,
+    integrating a headless CMS as the backbone for both business operations (order, delivery, and product
+    management) and content delivery (dynamic SEO rule sets, automated sitemap, and CMS-managed pages
+    compiled as SSGs) — achieving Lighthouse scores of 98 SEO and 100 Accessibility.
+  - >-
+    Implemented role-based access control with row-level ownership enforcement, mapping Clerk authentication
+    to CMS domain entities across two independent layers
+  - >-
+    Structured error logging via next-axiom with contextual metadata to inspect production errors
+  - >-
+    Configured tag-scoped ISR cache invalidation tied to CMS publish events, with bulk-import-safe revalidation
+    suppression
+  - >-
+    Built a field-level audit logging system capturing structured diffs, actor metadata, and request context
+    across all CMS collections
+  stack: [Next.js, React, TypeScript, Payload CMS, PostgreSQL, Drizzle ORM, Neon Postgres, Clerk, Tailwind,
+    shadcn/ui, GSAP, Framer Motion, Resend, React Email, Upstash Redis, Next-axiom, Vercel, Vercel Blob,
+    Vitest, Playwright, Zod, SWR, TanStack Table, Docker]
+- title: Data engineering Consultant
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – currently
+  bullets:
+  - Lead the migration of a CRM data integration project to dbt and snowflake
+  - >-
+    Developed a native tool in snowflake for writing xml ingestion code based on a given xsd schema and
+    a defined config by the end user, eliminating the need for external ingestion tools
+  - >-
+    Working closely with GRDF to fix detected production anomalies in their legacy data pipelines.
+  - >-
+    Contributing to the development of an agentic AI system to automate the migration of Informatica mappings
+    to dbt models, drastically reducing conversion time.
+  stack: [Python, FastAPI, React, LangGraph, Redis, dbt, Docker, Informatica, VTOM, Oracle DB, Snowflake,
+    Airflow, Jinja, SQL, XML]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Integrated a multi-agent system with LangGraph for dynamic SQL and chart generation, enabling no-code
+    data exploration.
+  - >-
+    Built a real-time CDC pipeline refreshing charts live, enabling instant monitoring through the AI
+    first client interface.
+  - >-
+    Developed an end-to-end data pipeline with MinIO, Nessie, Airflow, and dbt to manage ingestion, transformation,
+    and ML forecasting.
+  - Secured the platform with Keycloak IAM using role- and group-based access control.
+  - >-
+    Implemented a caching system through Redis reducing network I/O calls for the agentic system for context
+    retrieval.
+  stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Nessie, Airflow,
+    dbt, PostgreSQL, Keycloak, Docker, Nginx]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Dec 2024 - Jan 2025
+  bullets:
+  - >-
+    Architected a CMS solution with Payload CMS and a custom block-based page builder, enabling no-code
+    content updates for the landing site.
+  - >-
+    Built an instantaneous preview system using Astro.js for dynamic component rendering with minimal
+    JS.
+  - >-
+    Designed a dual rendering strategy (SSR for preview, SSG for production), achieving 100 performance,
+    95 accessibility, and 100 SEO score on Lighthouse.
+  stack: [Astro.js, Payload CMS, React, TypeScript, Vercel, SQLite, Turborepo]
+- title: Freelance instructor (Weekends)
+  company: ENET’Com Junior Entreprise
+  location: Sfax, TN
+  dates: Oct 2023 - Nov 2023
+  bullets:
+  - >-
+    Conducted workshops over the weekends on web development using the MERN stack (MongoDB, Express.js,
+    React, Node.js) teaching more than 30 junior club members.
+  stack: []
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 - Sep 2024
+  bullets:
+  - >-
+    Implemented product state historization with audit trail, enabling edits, rollbacks, and time-travel
+    of product data.
+  - >-
+    Contributed to migration from legacy stack to Next.js, tRPC, and Turborepo monorepo with AWS deployment.
+  stack: [Next.js, React, TypeScript, Node.js, tRPC, PostgreSQL, AWS (EC2, ECR, S3, RDS), Docker, GitHub
+      Actions, Turborepo]
+- title: Software Engineering Intern
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: June 2023 - Aug 2023
+  bullets: []
+  stack: []
+projects:
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Torrent streamer in Node.js with backend wrapper using MSE API for seamless browser playback. Angular
+    frontend, Electron desktop app to bundle the engine and the frontend, and Ionic mobile controller.
+  stack: []
+- name: OpsForge
+  url: https://ihebbelhadj.vercel.app/projects/devops_playground
+  bullets:
+  - >-
+    A self-contained local DevOps environment simulating production using Vagrant and Ansible. Includes
+    a private Docker registry, Jenkins CI/CD, monitoring stack with Prometheus/Grafana, and SonarQube.
+  stack: [Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash]
+- name: EldSync
+  url: https://ihebbelhadj.vercel.app/projects/elder_care_saas
+  bullets:
+  - >-
+    Contributed to the frontend development of a Java microservices platform, building Angular components
+    with NgRx for state management, integrated with Spring Boot backend services.
+  stack: []
+- name: Portfolio
+  url: https://ihebbelhadj.vercel.app/
+  bullets:
+  - >-
+    Built on Next.js with MDX-based content management, lazy loading, and server components. Integrated
+    a LangChain agent that answers questions about my experience. Achieved 100 performance and best practices
+    scores on Lighthouse.
+  stack: []
+education:
+- degree: Software Engineering Master
+  school: ESPRIT
+  dates: Sept 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sept 2020 – June 2022
+  bullets: []

@@ -1,53 +1,61 @@
 # context/: the knowledge base
 
 Everything here is **fact about Iheb** and the only material a resume may use. Keep it
-exhaustive: it should hold more than any single resume shows. Edit it only with facts the
+exhaustive: it should hold far more than any single resume shows. Edit it only with facts the
 user has provided or confirmed (or extracted from their repos via `/ingest-project` and then
-reviewed). Run `.venv/bin/python -m pipeline check` after every change.
+reviewed). Run `.venv/bin/python -m pipeline check` after every change; it also lists files
+that are still thin.
 
 ## Files
 
 | Path | Holds |
 |---|---|
-| `profile.yaml` | name, `pdf_name`, header `contacts` (`newline: true` starts a 2nd header line), `summaries` (id/tags/text), `notes` |
-| `skills.yaml` | `categories` → `{id, label, items}`. Any skill a resume lists must be here |
-| `experiences/<id>.yaml` | one job/freelance/teaching role |
-| `projects/<id>.yaml` | one side/school project |
-| `studies/<id>.yaml` | one degree |
+| `profile.yaml` | name, `pdf_name`, header `contacts` (`newline: true` starts a 2nd header line), `notes` (free-form, for the agent; no summaries: `tailor` writes one per offer) |
+| `skills.yaml` | `categories` → `{id, label, items}`. Any technology a resume names must be here (concepts are written "Concept (Skill, …)") |
+| `experiences/<id>.md` | one job/freelance/teaching role |
+| `projects/<id>.md` | one side/school project |
+| `studies/<id>.md` | one degree |
 
-## Schema
+## Format: YAML frontmatter + raw Markdown body
 
-```yaml
-# experiences/<id>.yaml   (filename stem == id)
-id: talan-intern
+```markdown
+---
+id: talan-intern                        # == filename stem
 company: Talan
-titles: [Software Engineering Intern]   # first = default; selection may pick another (e.g. role-flavoured)
+titles: [Software Engineering Intern, Stagiaire ingénieur logiciel]   # first = default; add translations for non-English offers
 location: Tunis, TN
 start: 2025-02                          # YYYY-MM, used for newest-first ordering
 dates: Feb 2025 – Oct 2025              # display string
 tags: [ai, data]
 stack: [Python, FastAPI]                # full "Technologies used" list
-bullets:
-  - id: ti-keycloak                     # globally unique; prefix with an owner abbreviation
-    tags: [security, iam]
-    text: Secured the platform with Keycloak IAM ...
-  - id: ti-keycloak-nginx
-    variant_of: ti-keycloak             # alternative phrasing of the same fact (same file only)
-    text: ...
-notes: |                                 # never rendered; context for the agent (clients, team size, caveats)
+---
 
-# projects/<id>.yaml: id, name, url, tags, stack, repo (local path), bullets, notes
-# studies/<id>.yaml:  id, school, degrees (list, first = default), start, dates, tags, bullets, notes
+## Context
+Client, team size, who I reported to, what the product was.
+
+## What I did
+- Everything, including small things and things I only touched (say so).
+
+## Numbers
+- Only real ones, with where they come from.
 ```
 
-Text supports `**bold**` and `[label](url)`; everything else is escaped for LaTeX
-automatically, so write plain text (`C#`, `&`, `%` are fine).
+Projects: `id, name, url, tags, stack, repo` (local path). Studies: `id, school, degrees`
+(list, first = default), `start, dates, tags`.
 
-## Writing good bullets
+The **frontmatter** is what code validates and renders. The **body** is never rendered: it is
+the raw material resume bullets are written from, and a bullet may only claim what
+its own file's body says. So:
 
-- One fact per bullet, with impact or numbers when real (Lighthouse scores, "30+ members").
-- Prefer adding a **new variant** (`variant_of`) over editing a bullet into something
-  offer-specific; keep the original phrasing available.
-- Tag generously (`backend`, `devops`, `data`, `ai`, `frontend`, tech names). Tags are what
-  the tailoring agent matches against the offer.
-- `TODO` in `notes` marks missing info to ask the user about; don't fill it with guesses.
+- **Write it down, all of it.** Scope, team, tools, problems, decisions, results. Headings and
+  lists are free-form; structure it however reads best.
+- **Be precise about your part.** "Contributed to", "paired on", "only reviewed" vs "built
+  alone", "led". The generated bullet can only claim what the body says.
+- **Numbers and technologies** must appear in the body to appear in a bullet, so name them
+  where they were actually used.
+- `## From past resumes` holds the phrasings from old hand-written resumes (nested items are
+  alternative phrasings). They are valid facts; rewrite or expand them freely.
+- `TODO` marks missing info to ask the user about; don't fill it with guesses.
+
+Text in a bullet supports `**bold**` and `[label](url)` (the URL must appear in the file);
+everything else is escaped for LaTeX automatically, so write plain text (`C#`, `&`, `%` are fine).

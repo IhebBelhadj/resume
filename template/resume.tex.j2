@@ -3,10 +3,10 @@
     angle-percent for blocks, angle-hash for comments. See render.py.
     All free text goes through the `tex` filter (escaping + **bold** + [link](url)). -#>
 % GENERATED FILE: do not edit by hand.
-% Source: << selection_path >>
+% Source: << source_path >>
 \documentclass{resume}
 \hypersetup{
-  pdftitle={<< profile.name >> - Resume},
+  pdftitle={<< profile.name >> - << t.resume >>},
   pdfauthor={<< profile.name >>},
   pdfcreator={<< profile.name >>},
 }
@@ -32,13 +32,13 @@
 <% for section in sections %>
 <% if section == "summary" and summary %>
 
-\section{Summary}
+\section{<< t.summary >>}
 \begin{onecolentry}
 << summary | tex >>
 \end{onecolentry}
 <% elif section == "skills" and skills %>
 
-\section{Technologies}
+\section{<< t.skills >>}
 <% for cat in skills %>
 \begin{onecolentry}
 \textbf{<< cat.label | tex >>:} << cat["items"] | map("tex") | join(", ") >>
@@ -46,7 +46,7 @@
 <% endfor %>
 <% elif section == "experience" and experiences %>
 
-\section{Experience}
+\section{<< t.experience >>}
 <% for e in experiences %>
 
 \begin{twocolentry}{<< e.dates | tex >>}
@@ -60,7 +60,7 @@
 <% endfor %>
 <% if e.stack %>
     \begin{highlightsforbulletentries}
-    \item Technologies used: << e.stack | map("tex") | join(", ") >>
+    \item << t.stack >>: << e.stack | map("tex") | join(", ") >>
     \end{highlightsforbulletentries}
 <% endif %>
   \end{highlights}
@@ -72,14 +72,14 @@
 <% endfor %>
 <% elif section == "projects" and projects %>
 
-\section{Projects}
+\section{<< t.projects >>}
 <% for p in projects %>
 \begin{onecolentry}
   \begin{highlights}
     \item \textbf{<% if p.url %>\href{<< p.url | url >>}{<< p.name | tex >>:}<% else %><< p.name | tex >>:<% endif %>} << p.bullets | map("tex") | join(" ") >>
 <% if p.stack %>
     \begin{highlightsforbulletentries}
-    \item Technologies used: << p.stack | map("tex") | join(", ") >>
+    \item << t.stack >>: << p.stack | map("tex") | join(", ") >>
     \end{highlightsforbulletentries}
 <% endif %>
   \end{highlights}
@@ -90,7 +90,7 @@
 <% endfor %>
 <% elif section == "education" and education %>
 
-\section{Education}
+\section{<< t.education >>}
 <% for s in education %>
 \begin{twocolentry}{<< s.dates | tex >>}
 \textbf{<< s.degree | tex >>}, << s.school | tex >>\end{twocolentry}
