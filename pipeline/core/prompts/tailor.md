@@ -27,23 +27,42 @@ written for this offer.
    group), and an item may be a concept the offer asks for backed by SKILLS items, written
    exactly "Concept (Skill, Skill)", e.g. "Relational databases (PostgreSQL, MySQL)". `stack` items come from that entry's own stack or SKILLS; list
    only the relevant ones, most relevant first ([] for none).
-6. **Structure.** Keep every experience (no unexplained gaps in the timeline) but give the
-   relevant ones more bullets (typically 3–5) and the rest 1–2. Pick the 2–4 most relevant
-   projects, most relevant first, usually one bullet each. Include all degrees.
-7. **Summary**: write it for this offer, 2–3 lines: who the candidate is for this role
-   (a title CONTEXT supports), the strengths the offer asks for that CONTEXT backs, nothing
-   else. Same rules as bullets: no claim, level or technology CONTEXT lacks, no years of
+6. **Structure: a bullet budget, balanced across entries.** About 14–16 bullets in total
+   (experiences + projects). At most 5 bullets for any experience, and only the single most
+   relevant one gets 4–5; when it does, the others compensate: 2–3 for the next most
+   relevant, 0–1 for the rest (a title line alone is fine). Keep every experience that
+   avoids an unexplained gap in the timeline; drop short side roles that overlap another
+   role and add nothing for this offer. Projects: 0–2, only when they show something the
+   offer wants that the experiences don't, one line each. Include all degrees.
+7. **Summary**: 2 lines, about the candidate, not the offer: who they are across their
+   career (a title CONTEXT supports) and the two or three strengths that run through their
+   work. It should read the same for any offer in the same field; the offer only decides
+   which of those strengths comes first. Never echo the offer's wording, keyword lists or
+   job title, name at most three technologies, and leave the specifics to the bullets.
+   It is about experience: never mention education (school, degree, graduation);
+   the education section already covers it. Same rules as bullets: no claim, level or technology CONTEXT lacks, no years of
    experience unless the dates show them, no clichés ("passionate", "results-driven"). Never
    mention where the candidate lives or is based; mention relocation only if the offer's
    location makes it relevant and PROFILE NOTES state it.
-8. **Length follows the material, within the page budget.** One page when what is relevant
+8. **No "engineer" title before the engineering degree.** For an experience that started
+   before the candidate's engineering degree was completed (its end date in STUDIES), pick a
+   `title` without "Engineer"/"Ingénieur" (e.g. "Developer"); intern titles such as
+   "Software Engineering Intern" are fine. If every title of that experience says
+   "Engineer", keep the most neutral one and add to `gaps`: "<id>: add a non-engineer title".
+9. **Link freelance work.** For a freelance experience or a project whose CONTEXT file gives
+   the client's or product's public URL, put it in that entry's first bullet as
+   `[domain](url)` (once, URL copied exactly from CONTEXT).
+10. **Length follows the material, within the page budget.** One page when what is relevant
    to this offer fits on it; a second page only when there is enough relevant material to
    fill a good part of it. Never pad (no filler bullets, no irrelevant entries to fill
    space), never cut strong relevant evidence just to stay on one page, never exceed the
    page budget.
-9. **Write in the offer's language.** Set `lang` to the language the offer is written in
+11. **Write in the offer's language.** Set `lang` to the language the offer is written in
    (`fr` for French, else `en`) and write the summary, bullets and skill group labels in
    it, naturally (as a native recruiter would read it), not word for word. Technology
    names stay as they are. Pick the `title`/`education` entry in that language when CONTEXT
    lists one; otherwise keep the English one. Dates and section headings are translated by code.
-10. `offer`: company, role and URL (or "").
+12. `offer`: company, role, URL (or "") and `country`: the ISO 3166 alpha-2 code of the
+    country where the job is (e.g. "TN", "FR", "NL"; "" if the offer doesn't say). Code uses
+    it to name degrees (engineering-school names for TN/FR, bachelor/master elsewhere) and
+    orders experiences (ongoing roles first, then newest first): don't do either yourself.

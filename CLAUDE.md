@@ -81,15 +81,18 @@ Model: `--model` or `$RESUME_MODEL` (default `opus`).
    and use the offer's vocabulary, but must claim nothing the body doesn't: no added
    technologies, numbers, scope, seniority or ownership ("used" never becomes "led",
    "contributed to" never becomes "built").
-4. **One or two pages, by content.** `max_pages: 2` is a ceiling, not a target: one page
+4. **Balance the bullets.** About 14–16 in total; at most 5 per experience, and only the most
+   relevant one gets 4–5, the others compensate (2–3, then 0–1); projects 0–2, one line each.
+   `tailor` caps bullets per entry in its output schema.
+5. **One or two pages, by content.** `max_pages: 2` is a ceiling, not a target: one page
    when the relevant material fits, two when there is enough relevant material to fill a
    good part of the second; never pad to fill it. Over budget: drop the least relevant
    bullets and projects first; then trim stacks; then shorten bullets.
-5. **Match the offer's language.** `lang` (`en` | `fr`) in `resume.yaml`: the model writes
+6. **Match the offer's language.** `lang` (`en` | `fr`) in `resume.yaml`: the model writes
    the summary, bullets and skill labels in the offer's language; code translates headings
    (`render.LABELS`) and context dates/locations (`resume.localize`). Titles and degrees
    come from `context/` (add a translated variant to `titles`/`degrees` to use it).
-6. **New facts go to `context/` first**, with the user's confirmation, never straight
+7. **New facts go to `context/` first**, with the user's confirmation, never straight
    into a `resume.yaml`. The same goes for cover letters.
 
 ## Tailoring workflow (interactive: `/tailor-resume`)
@@ -128,8 +131,14 @@ Slug format: `YYYY-MM-<company>-<role>` (kebab-case).
   API (e.g. for Batch at volume) means reimplementing only that function.
 - **`core/` vs `flows/` split.** `pipeline/core` must never import an orchestrator. Prefect
   is the first orchestrator; switching to Dagster later means rewriting only `flows/`.
-- `tailor` writes experiences and education newest-first (by `start`) and projects most
-  relevant first; `build` prints everything in `resume.yaml` order.
+- `tailor` writes experiences ongoing first (`dates` ending in "currently"/"Present"), then
+  newest first (by `start`); education newest first; projects most relevant first. `build`
+  prints everything in `resume.yaml` order.
+- **Degree names follow the job's country**, in code (`resume.ENGINEERING_SYSTEM`): Tunisia
+  and France use the engineering-school system (cycle préparatoire + diplôme d'ingénieur),
+  elsewhere the bachelor/master equivalents (ESPRIT's diploma is officially equivalent to a
+  master's in software engineering). The model only reports `offer.country`; the names
+  come from `names` in `context/studies/*.md`.
 
 ## Roadmap
 

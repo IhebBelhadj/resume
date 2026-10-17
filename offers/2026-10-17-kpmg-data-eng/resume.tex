@@ -2,7 +2,7 @@
 % Source: offers/2026-10-17-kpmg-data-eng/resume.yaml
 \documentclass{resume}
 \hypersetup{
-  pdftitle={Iheb Belhadj - Resume},
+  pdftitle={Iheb Belhadj - CV},
   pdfauthor={Iheb Belhadj},
   pdfcreator={Iheb Belhadj},
 }
@@ -27,113 +27,112 @@
 
 \vspace{5 pt - 0.3 cm}
 
-\section{Summary}
+\section{Profil}
 \begin{onecolentry}
-Data Engineering Consultant at Talan, migrating client data integrations to dbt and Snowflake and leading the design of multi-environment Airflow orchestration. Also builds full-stack applications (React, Next.js, FastAPI, PostgreSQL) and deploys them on AWS with Docker. Works directly with clients on production data pipelines.
+Consultant Data Engineering chez Talan, ingénieur en génie logiciel (ESPRIT). Je conçois des pipelines et des migrations de données (dbt, Snowflake, Airflow, Informatica) et des applications full stack (React, Next.js, PostgreSQL) déployées dans le cloud (AWS, Docker). J'ai aussi contribué à des systèmes d'IA agentique (LangGraph).
 \end{onecolentry}
 
-\section{Technologies}
+\section{Compétences techniques}
 \begin{onecolentry}
-\textbf{Programming languages:} Python, SQL, Java, C\#, TypeScript, JavaScript, Bash
+\textbf{Langages:} Python, SQL, Java, C\#, TypeScript, JavaScript, Bash
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Data engineering \& Big Data:} ETL / ELT (dbt, Airbyte, Informatica), Orchestration (Airflow, VTOM), Snowflake, Spark, Databricks, Kafka, Trino, Delta Lake
+\textbf{Data Engineering \& IA:} ETL / ELT (dbt, Airbyte, Informatica), Entrepôts de données (Snowflake), Orchestration (Airflow, VTOM), Big Data (Spark, Databricks, Kafka), IA agentique (LangGraph, LangChain)
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Machine learning \& AI:} LangGraph, LangChain, MLflow
+\textbf{Bases de données:} PostgreSQL, MySQL, MongoDB, Oracle DB, Redis, MinIO
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Databases:} PostgreSQL, Oracle DB, MySQL, MongoDB, Redis, SQLite
+\textbf{Cloud \& DevOps:} Cloud (AWS, Vercel), AWS EC2, S3, AWS RDS, AWS CloudFront, Docker, Docker Compose, Terraform, CI/CD (GitHub Actions)
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Cloud:} AWS, AWS EC2, S3, AWS RDS, AWS CloudFront, AWS IAM, Vercel
+\textbf{Full stack:} React, Next.js, FastAPI, Node.js, Spring Boot, Angular
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Full-stack (Front-End / Back-End):} React, Next.js, Angular, FastAPI, Spring Boot, Node.js, Tailwind CSS
-\end{onecolentry}
-\begin{onecolentry}
-\textbf{DevOps \& CI/CD:} Docker, Docker Compose, GitHub Actions, Terraform, Jenkins
+\textbf{Tests \& qualité:} Pytest, Vitest, Playwright, SonarQube
 \end{onecolentry}
 
-\section{Experience}
+\section{Expérience professionnelle}
 
-\begin{twocolentry}{Feb 2026 – May 2026}
-\textbf{Lead Full-stack Engineer (Freelance)}, K-Rose -- Tunis, TN\end{twocolentry}
-\vspace{0.10 cm}
-\begin{onecolentry}
-  \begin{highlights}
-    \item Led a three-developer team building a B2B ordering platform for \href{https://www.kairouanrose.com/}{kairouanrose.com}: wrote the architecture document, reviewed and merged pull requests, and deployed it end to end on Vercel.
-    \item Turned the client's request → negotiation → confirmed-order process into a Next.js app with a client portal and a Payload CMS back office on PostgreSQL, replacing email, phone calls and spreadsheets.
-    \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, React, TypeScript, PostgreSQL, Payload CMS, Drizzle ORM, Vercel, Docker
-    \end{highlightsforbulletentries}
-  \end{highlights}
-\end{onecolentry}
-\entryspace
-
-\begin{twocolentry}{Oct 2025 – currently}
+\begin{twocolentry}{oct. 2025 – aujourd'hui}
 \textbf{Data Engineering Consultant}, Talan -- Tunis, TN\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Leading the migration of a CRM data integration project to dbt and Snowflake.
-    \item Led the architecture and development of multi-environment Airflow orchestration, with a custom library that keeps DAGs declarative: source-agnostic config builder, asset-based triggering, shared state store.
-    \item Helped build a Python tool that runs natively in Snowflake and generates XML parsing SQL from Informatica's exported workflows: models with 100+ columns, lineage, an enforced XML schema and input validation.
-    \item Work directly with the client GRDF to fix production anomalies in their legacy data pipelines.
-    \item Contributing to an agentic AI system (LangGraph) that automates the conversion of Informatica mappings into dbt models.
+    \item Pilotage de la migration d'un projet d'intégration de données CRM vers dbt et Snowflake.
+    \item Pilotage de l'architecture et du développement de l'orchestration multi-environnements sur Airflow, avec une librairie interne : configuration multi-source (pattern Strategy), DAGs événementiels basés sur des assets et partage d'état entre DAGs.
+    \item Contribution à un outil Python natif Snowflake qui génère le code SQL de parsing XML à partir des mappings Informatica : plus de 100 colonnes par modèle, lineage, schéma XML imposé et validations, sans outil d'ingestion externe.
+    \item Contribution à un système d'IA agentique qui automatise la conversion des mappings Informatica en modèles dbt.
+    \item Maintenance en production avec GRDF : correction des anomalies détectées dans leurs pipelines de données legacy.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, SQL, dbt, Snowflake, Airflow, Informatica, Oracle DB, LangGraph, Docker
+    \item Technologies utilisées: Snowflake, dbt, Airflow, Python, SQL, Informatica
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 \entryspace
 
-\begin{twocolentry}{Feb 2025 – Oct 2025}
+\begin{twocolentry}{févr. 2026 – mai 2026}
+\textbf{Lead Full-stack Engineer (Freelance)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Rédaction du document d'architecture puis développement et déploiement de bout en bout d'une plateforme B2B full stack (site public, portail client, back-office) qui remplace emails et tableurs ; équipe de 3, revue et merge des pull requests.
+    \begin{highlightsforbulletentries}
+    \item Technologies utilisées: Next.js, React, TypeScript, PostgreSQL, Payload CMS, Drizzle ORM
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{févr. 2025 – oct. 2025}
 \textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Built an end-to-end data pipeline (MinIO, Airbyte, Airflow, dbt) on Dockerized infrastructure for ingestion, transformation and ML forecasting.
-    \item Built a real-time CDC pipeline and a Next.js front end that pushes live chart updates over WebSockets for instant monitoring.
-    \item Integrated a LangGraph multi-agent system that generates SQL and charts on the fly, enabling no-code data exploration.
+    \item Développement d'un pipeline de données de bout en bout (MinIO, Airflow, Airbyte, dbt) couvrant l'ingestion, la transformation et des prévisions par Machine Learning.
+    \item Mise en place d'un pipeline CDC temps réel qui rafraîchit les graphiques en direct pour un suivi instantané.
+    \item Intégration d'un système multi-agents LangGraph qui génère du SQL et des graphiques à la volée, pour explorer les données sans code.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, FastAPI, Airflow, Airbyte, dbt, MinIO, PostgreSQL, LangGraph, MLflow, Next.js, Docker
+    \item Technologies utilisées: Python, Airflow, Airbyte, dbt, MinIO, PostgreSQL
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 \entryspace
 
-\begin{twocolentry}{Nov 2024 - Feb 2025}
-\textbf{Freelance Software Engineer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\begin{twocolentry}{nov. 2024 - févr. 2025}
+\textbf{Freelance Software Engineer}, Nexits -- Paris, FR (à distance)\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Worked with the team on Terraform-defined AWS hosting: S3 + CloudFront, Docker on EC2, GitHub Actions.
+    \item Participation avec l'équipe à l'hébergement sur AWS en Terraform : site statique sur S3 + CloudFront avec rollback en \textasciitilde{}10 s, CMS sur EC2 avec Docker Compose et déploiements CI via GitHub Actions.
     \begin{highlightsforbulletentries}
-    \item Technologies used: AWS, Terraform, Docker, GitHub Actions, Payload CMS, React, TypeScript
+    \item Technologies utilisées: Payload CMS, Astro.js, TypeScript, AWS, S3, AWS CloudFront
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 \entryspace
 
-\begin{twocolentry}{Aug 2023 - Sep 2024}
-\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\begin{twocolentry}{août 2023 - sept. 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (à distance)\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Contributed to the migration from a legacy Vue.js product to Next.js, tRPC and a Turborepo monorepo deployed on AWS.
-    \item Worked with the team on the SaaS deployment: containers on EC2, RDS PostgreSQL, GitHub Actions CI/CD.
+    \item Contribution à la migration de l'application legacy vers Next.js, tRPC et un monorepo Turborepo, et participation avec l'équipe au déploiement sur AWS (EC2 avec Docker Compose, RDS PostgreSQL, S3, CloudFront) en Terraform.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, React, TypeScript, PostgreSQL, AWS, Docker, Terraform, GitHub Actions
+    \item Technologies utilisées: Next.js, React, TypeScript, PostgreSQL, AWS, AWS RDS
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
+\entryspace
 
-\section{Education}
-\begin{twocolentry}{Sept 2022 – Sep 2025}
-\textbf{Software Engineering Master}, ESPRIT\end{twocolentry}
+\begin{twocolentry}{juin 2023 - août 2023}
+\textbf{Software Engineering Intern}, Nexits -- Paris, FR (à distance)\end{twocolentry}
+
+\section{Formation}
+\begin{twocolentry}{sept. 2022 – sept. 2025}
+\textbf{Diplôme d'ingénieur en génie logiciel}, ESPRIT\end{twocolentry}
 \vspace{0.10 cm}
-\begin{twocolentry}{Sept 2020 – June 2022}
-\textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
+\begin{twocolentry}{sept. 2020 – juin 2022}
+\textbf{Cycle préparatoire aux études d'ingénieur}, IPEIM\end{twocolentry}
 
 \end{document}

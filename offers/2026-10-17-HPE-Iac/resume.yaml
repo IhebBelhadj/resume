@@ -1,0 +1,187 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: Hewlett Packard Enterprise (HPE)
+  role: IaC & Automation Solution Architect
+  url: ''
+  country: TN
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Software engineer focused on infrastructure as code and automation: Terraform-provisioned AWS hosting
+  with keyless GitHub Actions CI/CD, Docker Compose deployments on Linux hosts with health-checked rollbacks,
+  and self-hosted platforms secured behind an Nginx gateway, TLS and Keycloak. Writes deployment plans
+  and builds reusable automation frameworks, such as a custom Airflow orchestration library.
+skills:
+- label: IaC & Configuration Management
+  items: [Terraform, Ansible, Vagrant]
+- label: Containers & Orchestration
+  items: [Docker, Docker Compose, Kubernetes]
+- label: CI/CD & Quality
+  items: [GitHub Actions, Jenkins, SonarQube]
+- label: Cloud (AWS)
+  items: [AWS EC2, AWS ECR, S3, AWS CloudFront, AWS Route 53, AWS IAM, AWS SSM, AWS RDS, AWS CloudWatch,
+    AWS EventBridge, AWS CloudTrail, AWS GuardDuty]
+- label: Networking & Security
+  items: ['Reverse proxies & TLS (Nginx, Caddy)', IAM / SSO (Keycloak), mDNS / DNS-SD, UDP, OAuth 2.0
+      Device Flow]
+- label: Monitoring & Logging
+  items: [Prometheus, Grafana, AWS CloudWatch, Sentry, Axiom]
+- label: Scripting & Languages
+  items: [Python, Bash, TypeScript, Java, Groovy, SQL]
+- label: APIs & Workflow Automation
+  items: ['RESTful APIs (FastAPI, Node.js, OpenAPI)', Airflow, PostgreSQL]
+experiences:
+- title: Data Engineering Consultant
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – currently
+  bullets:
+  - >-
+    Led the architecture and development of multi-environment pipeline orchestration on Airflow, with
+    a custom library that gives DAG developers a reusable framework so DAG code stays declarative
+  - >-
+    Built a source-agnostic config builder (strategy pattern over Snowflake metadata tables, a metadata
+    database or Airflow JSON variables) and a state store with override hierarchy policies across DAGs
+  stack: [Python, Airflow, Jinja, Snowflake, SQL]
+- title: Lead Full-stack Engineer (Freelance)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Feb 2026 – May 2026
+  bullets:
+  - >-
+    Built and deployed [kairouanrose.com](https://www.kairouanrose.com/) end to end on Vercel, with versioned
+    database migrations, Docker Compose for the local database, Axiom structured logging and Sentry error
+    tracking
+  stack: [Vercel, Docker, PostgreSQL, Axiom, Sentry]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Worked on provisioning a self-hosted data platform (Airbyte, Airflow, dbt) with shell scripts and
+    per-instance Docker Compose files on shared Docker networks, and automated deployments with GitHub
+    webhooks and Bash scripts
+  - >-
+    Set up Nginx as the gateway in front of the self-hosted services and worked on TLS between instances
+    with certificate sharing
+  - >-
+    Secured the platform inside a LAN with Keycloak IAM (role- and group-based access control) authenticating
+    every service, with the whole instance behind a VPN
+  stack: [Docker, Docker Compose, Bash, Nginx, Keycloak, Airflow, Airbyte, dbt, Cosmos]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 - Feb 2025
+  bullets:
+  - >-
+    Wrote the AWS deployment plan for the Nexits landing site and Payload CMS (cost-first launch profile
+    and a later growth architecture) and worked with the team on building the launch profile
+  - >-
+    Provisioned the infrastructure as code with Terraform: a bootstrap stack (S3 state with native locking,
+    GitHub OIDC provider, CI IAM roles), then network, static site, host, ECR, Route 53 and budget stacks
+  - >-
+    Set up guardrails for CI/CD: GitHub Actions authenticates to AWS through OIDC with least-privilege
+    IAM roles per workflow, a reviewer-gated Terraform apply and a permissions boundary, so there are
+    no long-lived keys
+  - >-
+    Automated deployments to an EC2 Graviton Linux host through AWS SSM Run Command: arm64 images on ECR
+    pinned by digest, health check with automatic rollback, SSH closed, secrets in SSM Parameter Store
+  - >-
+    Ran the CMS on Docker Compose with Caddy (automatic TLS) and Litestream replicating SQLite to S3,
+    with CloudWatch auto-recover and daily EBS snapshots, so the host can be rebuilt from Terraform in
+    about 10 min
+  stack: [Terraform, AWS EC2, AWS SSM, AWS IAM, AWS ECR, S3, AWS CloudFront, AWS Route 53, AWS CloudWatch,
+    GitHub Actions, Docker, Docker Compose, Caddy, Litestream]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 - Sep 2024
+  bullets:
+  - >-
+    Worked with the team on the Terraform setup for the SaaS on AWS: one account per environment under
+    AWS Organizations, one state per stack, outputs shared through SSM Parameter Store
+  - >-
+    Contributed to the GitHub Actions CI/CD: images built once and promoted by digest from staging to
+    prod behind a manual approval gate, OIDC role assumption, and Turborepo affected-app detection
+  - >-
+    Worked on zero-downtime API deploys on an EC2 Graviton host with Docker Compose (docker rollout, health
+    checks, Caddy retries), backed by RDS PostgreSQL in private subnets
+  stack: [Terraform, AWS EC2, AWS RDS, AWS SSM, AWS IAM, AWS EventBridge, GitHub Actions, Docker, Docker
+      Compose, Caddy, Turborepo]
+- title: Software Engineering Intern
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: June 2023 - Aug 2023
+  bullets: []
+  stack: []
+projects:
+- name: OpsForge
+  url: https://ihebbelhadj.vercel.app/projects/devops_playground
+  bullets:
+  - >-
+    Self-contained local DevOps environment simulating production, provisioned with Vagrant and Ansible:
+    private Docker registry, Jenkins CI/CD, Prometheus/Grafana monitoring and SonarQube
+  stack: [Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash]
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Self-hosted media server with a headless entry built to run under systemd or Docker on Linux (exit
+    codes for supervisor restarts), a versioned OpenAPI REST API, and deb packages that open firewall
+    ports with ufw/firewalld
+  stack: [Node.js, OpenAPI, Docker, electron-builder, mDNS / DNS-SD, UDP]
+education:
+- degree: Engineering Degree in Software Engineering
+  school: ESPRIT
+  dates: Sept 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Preparatory Cycle
+  school: IPEIM
+  dates: Sept 2020 – June 2022
+  bullets: []
+gaps:
+- >-
+  Seniority: offer asks 10-15 years; dates show about 3 years (Jun 2023 onward). Big mismatch for a TCP_05
+  architect role
+- >-
+  Kubernetes (expert level, Helm, operators, GitOps): listed in SKILLS but no experience shows it; closest
+  is Horizon, where Docker Compose, shell provisioning, an Nginx gateway and TLS between services were
+  set up by hand
+- 'Chef (cookbooks, knife): not used; closest is Ansible (OpsForge) and Terraform'
+- >-
+  Ansible custom modules / Terraform provider plugins: not used; closest is writing Terraform stacks and
+  Ansible provisioning
+- 'GitLab CI / CircleCI: not used; closest is GitHub Actions and Jenkins'
+- 'Go / Ruby: not used; closest is Python and Bash'
+- 'PowerShell: not used; closest is Bash'
+- 'ELK Stack: not used; closest is Prometheus/Grafana, CloudWatch, Axiom, Sentry'
+- 'Azure / GCP: not used; closest is AWS'
+- 'Bare-metal servers, SAN/NAS storage, enterprise networking: nothing in context'
+- >-
+  Linux administration: shown in the work (EC2 Linux hosts, systemd/Debian packaging in Playpex) but 'Linux'
+  isn't in skills.yaml; add it if you want it listed
+- >-
+  Leading teams / pursuit solutioning / mentoring: only K-Rose (reviewed and merged PRs from two developers)
+  and the ENET'Com workshops; nothing at enterprise scale
+- >-
+  Architecture diagrams: context mentions deployment plans but no end-to-end architecture diagrams; add
+  them if they exist
+- >-
+  talan-intern: which VPN, and whether Horizon ran on Linux hosts (would back the Linux requirement)

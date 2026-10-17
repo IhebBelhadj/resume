@@ -17,6 +17,10 @@ from .context import Context
 
 SECTIONS = ["summary", "skills", "experience", "projects", "education"]
 LANGS = ("en", "fr")  # the resume is written in the offer's language; context/ is in English
+# Jobs in these countries get the engineering-school degree names (prépa + diplôme d'ingénieur);
+# everywhere else, their bachelor/master equivalents. See `names` in context/studies/*.md.
+ENGINEERING_SYSTEM = {"TN", "FR"}
+_ONGOING_RE = re.compile(r"(currently|present|now)\s*$", re.I)
 _STR, _LIST = str, list
 # required keys and their types, per entry list; checked by `validate`
 _FIELDS = {
@@ -185,7 +189,7 @@ def expand(sel: dict, ctx: Context) -> dict:
                 errors.append(f"skills[{i}] ({label}): {err}")
         skills.append({"label": label, "items": list(items)})
 
-    # experiences, newest first
+    # experiences: ongoing first, then newest first
     experiences = []
     for spec in sel.get("experiences") or []:
         eid = spec["id"] if isinstance(spec, dict) else spec
@@ -197,7 +201,7 @@ def expand(sel: dict, ctx: Context) -> dict:
         title = spec.get("title") or e["titles"][0]
         if title not in e["titles"]:
             errors.append(f"experiences.{eid}: title {title!r} not in {e['titles']}")
-        experiences.append((str(e["start"]), {
+        experiences.append(((bool(_ONGOING_RE.search(e["dates"])), str(e["start"])), {
             "title": title,
             "company": e["company"],
             "location": localize(e["location"], lang),
@@ -223,7 +227,8 @@ def expand(sel: dict, ctx: Context) -> dict:
             "stack": _stack(spec.get("stack", False), p, ctx, f"projects.{pid}", errors),
         })
 
-    # education, newest first
+    # education, newest first; degree name set by the job's country when the study has `names`
+    system = "engineering" if (sel.get("offer") or {}).get("country", "").upper() in ENGINEERING_SYSTEM else "academic"
     education = []
     for spec in sel.get("education") or []:
         sid = spec["id"] if isinstance(spec, dict) else spec
@@ -232,9 +237,12 @@ def expand(sel: dict, ctx: Context) -> dict:
         if not s:
             errors.append(f"education: unknown id {sid!r}")
             continue
-        degree = spec.get("degree") or s["degrees"][0]
-        if degree not in s["degrees"]:
-            errors.append(f"education.{sid}: degree {degree!r} not in {s['degrees']}")
+        if names := (s.get("names") or {}).get(system):
+            degree = names.get(lang) or names["en"]
+        else:
+            degree = spec.get("degree") or s["degrees"][0]
+            if degree not in s["degrees"]:
+                errors.append(f"education.{sid}: degree {degree!r} not in {s['degrees']}")
         education.append((str(s["start"]), {
             "degree": degree,
             "school": s["school"],

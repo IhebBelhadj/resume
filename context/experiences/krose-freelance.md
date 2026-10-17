@@ -1,14 +1,45 @@
 ---
 id: krose-freelance
 company: K-Rose
-titles: [Freelance Job, Freelance Software Engineer, Lead Full-stack Engineer (Freelance)]
+website created: https://www.kairouanrose.com/
+titles:
+  [
+    Freelance Job,
+    Freelance Software Engineer,
+    Lead Full-stack Engineer (Freelance),
+  ]
 location: Tunis, TN
 start: 2026-02
 dates: Feb 2026 – May 2026
 tags: [fullstack, frontend, backend, nextjs, cms, ecommerce, b2b, i18n]
-stack: [Next.js, React, TypeScript, Payload CMS, PostgreSQL, Drizzle ORM, Neon Postgres, Clerk, Tailwind CSS, shadcn/ui, GSAP,
-  Framer Motion, Resend, React Email, Upstash Redis, Axiom, Vercel, Vercel Blob, Vitest, Playwright, Zod, SWR,
-  TanStack Table, Docker]
+stack:
+  [
+    Next.js,
+    React,
+    TypeScript,
+    Payload CMS,
+    PostgreSQL,
+    Drizzle ORM,
+    Neon Postgres,
+    Clerk,
+    Tailwind CSS,
+    shadcn/ui,
+    GSAP,
+    Framer Motion,
+    Resend,
+    React Email,
+    Upstash Redis,
+    Axiom,
+    Vercel,
+    Vercel Blob,
+    Vitest,
+    Playwright,
+    Zod,
+    SWR,
+    TanStack Table,
+    Docker,
+    Sentry,
+  ]
 repo: /home/iheb/projects/kairouan-rose
 ---
 
@@ -68,6 +99,7 @@ repo: /home/iheb/projects/kairouan-rose
 - Audit log for orders and deliveries: field-level diff (from / to) of every change, actor (admin / client / system), IP and user agent, written in the same database transaction as the change; entries cannot be edited or deleted.
 - Client notifications generated from the same diff when an admin updates an order or a delivery ("Status changed to ...").
 - Live preview and drafts / versioning for content.
+- PDF invoices (the invoice is HTML which the client prints to PDF)
 
 ## Observability, testing, tooling
 
@@ -75,15 +107,16 @@ repo: /home/iheb/projects/kairouan-rose
 - Vitest unit tests for the sign-up / sign-in flows and the client-creation action, an integration test for the contact API, Playwright set up for end-to-end tests.
 - pnpm, ESLint, Prettier, Docker Compose for the local database.
 - Wrote an internal issue tracker for the codebase (security, data integrity, routing, i18n, tests, tech debt) with priorities and fix directions.
+- Used Sentry for error tracking for both client and server errors
+- Used TDD development approach for development
 
 ## Not built (planned in the design document, do not claim)
 
-- Online payments (Paymee), Calendly webhook, PDF invoices (the invoice is HTML), outbox / background jobs.
+- Online payments (Paymee), Calendly webhook, outbox / background jobs.
 
 ## Numbers
 
-- Lighthouse on the production homepage, from my portfolio page: 82 performance, 97 accessibility, 96 best practices, 100 SEO.
-- Older resume figure (earlier measurement): 98 SEO and 100 Accessibility. TODO: which one is current?
+- Lighthouse on the production homepage, from my portfolio page: 92 performance, 97 accessibility, 96 best practices, 100 SEO.
 - About 140 of the 164 commits in the repository are mine.
 
 ## From past resumes

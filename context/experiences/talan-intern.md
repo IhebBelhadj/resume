@@ -6,13 +6,51 @@ location: Tunis, TN
 start: 2025-02
 dates: Feb 2025 – Oct 2025
 tags: [ai, agents, data, backend, fullstack, devops]
-stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Nessie, Airflow,
-  Airbyte, dbt, PostgreSQL, Keycloak, Docker, Nginx]
+stack:
+  [
+    Python,
+    FastAPI,
+    Next.js,
+    LangGraph,
+    LangChain,
+    Redis,
+    MinIO,
+    Airflow,
+    Airbyte,
+    dbt,
+    PostgreSQL,
+    Keycloak,
+    Docker,
+    Nginx,
+    Cosmos,
+    Bash,
+    Docker Compose,
+  ]
 ---
 
 <!-- Raw facts: never rendered. Resume bullets are generated from this text per offer and
      must quote it as their source, so write everything down (scope, team, tools, numbers,
      what you only touched). Keep it true; vague is fine, inflated is not. -->
+
+## Context
+
+- 6-month internship (end-of-studies), Feb 2025 – Oct 2025. TODO: team size, who I reported to.
+- The application is called Horizon. Its purpose: dynamic chart generation (a multi-agent system turns
+  questions into SQL and charts), with CDC so charts update in real time.
+- Horizon is hosted locally, on purpose: the idea is a local data system with minimal cost, avoiding
+  cloud costs by running your own data platform. Airbyte, dbt and Airflow all run locally.
+
+## Self-hosted infrastructure (what I worked on)
+
+- Running Airbyte, Airflow and dbt locally needs a way to orchestrate and connect the instances; I used
+  Nginx as the gateway in front of them.
+- Worked on connecting the instances through TLS, with certificate sharing between them.
+- Worked on the provisioning through shell scripts and per-instance Docker Compose files with shared
+  Docker network definitions. In effect I rebuilt by hand what Kubernetes gives by default (service
+  networking, provisioning, gateway/ingress, TLS between services).
+- Hosted the dbt projects in Airflow with Cosmos (astronomer-cosmos).
+- Designed to run inside a LAN: an exposed IAM solution (Keycloak) authenticates every service, and the
+  whole instance is hidden behind a VPN. TODO: which VPN.
 
 ## From past resumes
 
@@ -29,9 +67,3 @@ stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Ne
 - Automated deployments via GitHub webhooks and Bash scripts on a Docker Compose cluster, improving release consistency.
 - Built a Next.js frontend leveraging WebSockets to deliver instant feedback and live chart updates for a seamless user experience.
 - Optimized frontend performance with persisted state to reduce network calls and enable offline viewing, and implemented optimistic updates for a faster, more responsive user experience.
-
-## Notes
-
-Older resume variants listed the end date as Aug 2025; the latest generic resume says Oct 2025.
-Lakehouse wording differs across variants (Nessie / Delta Lake / Airbyte); choose ONE pipeline bullet.
-Never name Trino or Delta Lake on a resume (user's decision, 2026-10-17).

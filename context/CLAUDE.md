@@ -41,7 +41,9 @@ Client, team size, who I reported to, what the product was.
 ```
 
 Projects: `id, name, url, tags, stack, repo` (local path). Studies: `id, school, degrees`
-(list, first = default), `start, dates, tags`.
+(list, first = default), `start, dates, tags`, and optionally `names: {engineering: {en, fr},
+academic: {en, fr}}`: when present, code prints the `engineering` name for jobs in Tunisia or
+France and the `academic` (bachelor/master) name elsewhere, in the resume's language.
 
 The **frontmatter** is what code validates and renders. The **body** is never rendered: it is
 the raw material resume bullets are written from, and a bullet may only claim what

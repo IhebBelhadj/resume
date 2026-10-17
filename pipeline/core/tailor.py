@@ -12,17 +12,21 @@ from .resume import LANGS, expand, write_resume
 _STR_LIST = {"type": "array", "items": {"type": "string"}}
 
 
+def _bullets(n: int) -> dict:
+    return {**_STR_LIST, "maxItems": n}
+
+
 def _obj(**props) -> dict:
     return {"type": "object", "properties": props, "required": list(props), "additionalProperties": False}
 
 
 SCHEMA = _obj(
-    offer=_obj(company={"type": "string"}, role={"type": "string"}, url={"type": "string"}),
+    offer=_obj(company={"type": "string"}, role={"type": "string"}, url={"type": "string"}, country={"type": "string"}),
     lang={"type": "string", "enum": list(LANGS)},
     summary={"type": "string"},
     skills={"type": "array", "items": _obj(category={"type": "string"}, label={"type": "string"}, items=_STR_LIST)},
-    experiences={"type": "array", "items": _obj(id={"type": "string"}, title={"type": "string"}, bullets=_STR_LIST, stack=_STR_LIST)},
-    projects={"type": "array", "items": _obj(id={"type": "string"}, bullets=_STR_LIST, stack=_STR_LIST)},
+    experiences={"type": "array", "items": _obj(id={"type": "string"}, title={"type": "string"}, bullets=_bullets(5), stack=_STR_LIST)},
+    projects={"type": "array", "items": _obj(id={"type": "string"}, bullets=_bullets(1), stack=_STR_LIST)},
     education=_STR_LIST,
     gaps=_STR_LIST,
 )

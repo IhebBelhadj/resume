@@ -82,6 +82,7 @@ categories:
       - Airflow
       - Airbyte
       - dbt
+      - Cosmos
       - Kafka
       - Spark
       - Nessie
@@ -91,7 +92,6 @@ categories:
       - VTOM
       - LangChain
       - LangGraph
-      - MLflow
   - id: cloud
     label: Cloud (AWS)
     items:

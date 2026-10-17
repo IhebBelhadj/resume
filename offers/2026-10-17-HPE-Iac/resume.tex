@@ -1,0 +1,166 @@
+% GENERATED FILE: do not edit by hand.
+% Source: offers/2026-10-17-HPE-Iac/resume.yaml
+\documentclass{resume}
+\hypersetup{
+  pdftitle={Iheb Belhadj - Resume},
+  pdfauthor={Iheb Belhadj},
+  pdfcreator={Iheb Belhadj},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \AND%
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}}%
+
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
+  \AND%
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \AND%
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+\section{Summary}
+\begin{onecolentry}
+Software engineer focused on infrastructure as code and automation: Terraform-provisioned AWS hosting with keyless GitHub Actions CI/CD, Docker Compose deployments on Linux hosts with health-checked rollbacks, and self-hosted platforms secured behind an Nginx gateway, TLS and Keycloak. Writes deployment plans and builds reusable automation frameworks, such as a custom Airflow orchestration library.
+\end{onecolentry}
+
+\section{Technologies}
+\begin{onecolentry}
+\textbf{IaC \& Configuration Management:} Terraform, Ansible, Vagrant
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Containers \& Orchestration:} Docker, Docker Compose, Kubernetes
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{CI/CD \& Quality:} GitHub Actions, Jenkins, SonarQube
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Cloud (AWS):} AWS EC2, AWS ECR, S3, AWS CloudFront, AWS Route 53, AWS IAM, AWS SSM, AWS RDS, AWS CloudWatch, AWS EventBridge, AWS CloudTrail, AWS GuardDuty
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Networking \& Security:} Reverse proxies \& TLS (Nginx, Caddy), IAM / SSO (Keycloak), mDNS / DNS-SD, UDP, OAuth 2.0 Device Flow
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Monitoring \& Logging:} Prometheus, Grafana, AWS CloudWatch, Sentry, Axiom
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Scripting \& Languages:} Python, Bash, TypeScript, Java, Groovy, SQL
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{APIs \& Workflow Automation:} RESTful APIs (FastAPI, Node.js, OpenAPI), Airflow, PostgreSQL
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{Oct 2025 – currently}
+\textbf{Data Engineering Consultant}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Led the architecture and development of multi-environment pipeline orchestration on Airflow, with a custom library that gives DAG developers a reusable framework so DAG code stays declarative
+    \item Built a source-agnostic config builder (strategy pattern over Snowflake metadata tables, a metadata database or Airflow JSON variables) and a state store with override hierarchy policies across DAGs
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, Airflow, Jinja, Snowflake, SQL
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2026 – May 2026}
+\textbf{Lead Full-stack Engineer (Freelance)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built and deployed \href{https://www.kairouanrose.com/}{kairouanrose.com} end to end on Vercel, with versioned database migrations, Docker Compose for the local database, Axiom structured logging and Sentry error tracking
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Vercel, Docker, PostgreSQL, Axiom, Sentry
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2025 – Oct 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Worked on provisioning a self-hosted data platform (Airbyte, Airflow, dbt) with shell scripts and per-instance Docker Compose files on shared Docker networks, and automated deployments with GitHub webhooks and Bash scripts
+    \item Set up Nginx as the gateway in front of the self-hosted services and worked on TLS between instances with certificate sharing
+    \item Secured the platform inside a LAN with Keycloak IAM (role- and group-based access control) authenticating every service, with the whole instance behind a VPN
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Docker, Docker Compose, Bash, Nginx, Keycloak, Airflow, Airbyte, dbt, Cosmos
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Nov 2024 - Feb 2025}
+\textbf{Freelance Job}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Wrote the AWS deployment plan for the Nexits landing site and Payload CMS (cost-first launch profile and a later growth architecture) and worked with the team on building the launch profile
+    \item Provisioned the infrastructure as code with Terraform: a bootstrap stack (S3 state with native locking, GitHub OIDC provider, CI IAM roles), then network, static site, host, ECR, Route 53 and budget stacks
+    \item Set up guardrails for CI/CD: GitHub Actions authenticates to AWS through OIDC with least-privilege IAM roles per workflow, a reviewer-gated Terraform apply and a permissions boundary, so there are no long-lived keys
+    \item Automated deployments to an EC2 Graviton Linux host through AWS SSM Run Command: arm64 images on ECR pinned by digest, health check with automatic rollback, SSH closed, secrets in SSM Parameter Store
+    \item Ran the CMS on Docker Compose with Caddy (automatic TLS) and Litestream replicating SQLite to S3, with CloudWatch auto-recover and daily EBS snapshots, so the host can be rebuilt from Terraform in about 10 min
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Terraform, AWS EC2, AWS SSM, AWS IAM, AWS ECR, S3, AWS CloudFront, AWS Route 53, AWS CloudWatch, GitHub Actions, Docker, Docker Compose, Caddy, Litestream
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 - Sep 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Worked with the team on the Terraform setup for the SaaS on AWS: one account per environment under AWS Organizations, one state per stack, outputs shared through SSM Parameter Store
+    \item Contributed to the GitHub Actions CI/CD: images built once and promoted by digest from staging to prod behind a manual approval gate, OIDC role assumption, and Turborepo affected-app detection
+    \item Worked on zero-downtime API deploys on an EC2 Graviton host with Docker Compose (docker rollout, health checks, Caddy retries), backed by RDS PostgreSQL in private subnets
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Terraform, AWS EC2, AWS RDS, AWS SSM, AWS IAM, AWS EventBridge, GitHub Actions, Docker, Docker Compose, Caddy, Turborepo
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{June 2023 - Aug 2023}
+\textbf{Software Engineering Intern}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+
+\section{Projects}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/devops_playground}{OpsForge:}} Self-contained local DevOps environment simulating production, provisioned with Vagrant and Ansible: private Docker registry, Jenkins CI/CD, Prometheus/Grafana monitoring and SonarQube
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Ansible, Vagrant, Docker, Jenkins, Prometheus, Grafana, SonarQube, Bash
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\vspace{0.1 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}} Self-hosted media server with a headless entry built to run under systemd or Docker on Linux (exit codes for supervisor restarts), a versioned OpenAPI REST API, and deb packages that open firewall ports with ufw/firewalld
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Node.js, OpenAPI, Docker, electron-builder, mDNS / DNS-SD, UDP
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Education}
+\begin{twocolentry}{Sept 2022 – Sep 2025}
+\textbf{Engineering Degree in Software Engineering}, ESPRIT\end{twocolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{Sept 2020 – June 2022}
+\textbf{Pre-engineering Preparatory Cycle}, IPEIM\end{twocolentry}
+
+\end{document}

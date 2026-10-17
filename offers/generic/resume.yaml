@@ -30,7 +30,7 @@ skills:
 - label: Databases
   items: [PostgreSQL, Oracle DB, MySQL, MongoDB, Redis, MinIO, AWS RDS, S3, Vercel Blob, Neon Postgres]
 - label: Data Eng & AI
-  items: [Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, MLflow, Snowflake, Databricks]
+  items: [Airflow, Airbyte, dbt, Kafka, Spark, LangChain, LangGraph, Snowflake, Databricks]
 - label: Infrastructure
   items: [Docker, Kubernetes, Ansible, Vagrant, Jenkins, GitHub Actions, AWS]
 - label: Testing
@@ -94,7 +94,7 @@ experiences:
   - >-
     Implemented a caching system through Redis reducing network I/O calls for the agentic system for context
     retrieval.
-  stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MLflow, MinIO, Nessie, Airflow,
+  stack: [Python, FastAPI, Next.js, LangGraph, LangChain, Redis, MinIO, Nessie, Airflow,
     dbt, PostgreSQL, Keycloak, Docker, Nginx]
 - title: Freelance Job
   company: Nexits
