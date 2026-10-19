@@ -1,0 +1,15 @@
+<# Name + contacts header, shared by resume.tex.j2 and cover-letter.tex.j2. #>
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont << profile.name >>
+
+  \normalsize
+  \kern 5.0 pt%
+<% for c in profile.contacts %>
+<% if c.get("newline") %>
+
+<% elif not loop.first %>
+  \AND%
+<% endif %>
+  \mbox{\href{<< c.url | url >>}{<< c.label | tex >>}}%
+<% endfor %>
+\end{header}

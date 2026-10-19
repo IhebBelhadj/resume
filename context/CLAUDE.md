@@ -10,7 +10,7 @@ that are still thin.
 
 | Path | Holds |
 |---|---|
-| `profile.yaml` | name, `pdf_name`, header `contacts` (`newline: true` starts a 2nd header line), `notes` (free-form, for the agent; no summaries: `tailor` writes one per offer) |
+| `profile.yaml` | name, `pdf_name`, header `contacts` (`newline: true` starts a 2nd header line), spoken `languages` (one string per resume `lang`, printed under Skills), `notes` (free-form, for the agent; no summaries: `tailor` writes one per offer) |
 | `skills.yaml` | `categories` → `{id, label, items}`. Any technology a resume names must be here (concepts are written "Concept (Skill, …)") |
 | `experiences/<id>.md` | one job/freelance/teaching role |
 | `projects/<id>.md` | one side/school project |

@@ -1,0 +1,157 @@
+% GENERATED FILE: do not edit by hand.
+% Source: offers/2026-10-19-oneleet-fullstack/resume.yaml
+\documentclass{resume}
+\hypersetup{
+  pdftitle={Iheb Belhadj - Resume},
+  pdfauthor={Iheb Belhadj},
+  pdfcreator={Iheb Belhadj},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \AND%
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}}%
+
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
+  \AND%
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \AND%
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+\section{Summary}
+\begin{onecolentry}
+Full-stack engineer who builds web products end to end in TypeScript, React and Next.js, from data model and APIs to the interface, across startup, freelance and consulting work. Strongest at turning complex data into clear interfaces, designing efficient queries, and running secure, observable production systems.
+\end{onecolentry}
+
+\section{Skills}
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, JavaScript, Python, SQL
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Frontend:} React, Next.js, Tailwind CSS, shadcn/ui, TanStack Query, TanStack Table, SWR, Zustand, Zod
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Backend \& APIs:} Node.js, Express.js, REST APIs (OpenAPI), tRPC, FastAPI, WebSocket, Payload CMS
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Data, Caching \& Async Jobs:} Relational databases (PostgreSQL, SQLite), Drizzle ORM, Caching (Redis, Upstash Redis), Job queues (pg-boss), Workflow orchestration (Airflow), dbt, Snowflake
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Monitoring \& Observability:} Sentry, Axiom, AWS CloudWatch, Grafana
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Auth \& Security:} Auth \& IAM (Clerk, Better Auth, Keycloak, AWS IAM), OAuth 2.0 Device Flow
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Cloud \& DevOps:} AWS, Terraform, Docker, GitHub Actions, Vercel
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Testing:} Vitest, Playwright, Jest
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Spoken languages:} Arabic (native), English (C1), French (B2)
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{Oct 2025 – Present}
+\textbf{Software Engineer}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Single-handedly built a Python tool running natively in Snowflake (Snowpark, Streamlit) that maps Informatica XML workflows to Snowflake SQL parsing code with schema enforcement, lineage and input validation; used to migrate 20+ workflows and 100+ models
+    \item Led the architecture of multi-environment async workflow orchestration on Airflow (850+ DAGs), with a custom library for event-driven DAG triggering, state passing between DAGs and source-agnostic configuration
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, Airflow, Snowflake, dbt, SQL, XML
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Dec 2025 – Aug 2026}
+\textbf{Full-stack Engineer (Freelance, part-time)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the client portal and back office of \href{https://www.kairouanrose.com/}{kairouanrose.com}, a B2B ordering platform (Next.js, React, TypeScript, Payload CMS) that replaces email, phone and spreadsheet workflows
+    \item Moved order listing to server-side pagination, sorting, filtering and debounced search, so only one page of a client's orders is fetched, backed by btree and partial unique indexes in SQL migrations
+    \item Turned order and delivery data into a clear delivery calendar: one database-filtered query per month, summed into a daily load map that steers clients to lighter production days
+    \item Built an append-only audit log of every order and delivery change (field-level diff, actor, IP) written in the same transaction, plus server-side access rules so clients only see their own data
+    \item Added production monitoring with structured logging to Axiom in Server Actions and API routes and Sentry error tracking on client and server, with Vitest and Playwright tests written TDD-style
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, React, TypeScript, PostgreSQL, Drizzle ORM, Payload CMS, Clerk, TanStack Table, SWR, Zod, Axiom, Sentry, Vitest, Playwright, Vercel
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2025 – Oct 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a Next.js frontend using WebSockets for live chart updates fed by a real-time CDC pipeline, with persisted state and optimistic updates, for a multi-agent (LangGraph) text-to-SQL analytics platform
+    \item Secured the self-hosted platform with Keycloak IAM (role- and group-based access control), an Nginx gateway and TLS between services
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, Python, FastAPI, LangGraph, Redis, PostgreSQL, Keycloak, Nginx, Docker
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Nov 2024 – Feb 2025}
+\textbf{Freelance Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the Nexits website alone, with a Payload CMS block-based page builder and live preview so non-developers compose pages, rendered from a shared React component library
+    \item Hardened the CMS before launch: removed a leftover route that exposed every user record, added login brute-force lockout, and set up GitHub OIDC with least-privilege IAM roles (with the team) instead of long-lived AWS keys
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, React, Next.js, Payload CMS, Astro.js, Turborepo, AWS, Terraform, GitHub Actions
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 – Sep 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel of product data
+    \item Built reusable frontend components and a hybrid state management system (route-based state and Zustand), improving load times and UX
+    \item Worked with the team on background jobs, retries, dead-letter queues and cron schedules with pg-boss on PostgreSQL, as part of the SaaS migration to Next.js, tRPC and a Turborepo monorepo
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, React, TypeScript, tRPC, PostgreSQL, pg-boss, Zustand, Turborepo, AWS, Sentry
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Projects}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}}    \begin{highlightsforbulletentries}
+    \item Designed a versioned REST API (OpenAPI 3.1, spec-first, generated TypeScript types) integrating third-party sources (TMDB, subtitle providers) behind uniform error codes; upstream failures return a JSON 502 so the UI never hangs
+    \item Built a React admin dashboard (TanStack Query, shadcn/ui) on a WebSocket event stream showing live sessions, streaming stats, devices and logs
+    \item Technologies used: Node.js, TypeScript, React, OpenAPI, WebSocket, TanStack Query, Better Auth, SQLite, Drizzle ORM
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Education}
+\begin{twocolentry}{Sep 2022 – Sep 2025}
+\textbf{Master's in Software Engineering}, ESPRIT\end{twocolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{Sep 2020 – Jun 2022}
+\textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
+
+\end{document}

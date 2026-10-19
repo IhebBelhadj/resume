@@ -4,7 +4,9 @@ offer:
   company: kapa.ai
   role: Software Engineer (Full-stack)
   url: https://www.linkedin.com/jobs/view/4231625058
-max_pages: 1
+  country: NL
+lang: en
+max_pages: 2
 profile:
   name: Iheb Belhadj
   pdf_name: IHEB_BELHADJ_RESUME
@@ -21,105 +23,140 @@ profile:
   - label: github.com/IhebBelhadj
     url: https://github.com/IhebBelhadj
 summary: >-
-  Fullstack Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced
-  in building cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven
-  solutions.
+  Software engineer who builds **LLM agents** and **retrieval (RAG) systems** in **Python** and ships
+  full-stack products with **React** and Next.js. Works end to end in small teams, from data pipelines
+  and APIs to user interfaces and the cloud infrastructure behind them.
 skills:
-- label: Languages
-  items: [Python, TypeScript, JavaScript, SQL]
-- label: Web/Fullstack
-  items: [React, Next.js, FastAPI, Flask, Node.js, Express.js, tRPC, Payload CMS, Tailwind]
-- label: Data Eng & AI
-  items: [LangGraph, LangChain, MLflow, Airflow, dbt, Snowflake, Kafka, Spark]
+- label: AI & LLMs
+  items:
+  - LLM agents (LangGraph, LangChain)
+  - Vector search & embeddings (ChromaDB, Sentence Transformers)
+- label: Backend
+  items: [Python, FastAPI, Flask, Node.js, Express.js, tRPC, OpenAPI, WebSocket, SQL]
+- label: Frontend
+  items: [React, Next.js, TypeScript, TanStack Query, SWR, Zod, Tailwind CSS, shadcn/ui, Vite, Angular]
 - label: Databases
-  items: [PostgreSQL, Redis, MongoDB, S3]
+  items: [PostgreSQL, Redis, SQLite, Drizzle ORM, MinIO]
+- label: Data
+  items: [Airflow, dbt, Airbyte, Snowflake]
 - label: Infrastructure
-  items: [Docker, Kubernetes, AWS, Terraform, GitHub Actions, Vercel, Nginx]
+  items: [Docker, Docker Compose, Kubernetes, Terraform, AWS, GitHub Actions, Nginx, Sentry, Vercel]
 - label: Testing
-  items: [Pytest, Vitest, Playwright, Jest]
+  items: [Vitest, Playwright, Pytest, Jest]
+languages: [Arabic (native), English (C1), French (B2)]
 experiences:
-- title: Lead Full-stack Engineer (Freelance)
-  company: K-Rose
-  location: Tunis, TN
-  dates: Feb 2026 – May 2026
-  bullets:
-  - >-
-    Led architecture and end-to-end delivery of a B2B ordering platform: one Next.js 15 / React 19 / TypeScript
-    app with public site, client portal and Payload CMS back office; ~140 of 164 commits, reviewed and
-    merged the team's PRs.
-  - >-
-    Built a three-step React order wizard (react-hook-form, Zod) with a ready-date calendar coloured by
-    production load.
-  - >-
-    Enforced an order state machine with separate admin/client transition matrices in Payload hooks, plus
-    server-side filtering so clients only see their own data.
-  stack: [React, Next.js, TypeScript, Payload CMS, PostgreSQL, Vercel]
-- title: Data Engineering Consultant
+- title: Software Engineer
   company: Talan
   location: Tunis, TN
-  dates: Oct 2025 – currently
+  dates: Oct 2025 – Present
   bullets:
   - >-
-    Contributing to an agentic AI system that automates the migration of Informatica mappings to dbt models,
-    drastically reducing conversion time.
+    Contributing to an **agentic AI system** that automates converting Informatica mappings into **dbt**
+    models, drastically reducing conversion time.
   - >-
-    Led the architecture of multi-environment data pipeline orchestration on Airflow, building a custom
-    library that keeps DAG code clean and declarative.
+    Built alone a **Python** tool running natively in **Snowflake** that generates XML parsing code; used
+    to migrate **20+ workflows** and **100+ models**.
   - >-
-    Helped build a Python tool running natively in Snowflake that generates XML parsing SQL from Informatica
-    workflow mappings, removing the need for an external ingestion tool.
-  stack: [Python, LangGraph, Airflow, Snowflake, dbt, SQL]
+    Led the architecture of a custom **Airflow** library for event-driven, multi-environment orchestration
+    of **850+ DAGs**.
+  stack: [Python, LangGraph, Snowflake, dbt, Airflow, SQL]
+- title: Lead Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Lead development of the B2B platform behind [kairouanrose.com](https://www.kairouanrose.com/): marketing
+    site, client portal and back office in one **Next.js** app.
+  - >-
+    Built the **React** client portal: a three-step order wizard with **Zod**, filterable order tables
+    and **SWR** notifications with optimistic updates.
+  - >-
+    Implemented an order **state machine** and a **transactional audit log** with field-level diffs on
+    **PostgreSQL** (Payload CMS).
+  stack: [Next.js, React, TypeScript, Payload CMS, PostgreSQL, Zod, SWR, Vitest, Sentry, Vercel]
 - title: Software Engineering Intern
   company: Talan
   location: Tunis, TN
   dates: Feb 2025 – Oct 2025
   bullets:
   - >-
-    Integrated a LangGraph multi-agent system for dynamic SQL and chart generation, enabling no-code data
-    exploration.
-  - Built a Next.js frontend using WebSockets for instant feedback and live chart updates.
-  stack: [Python, FastAPI, LangGraph, LangChain, Redis, Next.js]
+    Built an **agentic RAG** system for a **text-to-SQL LLM agent**, indexing data-profiling metrics in
+    **ChromaDB** with **Sentence Transformers** embeddings.
+  - >-
+    Added an **LLM relevance-grading** sub-agent (Corrective RAG) that keeps or discards each retrieved
+    result before it reaches the agent.
+  - >-
+    Integrated a **LangGraph multi-agent system** that turns user questions into **SQL and charts** for
+    no-code data exploration.
+  - >-
+    Implemented a **Redis caching** layer that reduces network I/O for the agents' context retrieval.
+  - >-
+    Built a **Next.js** frontend with **WebSockets** for **live chart updates** fed by a real-time CDC
+    pipeline.
+  stack: [Python, LangGraph, LangChain, ChromaDB, Sentence Transformers, FastAPI, Redis, Next.js, Airflow,
+    dbt, Docker]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built alone a block-based **Payload CMS** page builder with **live preview** for the **Astro.js**/**React**
+    marketing site (**100** Lighthouse performance).
+  stack: [Payload CMS, Astro.js, React, TypeScript, AWS, Terraform]
 - title: Full-stack Developer
   company: Nexits
   location: Paris, FR (Remote)
-  dates: Aug 2023 - Sep 2024
+  dates: Aug 2023 – Sep 2024
   bullets:
   - >-
-    Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel
-    of product data.
+    In a small startup team, contributed to migrating the SaaS from **Vue.js** to **Next.js**, **tRPC**
+    and a **Turborepo** monorepo.
   - >-
-    Contributed reusable components and hybrid state management (route-based state and Zustand), optimizing
-    load times.
-  stack: [TypeScript, React, Next.js, tRPC, AWS]
+    Worked with the team on the **AWS** deployment: **Terraform**, **Docker Compose** and **GitHub Actions**
+    CI/CD with zero-downtime deploys.
+  stack: [Next.js, React, TypeScript, tRPC, PostgreSQL, AWS, Terraform, Docker, GitHub Actions]
 projects:
-- name: Portfolio
-  url: https://ihebbelhadj.vercel.app/
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
   bullets:
   - >-
-    Next.js site with a LangChain agent that answers questions about my experience; 100 Lighthouse performance
-    score.
-  stack: [Next.js, LangChain, TypeScript]
+    Self-hosted media server with a **React** admin dashboard (**TanStack Query**, typed API client) receiving
+    live updates over **WebSockets**.
+  - >-
+    Spec-first **OpenAPI** REST API with generated **TypeScript** types and a dependency-free **protocol
+    package** shared by every client, checked by contract tests.
+  stack: [React, TypeScript, Node.js, OpenAPI, TanStack Query, WebSocket, Vite]
 education:
-- degree: Software Engineering Master
+- degree: Master's in Software Engineering
   school: ESPRIT
-  dates: Sept 2022 – Sep 2025
+  dates: Sep 2022 – Sep 2025
   bullets: []
 - degree: Pre-engineering Bachelor
   school: IPEIM
-  dates: Sept 2020 – June 2022
+  dates: Sep 2020 – Jun 2022
   bullets: []
 gaps:
 - >-
-  RAG engine work (retrieval-augmented generation, scaling RAG infrastructure): CONTEXT has LangGraph
-  multi-agent systems, Redis caching for context retrieval and a LangChain Q&A agent, but no RAG pipeline
-  is described explicitly
-- 'Maintaining a React SDK or published library: not in CONTEXT'
+  Production RAG at scale (thousands of questions per day): no users, query volume, latency or accuracy
+  numbers in context for the Horizon RAG system
 - >-
-  Analytics platform product work and customer-facing client integrations / embeddable widgets: not in
-  CONTEXT
+  Python web backend: FastAPI is in the Talan stacks but no context body describes a FastAPI service built
+  by Iheb (endpoints, WebSocket server, deployment)
 - >-
-  Deep learning and natural language processing (beyond using LLM agent frameworks): not in CONTEXT
+  React SDK maintenance: not done; closest is Playpex's shared typed OpenAPI protocol package and API
+  client
 - >-
-  3+ years of experience: professional experience runs Jun 2023 – present, including internships and freelance
-  work (about 3 years)
-- 'Netherlands location / work authorization / relocation: profile notes say this is TODO'
+  Machine learning / deep learning / NLP model work (training, fine-tuning, retrieval evaluation): not
+  in context; closest is LLM agents, agentic RAG and Sentence Transformers embeddings
+- >-
+  Analytics platform product work: closest is Horizon's dynamic SQL/chart generation with live updates
+- >-
+  Agentic Informatica-to-dbt system at Talan: Iheb's specific part and a measured conversion-time gain
+  are not in context
+- >-
+  nexits-freelance: add a non-engineer title (only 'Freelance Job' qualifies; e.g. 'Freelance Full-stack
+  Developer')
+- 'Results for K-Rose and Playpex (orders processed, clients, users): not in context'
+- 'Talan internship: team size and reporting line (TODO in context)'

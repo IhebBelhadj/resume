@@ -1,0 +1,10 @@
+Dear OneTutor team,
+
+For your Software Engineer role, I bring React and TypeScript product work and hands-on experience building RAG pipelines. Your tutor cites a source for every answer and says so when the material has no answer. That is the kind of grounded AI I have built.
+
+At K-Rose, I built the client portal and back office of a B2B ordering platform in one Next.js 15, React 19 and TypeScript app on PostgreSQL. It includes a three-step React order wizard and an order state machine enforced on the server, developed test-first with Vitest and Playwright. At Talan, I built a RAG pipeline (Sentence Transformers embeddings in ChromaDB) where an LLM sub-agent grades each retrieved result and drops irrelevant context before a text-to-SQL agent writes queries.
+
+I would start on the frontend, ship learner and instructor features end to end, and then grow into your backend. I am open to relocating to Munich and working on-site.
+
+Best regards,
+Iheb Belhadj

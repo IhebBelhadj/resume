@@ -4,7 +4,7 @@ company: ENET’Com Junior Entreprise
 titles: [Freelance instructor (Weekends), Freelance Instructor]
 location: Sfax, TN
 start: 2023-10
-dates: Oct 2023 - Nov 2023
+dates: Oct 2023 – Nov 2023
 tags: [teaching, mern, communication]
 ---
 

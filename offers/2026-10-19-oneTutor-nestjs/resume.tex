@@ -1,0 +1,153 @@
+% GENERATED FILE: do not edit by hand.
+% Source: offers/2026-10-19-oneTutor-nestjs/resume.yaml
+\documentclass{resume}
+\hypersetup{
+  pdftitle={Iheb Belhadj - Resume},
+  pdfauthor={Iheb Belhadj},
+  pdfcreator={Iheb Belhadj},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \AND%
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}}%
+
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
+  \AND%
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \AND%
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+\section{Summary}
+\begin{onecolentry}
+Full-stack software engineer focused on React and TypeScript products, building features end to end from the UI to typed APIs, data models, tests and production monitoring. Hands-on with LLM systems (RAG, multi-agent) and used to owning work in small startup teams. Open to relocation.
+\end{onecolentry}
+
+\section{Skills}
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, JavaScript, Python, SQL
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Frontend:} React, Next.js, Tailwind CSS, shadcn/ui, TanStack Query, TanStack Table, SWR, Zustand, Zod, Vite
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Backend \& APIs:} Node.js, API frameworks (Express.js, tRPC, FastAPI), Payload CMS, OpenAPI, WebSocket
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{AI \& LLM Tooling:} LangChain, LangGraph, RAG \& embeddings (ChromaDB, Sentence Transformers), Vector databases (ChromaDB)
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Databases:} PostgreSQL, Drizzle ORM, Redis, SQLite
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Testing:} Vitest, Playwright, Jest, Pytest
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{DevOps \& Cloud:} Docker, GitHub Actions, Sentry, Vercel, AWS
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Spoken languages:} Arabic (native), English (C1), French (B2)
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{Oct 2025 – Present}
+\textbf{Software Engineer}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Consultant for a large French energy client, contributing to an agentic AI system (LangGraph) that automates the migration of Informatica mappings to dbt models, alongside data pipeline migration work on Snowflake and Airflow
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, LangGraph, Snowflake, dbt, Airflow
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Dec 2025 – Aug 2026}
+\textbf{Lead Full-stack Engineer (Freelance, part-time)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the client portal and back office of a B2B ordering platform (\href{https://www.kairouanrose.com/}{kairouanrose.com}) in one Next.js 15 / React 19 / TypeScript app on Payload CMS and PostgreSQL, replacing email, calls and spreadsheets
+    \item Built a three-step React order wizard for three order types with react-hook-form and Zod, a filterable TanStack Table orders view and SWR notifications with optimistic updates
+    \item Modelled orders and deliveries with a status state machine (separate admin and client transition matrices) enforced server-side in Payload hooks, with field whitelisting and idempotency keys against duplicate orders
+    \item Designed an immutable audit log of field-level diffs, actor and request metadata written in the same database transaction, and generated client notifications from the same diff
+    \item Developed test-first with Vitest unit and integration tests and Playwright for end-to-end tests; added Sentry error tracking and structured Axiom logging in Server Actions and API routes
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, React, Next.js, Payload CMS, PostgreSQL, Drizzle ORM, Zod, TanStack Table, SWR, Clerk, Vitest, Playwright, Sentry, Vercel
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2025 – Oct 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a RAG pipeline that grounds a text-to-SQL agent in profiling analytics of the actual datasets (Sentence Transformers embeddings in ChromaDB), with an LLM sub-agent grading each retrieved result and discarding irrelevant context
+    \item Integrated a LangGraph multi-agent system turning natural-language questions into SQL and charts for no-code data exploration, with a Redis cache cutting network I/O for context retrieval
+    \item Built the Next.js frontend with WebSockets for live chart updates, persisted state for offline viewing and optimistic updates for a faster UI
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, LangGraph, LangChain, ChromaDB, Sentence Transformers, Redis, Next.js, PostgreSQL, Docker
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Nov 2024 – Feb 2025}
+\textbf{Freelance Job}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a block-based page builder on Payload CMS v3 and an Astro site with React islands and live preview, letting non-developers compose pages without code, delivered through code reviews with the Nexits team
+    \item Built the shared React component library (shadcn/ui, Tailwind CSS) and shared generated TypeScript types in a pnpm/Turborepo monorepo, with GitHub Actions CI for lint and typecheck
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, React, Payload CMS, Next.js, Astro.js, Tailwind CSS, shadcn/ui, Turborepo, GitHub Actions
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 – Sep 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Contributed to the migration from Vue.js to Next.js, tRPC and a Turborepo monorepo, building reusable React components and hybrid state management with route-based state and Zustand
+    \item Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel of product data
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Next.js, React, tRPC, Zustand, PostgreSQL, Turborepo
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Projects}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}}    \begin{highlightsforbulletentries}
+    \item Designed a spec-first versioned REST API for a self-hosted Node.js media server (OpenAPI 3.1, generated TypeScript types, contract tests against the spec)
+    \item Built its React 19 admin dashboard (Vite, TanStack Query, Tailwind CSS, shadcn/ui) with live sessions, devices and logs pushed over WebSocket
+    \item Technologies used: TypeScript, Node.js, React, OpenAPI, WebSocket, TanStack Query, Vite, SQLite, Drizzle ORM
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Education}
+\begin{twocolentry}{Sep 2022 – Sep 2025}
+\textbf{Master's in Software Engineering}, ESPRIT\end{twocolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{Sep 2020 – Jun 2022}
+\textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
+
+\end{document}

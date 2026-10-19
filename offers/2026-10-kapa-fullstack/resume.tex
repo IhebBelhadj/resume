@@ -29,56 +29,62 @@
 
 \section{Summary}
 \begin{onecolentry}
-Fullstack Software engineer specializing in backend systems, data pipelines, and agentic AI. Experienced in building cloud-native applications, multi-agent systems, and scalable infrastructure for data-driven solutions.
+Software engineer who builds \textbf{LLM agents} and \textbf{retrieval (RAG) systems} in \textbf{Python} and ships full-stack products with \textbf{React} and Next.js. Works end to end in small teams, from data pipelines and APIs to user interfaces and the cloud infrastructure behind them.
 \end{onecolentry}
 
-\section{Technologies}
+\section{Skills}
 \begin{onecolentry}
-\textbf{Languages:} Python, TypeScript, JavaScript, SQL
+\textbf{AI \& LLMs:} LLM agents (LangGraph, LangChain), Vector search \& embeddings (ChromaDB, Sentence Transformers)
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Web/Fullstack:} React, Next.js, FastAPI, Flask, Node.js, Express.js, tRPC, Payload CMS, Tailwind
+\textbf{Backend:} Python, FastAPI, Flask, Node.js, Express.js, tRPC, OpenAPI, WebSocket, SQL
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Data Eng \& AI:} LangGraph, LangChain, MLflow, Airflow, dbt, Snowflake, Kafka, Spark
+\textbf{Frontend:} React, Next.js, TypeScript, TanStack Query, SWR, Zod, Tailwind CSS, shadcn/ui, Vite, Angular
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Databases:} PostgreSQL, Redis, MongoDB, S3
+\textbf{Databases:} PostgreSQL, Redis, SQLite, Drizzle ORM, MinIO
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Infrastructure:} Docker, Kubernetes, AWS, Terraform, GitHub Actions, Vercel, Nginx
+\textbf{Data:} Airflow, dbt, Airbyte, Snowflake
 \end{onecolentry}
 \begin{onecolentry}
-\textbf{Testing:} Pytest, Vitest, Playwright, Jest
+\textbf{Infrastructure:} Docker, Docker Compose, Kubernetes, Terraform, AWS, GitHub Actions, Nginx, Sentry, Vercel
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Testing:} Vitest, Playwright, Pytest, Jest
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Spoken languages:} Arabic (native), English (C1), French (B2)
 \end{onecolentry}
 
 \section{Experience}
 
-\begin{twocolentry}{Feb 2026 – May 2026}
-\textbf{Lead Full-stack Engineer (Freelance)}, K-Rose -- Tunis, TN\end{twocolentry}
+\begin{twocolentry}{Oct 2025 – Present}
+\textbf{Software Engineer}, Talan -- Tunis, TN\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Led architecture and end-to-end delivery of a B2B ordering platform: one Next.js 15 / React 19 / TypeScript app with public site, client portal and Payload CMS back office; \textasciitilde{}140 of 164 commits, reviewed and merged the team's PRs.
-    \item Built a three-step React order wizard (react-hook-form, Zod) with a ready-date calendar coloured by production load.
-    \item Enforced an order state machine with separate admin/client transition matrices in Payload hooks, plus server-side filtering so clients only see their own data.
+    \item Contributing to an \textbf{agentic AI system} that automates converting Informatica mappings into \textbf{dbt} models, drastically reducing conversion time.
+    \item Built alone a \textbf{Python} tool running natively in \textbf{Snowflake} that generates XML parsing code; used to migrate \textbf{20+ workflows} and \textbf{100+ models}.
+    \item Led the architecture of a custom \textbf{Airflow} library for event-driven, multi-environment orchestration of \textbf{850+ DAGs}.
     \begin{highlightsforbulletentries}
-    \item Technologies used: React, Next.js, TypeScript, Payload CMS, PostgreSQL, Vercel
+    \item Technologies used: Python, LangGraph, Snowflake, dbt, Airflow, SQL
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 \entryspace
 
-\begin{twocolentry}{Oct 2025 – currently}
-\textbf{Data Engineering Consultant}, Talan -- Tunis, TN\end{twocolentry}
+\begin{twocolentry}{Dec 2025 – Aug 2026}
+\textbf{Lead Full-stack Engineer (Freelance, part-time)}, K-Rose -- Tunis, TN\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Contributing to an agentic AI system that automates the migration of Informatica mappings to dbt models, drastically reducing conversion time.
-    \item Led the architecture of multi-environment data pipeline orchestration on Airflow, building a custom library that keeps DAG code clean and declarative.
-    \item Helped build a Python tool running natively in Snowflake that generates XML parsing SQL from Informatica workflow mappings, removing the need for an external ingestion tool.
+    \item Lead development of the B2B platform behind \href{https://www.kairouanrose.com/}{kairouanrose.com}: marketing site, client portal and back office in one \textbf{Next.js} app.
+    \item Built the \textbf{React} client portal: a three-step order wizard with \textbf{Zod}, filterable order tables and \textbf{SWR} notifications with optimistic updates.
+    \item Implemented an order \textbf{state machine} and a \textbf{transactional audit log} with field-level diffs on \textbf{PostgreSQL} (Payload CMS).
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, LangGraph, Airflow, Snowflake, dbt, SQL
+    \item Technologies used: Next.js, React, TypeScript, Payload CMS, PostgreSQL, Zod, SWR, Vitest, Sentry, Vercel
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
@@ -89,24 +95,40 @@ Fullstack Software engineer specializing in backend systems, data pipelines, and
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Integrated a LangGraph multi-agent system for dynamic SQL and chart generation, enabling no-code data exploration.
-    \item Built a Next.js frontend using WebSockets for instant feedback and live chart updates.
+    \item Built an \textbf{agentic RAG} system for a \textbf{text-to-SQL LLM agent}, indexing data-profiling metrics in \textbf{ChromaDB} with \textbf{Sentence Transformers} embeddings.
+    \item Added an \textbf{LLM relevance-grading} sub-agent (Corrective RAG) that keeps or discards each retrieved result before it reaches the agent.
+    \item Integrated a \textbf{LangGraph multi-agent system} that turns user questions into \textbf{SQL and charts} for no-code data exploration.
+    \item Implemented a \textbf{Redis caching} layer that reduces network I/O for the agents' context retrieval.
+    \item Built a \textbf{Next.js} frontend with \textbf{WebSockets} for \textbf{live chart updates} fed by a real-time CDC pipeline.
     \begin{highlightsforbulletentries}
-    \item Technologies used: Python, FastAPI, LangGraph, LangChain, Redis, Next.js
+    \item Technologies used: Python, LangGraph, LangChain, ChromaDB, Sentence Transformers, FastAPI, Redis, Next.js, Airflow, dbt, Docker
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 \entryspace
 
-\begin{twocolentry}{Aug 2023 - Sep 2024}
+\begin{twocolentry}{Nov 2024 – Feb 2025}
+\textbf{Freelance Job}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built alone a block-based \textbf{Payload CMS} page builder with \textbf{live preview} for the \textbf{Astro.js}/\textbf{React} marketing site (\textbf{100} Lighthouse performance).
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Payload CMS, Astro.js, React, TypeScript, AWS, Terraform
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 – Sep 2024}
 \textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel of product data.
-    \item Contributed reusable components and hybrid state management (route-based state and Zustand), optimizing load times.
+    \item In a small startup team, contributed to migrating the SaaS from \textbf{Vue.js} to \textbf{Next.js}, \textbf{tRPC} and a \textbf{Turborepo} monorepo.
+    \item Worked with the team on the \textbf{AWS} deployment: \textbf{Terraform}, \textbf{Docker Compose} and \textbf{GitHub Actions} CI/CD with zero-downtime deploys.
     \begin{highlightsforbulletentries}
-    \item Technologies used: TypeScript, React, Next.js, tRPC, AWS
+    \item Technologies used: Next.js, React, TypeScript, tRPC, PostgreSQL, AWS, Terraform, Docker, GitHub Actions
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
@@ -114,18 +136,19 @@ Fullstack Software engineer specializing in backend systems, data pipelines, and
 \section{Projects}
 \begin{onecolentry}
   \begin{highlights}
-    \item \textbf{\href{https://ihebbelhadj.vercel.app/}{Portfolio:}} Next.js site with a LangChain agent that answers questions about my experience; 100 Lighthouse performance score.
-    \begin{highlightsforbulletentries}
-    \item Technologies used: Next.js, LangChain, TypeScript
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}}    \begin{highlightsforbulletentries}
+    \item Self-hosted media server with a \textbf{React} admin dashboard (\textbf{TanStack Query}, typed API client) receiving live updates over \textbf{WebSockets}.
+    \item Spec-first \textbf{OpenAPI} REST API with generated \textbf{TypeScript} types and a dependency-free \textbf{protocol package} shared by every client, checked by contract tests.
+    \item Technologies used: React, TypeScript, Node.js, OpenAPI, TanStack Query, WebSocket, Vite
     \end{highlightsforbulletentries}
   \end{highlights}
 \end{onecolentry}
 
 \section{Education}
-\begin{twocolentry}{Sept 2022 – Sep 2025}
-\textbf{Software Engineering Master}, ESPRIT\end{twocolentry}
+\begin{twocolentry}{Sep 2022 – Sep 2025}
+\textbf{Master's in Software Engineering}, ESPRIT\end{twocolentry}
 \vspace{0.10 cm}
-\begin{twocolentry}{Sept 2020 – June 2022}
+\begin{twocolentry}{Sep 2020 – Jun 2022}
 \textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
 
 \end{document}

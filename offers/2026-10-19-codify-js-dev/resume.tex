@@ -1,0 +1,164 @@
+% GENERATED FILE: do not edit by hand.
+% Source: offers/2026-10-19-codify-js-dev/resume.yaml
+\documentclass{resume}
+\hypersetup{
+  pdftitle={Iheb Belhadj - Resume},
+  pdfauthor={Iheb Belhadj},
+  pdfcreator={Iheb Belhadj},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \AND%
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}}%
+
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
+  \AND%
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \AND%
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+\section{Summary}
+\begin{onecolentry}
+Full-stack engineer who builds TypeScript web platforms end to end, from React front ends to Node.js back ends, with a security-first approach to authentication and data access. Also ships containerized cloud deployments and agentic AI features. Open to relocation.
+\end{onecolentry}
+
+\section{Skills}
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, JavaScript, SQL, Bash, Python, PHP
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Frontend:} React, Next.js, Vite, Apollo Client, TanStack Query, SWR, Zustand, Tailwind CSS, shadcn/ui, Astro.js, Vue.js, Electron
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Backend:} Node.js, Express.js, tRPC, GraphQL, WebSocket, OpenAPI, Payload CMS, Zod, ORM (Drizzle ORM)
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Databases:} PostgreSQL, NoSQL databases (MongoDB, Redis), SQLite
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Testing:} Vitest, Playwright, Jest
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Security \& Auth:} OAuth 2.0 Device Flow, Better Auth, Clerk, Keycloak
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Cloud \& DevOps:} AWS, Docker, Docker Compose, Terraform, GitHub Actions, Vercel, Linux, Sentry
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Generative AI:} LangChain, LangGraph
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Spoken languages:} Arabic (native), English (C1), French (B2)
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{Oct 2025 – Present}
+\textbf{Software Engineer}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Consultant for a large French energy company: contributing to an agentic AI system built with LangGraph that automates the migration of Informatica mappings to dbt models, and working with the client's teams to fix production anomalies
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, LangGraph, dbt, Snowflake, Airflow, SQL
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Dec 2025 – Aug 2026}
+\textbf{Lead Full-stack Engineer (Freelance, part-time)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Led the end-to-end build of a B2B ordering platform (\href{https://www.kairouanrose.com/}{kairouanrose.com}): public site, client portal and back office in one Next.js 15 / React 19 / TypeScript app; wrote \textasciitilde{}140 of 164 commits and reviewed and merged the team's pull requests
+    \item Modelled orders in PostgreSQL through Payload CMS and Drizzle ORM with versioned migrations, an order status state machine enforced in server-side hooks and an idempotency key against duplicate orders
+    \item Secured client data: Clerk authentication bridged to Payload, server-side access control so each client sees only their own orders, field whitelisting on client updates, Redis rate limiting and bot protection on the contact API
+    \item Built a tamper-proof audit log of field-level diffs written in the same database transaction, driving client notifications with optimistic read/unread updates (SWR)
+    \item Worked test-first: Vitest unit tests for the sign-up/sign-in flows, an integration test for the contact API and Playwright for end-to-end tests; Sentry and Axiom for production errors
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Next.js, React, Payload CMS, PostgreSQL, Drizzle ORM, Clerk, Zod, SWR, Upstash Redis, Vitest, Playwright, Sentry, Docker, Vercel
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2025 – Oct 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a Next.js frontend using WebSockets for live chart updates fed by a real-time CDC pipeline, with optimistic updates and persisted state to cut network calls
+    \item Integrated a LangGraph multi-agent system turning user questions into SQL and charts; secured the self-hosted services with Keycloak role- and group-based access, an Nginx gateway and TLS between instances
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Next.js, WebSocket, LangGraph, LangChain, Python, FastAPI, Redis, PostgreSQL, Keycloak, Nginx, Docker
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Nov 2024 – Feb 2025}
+\textbf{Freelance Job}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the Nexits marketing site in TypeScript with Astro.js, React islands and Payload CMS v3 on Next.js: a block-based page builder with live preview, scoring 100 performance and 100 SEO on Lighthouse
+    \item Hardened it before launch (removed a route exposing every user record, login brute-force protection, HSTS/CSP headers, HTTPS via Caddy) and worked with the team on AWS hosting with Terraform, Docker and GitHub Actions
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Astro.js, React, Payload CMS, Next.js, Tailwind CSS, Docker, Caddy, Terraform, AWS, GitHub Actions
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 – Sep 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Contributed to migrating a Vue.js SaaS to Next.js, tRPC and a Turborepo monorepo, building reusable React components and hybrid state management (route-based state and Zustand)
+    \item Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel of product data
+    \item Worked with the team on the AWS deployment: Node.js API and worker in Docker Compose on EC2, RDS PostgreSQL, zero-downtime deploys and GitHub Actions CI/CD with OIDC role assumption (no long-lived keys)
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Next.js, React, tRPC, Node.js, PostgreSQL, Zustand, Vue.js, Turborepo, Docker, AWS, GitHub Actions, Terraform
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Projects}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}}    \begin{highlightsforbulletentries}
+    \item Self-hosted media server in Node.js and TypeScript: versioned REST API defined by an OpenAPI 3.1 spec (generated types, contract tests), WebSocket events streaming live sessions to a React + Vite dashboard, SQLite with Drizzle ORM
+    \item Implemented OAuth 2.0 device authorization (RFC 8628) with Better Auth, scrypt hashing, HttpOnly signed cookies, rate limiting, Host header checks against DNS rebinding and refusal of cross-origin state-changing requests (CSRF)
+    \item Technologies used: Node.js, TypeScript, Express.js, React, Vite, WebSocket, OpenAPI, Better Auth, OAuth 2.0 Device Flow, Drizzle ORM, SQLite, TanStack Query
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\vspace{0.1 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/elder_care_saas}{EldSync:}} Contributed to the frontend of a Java microservices platform, integrating Apollo Client for data fetching and NgRx for state management with Spring Boot services    \begin{highlightsforbulletentries}
+    \item Technologies used: Apollo Client, Angular, NgRx, Spring Boot
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Education}
+\begin{twocolentry}{Sep 2022 – Sep 2025}
+\textbf{Master's in Software Engineering}, ESPRIT\end{twocolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{Sep 2020 – Jun 2022}
+\textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
+
+\end{document}

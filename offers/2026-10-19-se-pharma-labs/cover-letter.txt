@@ -1,0 +1,10 @@
+Dear Phantasma Labs team,
+
+I'm applying for the Software Engineer role. My day job is mapping semi-structured data from ERP and CRM systems into production pipelines, and I'd like to use that to connect AiPS to your partners' ERP and MES systems.
+
+At Talan, I built a Python tool on my own that turns the XML mappings in Informatica workflows into Snowflake SQL. We used it to migrate 20+ SOAP/XML workflows and 100+ models. I also join calls with the client's validation and data teams to investigate production anomalies.
+
+Outside work, I built OpsForge, a multi-site lab provisioned with idempotent Ansible roles that runs a K3s Kubernetes cluster stretched across sites. I'd bring customer data integration, React/TypeScript frontends and hands-on Kubernetes to your backend team, and I'm open to relocating to Berlin.
+
+Best regards,
+Iheb Belhadj

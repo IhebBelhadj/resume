@@ -1,0 +1,173 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: Oneleet
+  role: Fullstack Engineer
+  url: ''
+  country: NL
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Full-stack engineer who builds web products end to end in TypeScript, React and Next.js, from data model
+  and APIs to the interface, across startup, freelance and consulting work. Strongest at turning complex
+  data into clear interfaces, designing efficient queries, and running secure, observable production systems.
+skills:
+- label: Languages
+  items: [TypeScript, JavaScript, Python, SQL]
+- label: Frontend
+  items: [React, Next.js, Tailwind CSS, shadcn/ui, TanStack Query, TanStack Table, SWR, Zustand, Zod]
+- label: Backend & APIs
+  items: [Node.js, Express.js, REST APIs (OpenAPI), tRPC, FastAPI, WebSocket, Payload CMS]
+- label: Data, Caching & Async Jobs
+  items:
+  - Relational databases (PostgreSQL, SQLite)
+  - Drizzle ORM
+  - Caching (Redis, Upstash Redis)
+  - Job queues (pg-boss)
+  - Workflow orchestration (Airflow)
+  - dbt
+  - Snowflake
+- label: Monitoring & Observability
+  items: [Sentry, Axiom, AWS CloudWatch, Grafana]
+- label: Auth & Security
+  items:
+  - Auth & IAM (Clerk, Better Auth, Keycloak, AWS IAM)
+  - OAuth 2.0 Device Flow
+- label: Cloud & DevOps
+  items: [AWS, Terraform, Docker, GitHub Actions, Vercel]
+- label: Testing
+  items: [Vitest, Playwright, Jest]
+languages: [Arabic (native), English (C1), French (B2)]
+experiences:
+- title: Software Engineer
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – Present
+  bullets:
+  - >-
+    Single-handedly built a Python tool running natively in Snowflake (Snowpark, Streamlit) that maps
+    Informatica XML workflows to Snowflake SQL parsing code with schema enforcement, lineage and input
+    validation; used to migrate 20+ workflows and 100+ models
+  - >-
+    Led the architecture of multi-environment async workflow orchestration on Airflow (850+ DAGs), with
+    a custom library for event-driven DAG triggering, state passing between DAGs and source-agnostic configuration
+  stack: [Python, Airflow, Snowflake, dbt, SQL, XML]
+- title: Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Built the client portal and back office of [kairouanrose.com](https://www.kairouanrose.com/), a B2B
+    ordering platform (Next.js, React, TypeScript, Payload CMS) that replaces email, phone and spreadsheet
+    workflows
+  - >-
+    Moved order listing to server-side pagination, sorting, filtering and debounced search, so only one
+    page of a client's orders is fetched, backed by btree and partial unique indexes in SQL migrations
+  - >-
+    Turned order and delivery data into a clear delivery calendar: one database-filtered query per month,
+    summed into a daily load map that steers clients to lighter production days
+  - >-
+    Built an append-only audit log of every order and delivery change (field-level diff, actor, IP) written
+    in the same transaction, plus server-side access rules so clients only see their own data
+  - >-
+    Added production monitoring with structured logging to Axiom in Server Actions and API routes and
+    Sentry error tracking on client and server, with Vitest and Playwright tests written TDD-style
+  stack: [Next.js, React, TypeScript, PostgreSQL, Drizzle ORM, Payload CMS, Clerk, TanStack Table, SWR,
+    Zod, Axiom, Sentry, Vitest, Playwright, Vercel]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Built a Next.js frontend using WebSockets for live chart updates fed by a real-time CDC pipeline,
+    with persisted state and optimistic updates, for a multi-agent (LangGraph) text-to-SQL analytics platform
+  - >-
+    Secured the self-hosted platform with Keycloak IAM (role- and group-based access control), an Nginx
+    gateway and TLS between services
+  stack: [Next.js, Python, FastAPI, LangGraph, Redis, PostgreSQL, Keycloak, Nginx, Docker]
+- title: Freelance Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built the Nexits website alone, with a Payload CMS block-based page builder and live preview so non-developers
+    compose pages, rendered from a shared React component library
+  - >-
+    Hardened the CMS before launch: removed a leftover route that exposed every user record, added login
+    brute-force lockout, and set up GitHub OIDC with least-privilege IAM roles (with the team) instead
+    of long-lived AWS keys
+  stack: [TypeScript, React, Next.js, Payload CMS, Astro.js, Turborepo, AWS, Terraform, GitHub Actions]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 – Sep 2024
+  bullets:
+  - >-
+    Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel
+    of product data
+  - >-
+    Built reusable frontend components and a hybrid state management system (route-based state and Zustand),
+    improving load times and UX
+  - >-
+    Worked with the team on background jobs, retries, dead-letter queues and cron schedules with pg-boss
+    on PostgreSQL, as part of the SaaS migration to Next.js, tRPC and a Turborepo monorepo
+  stack: [Next.js, React, TypeScript, tRPC, PostgreSQL, pg-boss, Zustand, Turborepo, AWS, Sentry]
+projects:
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Designed a versioned REST API (OpenAPI 3.1, spec-first, generated TypeScript types) integrating third-party
+    sources (TMDB, subtitle providers) behind uniform error codes; upstream failures return a JSON 502
+    so the UI never hangs
+  - >-
+    Built a React admin dashboard (TanStack Query, shadcn/ui) on a WebSocket event stream showing live
+    sessions, streaming stats, devices and logs
+  stack: [Node.js, TypeScript, React, OpenAPI, WebSocket, TanStack Query, Better Auth, SQLite, Drizzle
+      ORM]
+education:
+- degree: Master's in Software Engineering
+  school: ESPRIT
+  dates: Sep 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sep 2020 – Jun 2022
+  bullets: []
+gaps:
+- >-
+  Go: not used; closest is backend work in TypeScript/Node.js (REST, tRPC) and Python (FastAPI)
+- 'gRPC: not used; closest is REST (OpenAPI) and tRPC'
+- >-
+  5+ years of full-stack experience: dates show about 3 years since Jun 2023 (internships included)
+- >-
+  Cybersecurity / security tools background: no security-product role; closest is IAM, auth, audit logs
+  and CMS hardening
+- >-
+  Feature usage analytics (usage, success rates, engagement): not in context; closest is Vercel Analytics
+  and Axiom/Sentry monitoring at K-Rose
+- >-
+  Iterating on features from customer feedback: not recorded; add K-Rose client feedback loops to context
+  if true
+- >-
+  Production metrics for full-stack work (users, order volume, load times): not in context; only Lighthouse
+  scores exist
+- 'nexits-intern: dropped (short, no recorded work); add facts to context to show it'

@@ -13,9 +13,14 @@ contacts:
   - label: github.com/IhebBelhadj
     url: https://github.com/IhebBelhadj
 
+# Spoken languages, printed on every resume as given (key = resume `lang`; `en` is the fallback).
+languages:
+  - {en: Arabic (native), fr: Arabe (langue maternelle)}
+  - {en: English (C1), fr: Anglais (C1)}
+  - {en: French (B2), fr: Français (B2)}
+
 # Free-form context for the tailoring agent (never rendered).
 notes: |
   - Open to relocation. Never state where he is currently based (irrelevant to applications).
   - Has worked remotely for a Paris-based company (Nexits).
-  - Languages spoken: TODO (fill in: e.g. Arabic native, French, English levels).
   - Availability date / work authorization: TODO.

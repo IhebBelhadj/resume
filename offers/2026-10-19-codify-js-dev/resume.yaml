@@ -1,0 +1,181 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: Codifly
+  role: Medior JavaScript Developer
+  url: https://codifly.be/en/careers
+  country: BE
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Full-stack engineer who builds TypeScript web platforms end to end, from React front ends to Node.js
+  back ends, with a security-first approach to authentication and data access. Also ships containerized
+  cloud deployments and agentic AI features. Open to relocation.
+skills:
+- label: Languages
+  items: [TypeScript, JavaScript, SQL, Bash, Python, PHP]
+- label: Frontend
+  items: [React, Next.js, Vite, Apollo Client, TanStack Query, SWR, Zustand, Tailwind CSS, shadcn/ui,
+    Astro.js, Vue.js, Electron]
+- label: Backend
+  items: [Node.js, Express.js, tRPC, GraphQL, WebSocket, OpenAPI, Payload CMS, Zod, ORM (Drizzle ORM)]
+- label: Databases
+  items: [PostgreSQL, 'NoSQL databases (MongoDB, Redis)', SQLite]
+- label: Testing
+  items: [Vitest, Playwright, Jest]
+- label: Security & Auth
+  items: [OAuth 2.0 Device Flow, Better Auth, Clerk, Keycloak]
+- label: Cloud & DevOps
+  items: [AWS, Docker, Docker Compose, Terraform, GitHub Actions, Vercel, Linux, Sentry]
+- label: Generative AI
+  items: [LangChain, LangGraph]
+languages: [Arabic (native), English (C1), French (B2)]
+experiences:
+- title: Software Engineer
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – Present
+  bullets:
+  - >-
+    Consultant for a large French energy company: contributing to an agentic AI system built with LangGraph
+    that automates the migration of Informatica mappings to dbt models, and working with the client's
+    teams to fix production anomalies
+  stack: [Python, LangGraph, dbt, Snowflake, Airflow, SQL]
+- title: Lead Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Led the end-to-end build of a B2B ordering platform ([kairouanrose.com](https://www.kairouanrose.com/)):
+    public site, client portal and back office in one Next.js 15 / React 19 / TypeScript app; wrote ~140
+    of 164 commits and reviewed and merged the team's pull requests
+  - >-
+    Modelled orders in PostgreSQL through Payload CMS and Drizzle ORM with versioned migrations, an order
+    status state machine enforced in server-side hooks and an idempotency key against duplicate orders
+  - >-
+    Secured client data: Clerk authentication bridged to Payload, server-side access control so each client
+    sees only their own orders, field whitelisting on client updates, Redis rate limiting and bot protection
+    on the contact API
+  - >-
+    Built a tamper-proof audit log of field-level diffs written in the same database transaction, driving
+    client notifications with optimistic read/unread updates (SWR)
+  - >-
+    Worked test-first: Vitest unit tests for the sign-up/sign-in flows, an integration test for the contact
+    API and Playwright for end-to-end tests; Sentry and Axiom for production errors
+  stack: [TypeScript, Next.js, React, Payload CMS, PostgreSQL, Drizzle ORM, Clerk, Zod, SWR, Upstash Redis,
+    Vitest, Playwright, Sentry, Docker, Vercel]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Built a Next.js frontend using WebSockets for live chart updates fed by a real-time CDC pipeline,
+    with optimistic updates and persisted state to cut network calls
+  - >-
+    Integrated a LangGraph multi-agent system turning user questions into SQL and charts; secured the
+    self-hosted services with Keycloak role- and group-based access, an Nginx gateway and TLS between
+    instances
+  stack: [Next.js, WebSocket, LangGraph, LangChain, Python, FastAPI, Redis, PostgreSQL, Keycloak, Nginx,
+    Docker]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built the Nexits marketing site in TypeScript with Astro.js, React islands and Payload CMS v3 on Next.js:
+    a block-based page builder with live preview, scoring 100 performance and 100 SEO on Lighthouse
+  - >-
+    Hardened it before launch (removed a route exposing every user record, login brute-force protection,
+    HSTS/CSP headers, HTTPS via Caddy) and worked with the team on AWS hosting with Terraform, Docker
+    and GitHub Actions
+  stack: [TypeScript, Astro.js, React, Payload CMS, Next.js, Tailwind CSS, Docker, Caddy, Terraform, AWS,
+    GitHub Actions]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 – Sep 2024
+  bullets:
+  - >-
+    Contributed to migrating a Vue.js SaaS to Next.js, tRPC and a Turborepo monorepo, building reusable
+    React components and hybrid state management (route-based state and Zustand)
+  - >-
+    Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel
+    of product data
+  - >-
+    Worked with the team on the AWS deployment: Node.js API and worker in Docker Compose on EC2, RDS PostgreSQL,
+    zero-downtime deploys and GitHub Actions CI/CD with OIDC role assumption (no long-lived keys)
+  stack: [TypeScript, Next.js, React, tRPC, Node.js, PostgreSQL, Zustand, Vue.js, Turborepo, Docker, AWS,
+    GitHub Actions, Terraform]
+projects:
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Self-hosted media server in Node.js and TypeScript: versioned REST API defined by an OpenAPI 3.1 spec
+    (generated types, contract tests), WebSocket events streaming live sessions to a React + Vite dashboard,
+    SQLite with Drizzle ORM
+  - >-
+    Implemented OAuth 2.0 device authorization (RFC 8628) with Better Auth, scrypt hashing, HttpOnly signed
+    cookies, rate limiting, Host header checks against DNS rebinding and refusal of cross-origin state-changing
+    requests (CSRF)
+  stack: [Node.js, TypeScript, Express.js, React, Vite, WebSocket, OpenAPI, Better Auth, OAuth 2.0 Device
+      Flow, Drizzle ORM, SQLite, TanStack Query]
+- name: EldSync
+  url: https://ihebbelhadj.vercel.app/projects/elder_care_saas
+  bullets:
+  - >-
+    Contributed to the frontend of a Java microservices platform, integrating Apollo Client for data fetching
+    and NgRx for state management with Spring Boot services
+  stack: [Apollo Client, Angular, NgRx, Spring Boot]
+education:
+- degree: Master's in Software Engineering
+  school: ESPRIT
+  dates: Sep 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sep 2020 – Jun 2022
+  bullets: []
+gaps:
+- 'Dutch (fluent required, knockout): not in languages (Arabic, English C1, French B2)'
+- >-
+  Work authorization for Belgium (EU/EEA/Swiss citizenship or work permit, knockout): TODO in profile
+  notes
+- >-
+  3+ years professional full-stack JavaScript: Aug 2023–present spans ~3 years but includes a part-time
+  freelance, an internship and a data-engineering role; confirm
+- >-
+  nexits-freelance: add a non-engineer title (e.g. 'Freelance Full-stack Developer'); 'Freelance Job'
+  kept because the role predates the engineering degree
+- 'Apollo Server: not used; closest is Apollo Client (EldSync project)'
+- 'Koa: not used; closest is Express.js'
+- 'Mocha & Chai: not used; closest is Vitest, Playwright, Jest'
+- 'Jest: listed in skills but no entry in context shows Jest tests'
+- 'React Native: not used; closest is React and Electron'
+- 'n8n: not used; closest is LangChain/LangGraph'
+- 'RAG / prompt engineering: not stated in context'
+- >-
+  JWT, OpenSSL: not stated in context (bearer tokens, TLS via Caddy/Let's Encrypt and between instances
+  exist)
+- 'XSS / SQL injection protection: not stated explicitly in context'
+- 'Agile practices: not stated in context'
+- '.NET: not used; C# listed in skills only'
+- 'nexits-intern (Jun–Aug 2023): dropped, no facts recorded in context'

@@ -8,6 +8,7 @@ resume.yaml (`validate` + render), never context/.
 
 from __future__ import annotations
 
+import datetime as dt
 import re
 from pathlib import Path
 
@@ -21,6 +22,10 @@ LANGS = ("en", "fr")  # the resume is written in the offer's language; context/ 
 # everywhere else, their bachelor/master equivalents. See `names` in context/studies/*.md.
 ENGINEERING_SYSTEM = {"TN", "FR"}
 _ONGOING_RE = re.compile(r"(currently|present|now)\s*$", re.I)
+# an experience that lasted longer than this must get at least one bullet (what the role was)
+MIN_BULLET_MONTHS = 4
+_END_RE = re.compile(r"([A-Za-z]{3})[a-z]*\.?\s+(\d{4})\s*$")
+_MONTH = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 _STR, _LIST = str, list
 # required keys and their types, per entry list; checked by `validate`
 _FIELDS = {
@@ -29,6 +34,27 @@ _FIELDS = {
     "education": {"degree": _STR, "school": _STR, "dates": _STR, "bullets": _LIST},
     "skills": {"label": _STR, "items": _LIST},
 }
+
+
+def months(e: dict, today: dt.date | None = None) -> int | None:
+    """Months an experience lasted, both ends included ("Jun 2023 – Aug 2023" = 3); None if unparseable."""
+    try:
+        y, m = (int(x) for x in str(e["start"]).split("-")[:2])
+    except ValueError:
+        return None
+    if _ONGOING_RE.search(e["dates"]):
+        today = today or dt.date.today()
+        ey, em = today.year, today.month
+    elif (end := _END_RE.search(e["dates"])) and end.group(1).lower() in _MONTH:
+        ey, em = int(end.group(2)), _MONTH[end.group(1).lower()]
+    else:
+        return None
+    return (ey - y) * 12 + em - m + 1
+
+
+def long_experiences(ctx: Context) -> list[str]:
+    """Ids of experiences that must get at least one bullet when shown."""
+    return [eid for eid, e in ctx.experiences.items() if (months(e) or 0) > MIN_BULLET_MONTHS]
 
 
 _CONCEPT_RE = re.compile(r"^(.+?)\s*\((.+)\)$")
@@ -108,6 +134,9 @@ def validate(doc: dict) -> list[str]:
     prof = doc.get("profile") or {}
     if not isinstance(prof.get("name"), str) or not isinstance(prof.get("contacts"), list):
         errors.append("profile: needs `name` and `contacts`")
+    langs = doc.get("languages") or []
+    if not isinstance(langs, list) or not all(isinstance(x, str) and x.strip() for x in langs):
+        errors.append("languages: expected a list of non-empty strings")
     if doc.get("summary") is not None and not isinstance(doc["summary"], str):
         errors.append("summary: must be a string (the text to print)")
     for s in doc.get("sections") or SECTIONS:
@@ -137,6 +166,7 @@ def render_model(doc: dict) -> dict:
         "sections": doc.get("sections") or SECTIONS,
         "summary": doc.get("summary"),
         "skills": doc.get("skills") or [],
+        "languages": doc.get("languages") or [],
         "experiences": doc["experiences"],
         "projects": [{"url": None, **p} for p in doc.get("projects") or []],
         "education": doc.get("education") or [],
@@ -198,6 +228,9 @@ def expand(sel: dict, ctx: Context) -> dict:
         if not e:
             errors.append(f"experiences: unknown id {eid!r}")
             continue
+        if not spec.get("bullets") and (n := months(e) or 0) > MIN_BULLET_MONTHS:
+            errors.append(f"experiences.{eid}: lasted {n} months but has no bullet; give it at least one "
+                          "saying what the role was, even if it is unrelated to the offer")
         title = spec.get("title") or e["titles"][0]
         if title not in e["titles"]:
             errors.append(f"experiences.{eid}: title {title!r} not in {e['titles']}")
@@ -269,6 +302,7 @@ def expand(sel: dict, ctx: Context) -> dict:
         "profile": {"name": prof["name"], "pdf_name": prof.get("pdf_name", "resume"), "contacts": prof["contacts"]},
         "summary": " ".join(summary_text.split()) if summary_text else None,
         "skills": skills,
+        "languages": [x.get(lang) or x["en"] for x in prof.get("languages") or []],
         "experiences": [e for _, e in experiences],
         "projects": projects,
         "education": [s for _, s in education],

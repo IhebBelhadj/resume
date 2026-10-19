@@ -1,10 +1,10 @@
 ---
 id: nexits-freelance
 company: Nexits
-titles: [Freelance Job, Freelance Software Engineer]
+titles: [Freelance Full-stack Developer, Freelance Software Engineer]
 location: Paris, FR (Remote)
 start: 2024-11
-dates: Nov 2024 - Feb 2025
+dates: Nov 2024 – Feb 2025
 tags: [frontend, cms, astro, performance, aws, devops, terraform]
 stack:
   - Astro.js
@@ -47,9 +47,6 @@ stack:
   content + React for interactive parts; minimal dependencies (Tailwind CSS, Framer Motion, shadcn);
   sitemap + SEO integrations; Payload CMS v3 for live content editing; linting and type-checking that
   work across the monorepo.
-- Repo source: `~/projects/nexits/landing` is an **old version** of the project (Jan–Sep 2025 commits,
-  21 commits, all but the initial scaffold by Iheb; commit dates in that copy run past the
-  mission, but I did not work on it after Feb 2025). The final version lived in the main Nexits
   monorepo with the rest of the Nexits apps and was hosted on AWS (see Deployment below).
 - Iheb worked alone on the website and CMS code, with code reviews and feedback from the Nexits
   team. The project was delivered in about 4 months (Nov 2024 – Feb 2025).
@@ -152,9 +149,8 @@ stack:
 ## Numbers
 
 - Lighthouse: 100 performance, 95 accessibility, 100 SEO (from past resumes; TODO: confirm on which page/build).
-- Hosting cost: about $25/month for the launch profile vs about $85–90/month for the growth
-  architecture. These are the plan's estimates (AWS pricing, eu-west-3), not a measured bill.
-- Rollback ~10 s; publish to live ~2–4 min; host rebuild ~10 min (plan figures).
+- Hosting cost: about $25/month for the launch profile
+- Rollback ~10 s; publish to live ~2–4 min; host rebuild ~10 min.
 
 ## From past resumes
 

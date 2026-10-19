@@ -13,20 +13,7 @@
 
 \begin{document}
 
-\begin{header}
-  \fontsize{25 pt}{25 pt}\selectfont << profile.name >>
-
-  \normalsize
-  \kern 5.0 pt%
-<% for c in profile.contacts %>
-<% if c.get("newline") %>
-
-<% elif not loop.first %>
-  \AND%
-<% endif %>
-  \mbox{\href{<< c.url | url >>}{<< c.label | tex >>}}%
-<% endfor %>
-\end{header}
+<% include "_header.tex.j2" %>
 
 \vspace{5 pt - 0.3 cm}
 <% for section in sections %>
@@ -36,7 +23,7 @@
 \begin{onecolentry}
 << summary | tex >>
 \end{onecolentry}
-<% elif section == "skills" and skills %>
+<% elif section == "skills" and (skills or languages) %>
 
 \section{<< t.skills >>}
 <% for cat in skills %>
@@ -44,6 +31,11 @@
 \textbf{<< cat.label | tex >>:} << cat["items"] | map("tex") | join(", ") >>
 \end{onecolentry}
 <% endfor %>
+<% if languages %>
+\begin{onecolentry}
+\textbf{<< t.languages >>:} << languages | map("tex") | join(", ") >>
+\end{onecolentry}
+<% endif %>
 <% elif section == "experience" and experiences %>
 
 \section{<< t.experience >>}
@@ -76,10 +68,19 @@
 <% for p in projects %>
 \begin{onecolentry}
   \begin{highlights}
-    \item \textbf{<% if p.url %>\href{<< p.url | url >>}{<< p.name | tex >>:}<% else %><< p.name | tex >>:<% endif %>} << p.bullets | map("tex") | join(" ") >>
-<% if p.stack %>
+<# one bullet: inline after the name; several: nested under it, like the stack line #>
+<% set nested = p.bullets | length > 1 %>
+    \item \textbf{<% if p.url %>\href{<< p.url | url >>}{<< p.name | tex >>:}<% else %><< p.name | tex >>:<% endif %>}<% if not nested %> << p.bullets | map("tex") | join(" ") >><% endif %>
+<% if nested or p.stack %>
     \begin{highlightsforbulletentries}
+<% if nested %>
+<% for b in p.bullets %>
+    \item << b | tex >>
+<% endfor %>
+<% endif %>
+<% if p.stack %>
     \item << t.stack >>: << p.stack | map("tex") | join(", ") >>
+<% endif %>
     \end{highlightsforbulletentries}
 <% endif %>
   \end{highlights}

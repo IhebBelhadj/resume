@@ -13,6 +13,8 @@ stack:
     Next.js,
     LangGraph,
     LangChain,
+    ChromaDB,
+    Sentence Transformers,
     Redis,
     MinIO,
     Airflow,
@@ -39,6 +41,17 @@ stack:
   questions into SQL and charts), with CDC so charts update in real time.
 - Horizon is hosted locally, on purpose: the idea is a local data system with minimal cost, avoiding
   cloud costs by running your own data platform. Airbyte, dbt and Airflow all run locally.
+
+## RAG for the text-to-SQL agent (built by me)
+
+- Horizon's SQL-writing agent gets context about the data it queries through a RAG system I built.
+- What is indexed: pre-aggregated analytics about the datasets, i.e. the operations I ran for the EDA
+  (exploratory data analysis) and other data-profiling metrics. This gives the agent an idea of what
+  data it is working with before it writes SQL.
+- Vector database: ChromaDB. Embeddings: Sentence Transformers, model `sentence-transformers/all-MiniLM-L6-v2`.
+- Agentic RAG: a sub-agent judges each retrieval result and decides whether it is included in the
+  SQL agent's context or discarded (an LLM relevance-grading step, as in Corrective RAG).
+- The Redis caching layer (see below) reduces network I/O for this context retrieval.
 
 ## Self-hosted infrastructure (what I worked on)
 

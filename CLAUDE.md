@@ -10,17 +10,24 @@ Content (facts) is kept apart from presentation (LaTeX). Per offer:
    `template/resume.tex.j2` from `resume.yaml` into `resume.tex`; `latexmk` makes the PDF.
 3. **score**: a separate model call reads `offer.md` + `resume.yaml` and writes `score.md`
    (fit out of 10, weaknesses, requirement table, what to do to raise the score).
+   **Revision (once):** `tailor` then runs again with the previous `resume.yaml` and the score's
+   feedback (weaknesses + resume edits; requests for new facts stay gaps), builds and re-scores;
+   the higher-scoring version is kept (`--no-revise` skips it).
 4. **cover-letter** (on demand): a model call with web search researches the company and
-   writes `cover-letter.md` from `context/` + the offer + `resume.yaml`; the facts it found,
-   with source URLs, go to `company.md`.
+   writes the letter's body as plain text in `cover-letter.txt` from `context/` + the offer +
+   `resume.yaml`; the facts it found, with source URLs, go to `company.md`. `build` renders the
+   .txt through `template/cover-letter.tex.j2` (`letter.cls`, same header as the resume) into
+   `cover-letter.tex` and `<pdf_name>_COVER_LETTER.pdf` (one page; header, language and company
+   come from `resume.yaml`). Edit the .txt by hand, then `build`.
 
 Models run through the local Claude Code CLI (`claude -p`, the user's subscription; no API key).
 
 ```
 context/        SOURCE OF TRUTH: every fact about Iheb (Markdown + YAML frontmatter). See context/CLAUDE.md
-template/       resume.cls (all styling), resume.tex.j2 (Jinja2 layout), resume.example.yaml (format)
+template/       resume.cls (all styling), resume.tex.j2 (Jinja2 layout), resume.example.yaml (format),
+                letter.cls + cover-letter.tex.j2 (cover letter), _header.tex.j2 (shared header)
 offers/<slug>/  one folder per offer: offer.md, resume.yaml, resume.tex, <pdf_name>.pdf, score.md,
-                cover-letter.md, company.md
+                cover-letter.txt, cover-letter.tex, <pdf_name>_COVER_LETTER.pdf, company.md
 pipeline/core/  pure Python (no orchestrator imports): context, resume, render, build, llm (claude -p),
                 tailor, score, cover_letter
 pipeline/core/prompts/  system prompts: tailor, score, cover_letter
@@ -37,20 +44,20 @@ Always use the project venv (`python3 -m venv .venv && .venv/bin/pip install -e 
 .venv/bin/python -m pipeline check                  # validate context/ (ids, required keys); lists thin files
 .venv/bin/python -m pipeline dump                   # ALL context in one document (frontmatter + raw facts)
 .venv/bin/python -m pipeline new 2026-10-acme-backend   # creates offer.md
-.venv/bin/python -m pipeline tailor offers/<slug>   # -> resume.yaml, then build + score (--max-pages N, --no-score)
-.venv/bin/python -m pipeline build offers/<slug>    # resume.yaml -> resume.tex -> PDF (no model)
+.venv/bin/python -m pipeline tailor offers/<slug>   # -> resume.yaml, build, score, 1 revision (--max-pages N, --no-score, --no-revise)
+.venv/bin/python -m pipeline build offers/<slug>    # resume.yaml (+ cover-letter.txt) -> .tex -> PDFs (no model)
 .venv/bin/python -m pipeline build                  # rebuild every offer (skips ones marked sent)
 .venv/bin/python -m pipeline score offers/<slug>    # -> score.md
-.venv/bin/python -m pipeline cover-letter offers/<slug>   # -> cover-letter.md + company.md (web research)
+.venv/bin/python -m pipeline cover-letter offers/<slug>   # -> cover-letter.txt + PDF, company.md (web research)
 .venv/bin/python -m pipeline mark-sent offers/<slug> [--date YYYY-MM-DD]
 ```
 
 ## What goes in git
 
 - Always: `context/`, `template/`, `pipeline/`, and per offer `offer.md`, `resume.yaml`, `resume.tex`,
-  `score.md`, `cover-letter.md`, `company.md`.
-- Offer PDFs are gitignored (`offers/*/*.pdf`) **until sent**. `mark-sent` checks that the PDF
-  is newer than `resume.yaml`, writes `sent: <date>` into it, force-adds the PDF, commits
+  `score.md`, `cover-letter.txt`, `cover-letter.tex`, `company.md`.
+- Offer PDFs are gitignored (`offers/*/*.pdf`) **until sent**. `mark-sent` checks that each PDF
+  is newer than its source (`resume.yaml`, `cover-letter.txt`), writes `sent: <date>` into `resume.yaml`, force-adds the PDFs, commits
   only that offer's files (other staged changes are left alone), and tags `sent/<slug>`.
   The user pushes (`git push && git push origin sent/<slug>`).
 - A sent offer is frozen: `build` skips it unless `--force`, because its committed PDF is
@@ -82,7 +89,10 @@ Model: `--model` or `$RESUME_MODEL` (default `opus`).
    technologies, numbers, scope, seniority or ownership ("used" never becomes "led",
    "contributed to" never becomes "built").
 4. **Balance the bullets.** About 14–16 in total; at most 5 per experience, and only the most
-   relevant one gets 4–5, the others compensate (2–3, then 0–1); projects 0–2, one line each.
+   relevant one gets 4–5, the others compensate (2–3, then 1); every experience longer than
+   4 months (`resume.MIN_BULLET_MONTHS`) gets at least one bullet saying what the role was,
+   even if unrelated to the offer (`tailor` rejects it otherwise and retries once); projects 0–2, one line each, or up to 3
+   bullets for a project that is among the most relevant (printed nested under its name).
    `tailor` caps bullets per entry in its output schema.
 5. **One or two pages, by content.** `max_pages: 2` is a ceiling, not a target: one page
    when the relevant material fits, two when there is enough relevant material to fill a
@@ -123,8 +133,9 @@ Slug format: `YYYY-MM-<company>-<role>` (kebab-case).
   contacts (code copies them from `context/` by id), and `build` reads nothing else, so
   the same `resume.yaml` always gives the same PDF.
 - **Summary and bullets are generated per offer** in one model call, not picked from a fixed list. No
-  automated fact checks or review loop: the human reads every bullet before sending.
-  `score` is advice for the human, it never edits the resume.
+  automated fact checks: the human reads every bullet before sending. `score` never edits the
+  resume itself; its notes feed exactly one `tailor` revision (no open-ended loop), and the
+  rest is advice for the human.
 - **Models via `claude -p`, behind `core/llm.py`.** One function (`complete_json`: prompt +
   JSON schema → structured output), our own system prompt, no tools except WebSearch/WebFetch
   for the cover letter. Moving to the Anthropic

@@ -1,0 +1,162 @@
+% GENERATED FILE: do not edit by hand.
+% Source: offers/2026-10-19-se-pharma-labs/resume.yaml
+\documentclass{resume}
+\hypersetup{
+  pdftitle={Iheb Belhadj - Resume},
+  pdfauthor={Iheb Belhadj},
+  pdfcreator={Iheb Belhadj},
+}
+
+\begin{document}
+
+\begin{header}
+  \fontsize{25 pt}{25 pt}\selectfont Iheb Belhadj
+
+  \normalsize
+  \kern 5.0 pt%
+  \mbox{\href{mailto:iheb.belhadj.dev@gmail.com}{iheb.belhadj.dev@gmail.com}}%
+  \AND%
+  \mbox{\href{tel:+21695611874}{+216 95 611 874}}%
+
+  \mbox{\href{https://ihebbelhadj.vercel.app/}{ihebbelhadj.vercel.app}}%
+  \AND%
+  \mbox{\href{https://linkedin.com/in/iheb-belhaj/}{linkedin.com/in/iheb-belhaj}}%
+  \AND%
+  \mbox{\href{https://github.com/IhebBelhadj}{github.com/IhebBelhadj}}%
+\end{header}
+
+\vspace{5 pt - 0.3 cm}
+
+\section{Summary}
+\begin{onecolentry}
+Software engineer who builds and runs full-stack and data systems end to end, from APIs and React frontends to the infrastructure they deploy on. Strongest at turning messy client data into reliable pipelines with Python and TypeScript, and at automating deployments with Terraform.
+\end{onecolentry}
+
+\section{Skills}
+\begin{onecolentry}
+\textbf{Languages:} TypeScript, Python, JavaScript, Java, SQL, Bash, XML
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Backend \& APIs:} Node.js, FastAPI, Express.js, tRPC, OpenAPI, WebSocket, Spring Boot, Payload CMS
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Frontend:} React, Next.js, TanStack Query, Tailwind CSS, shadcn/ui, Vite, Angular
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{DevOps \& Cloud:} Kubernetes, K3s, Ansible, Docker, Docker Compose, Terraform, GitHub Actions, AWS, Linux, Flux, Grafana, Nginx
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Data Integration \& Storage:} Data pipelines (Airflow, dbt, Airbyte), Snowflake, Informatica, PostgreSQL, SQLite, Redis, Drizzle ORM
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Testing \& Observability:} Vitest, Playwright, Jest, Pytest, Sentry, Axiom
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{AI:} LangGraph, LangChain
+\end{onecolentry}
+\begin{onecolentry}
+\textbf{Spoken languages:} Arabic (native), English (C1), French (B2)
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{Oct 2025 – Present}
+\textbf{Software Engineer}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built alone a Python tool, running natively in Snowflake, that converts the XML mappings in exported Informatica workflows into Snowflake SQL parsing code for semi-structured data from SOAP-based CRM and ERP systems, with an enforced XML schema, input validation and lineage.
+    \item Used the tool to migrate 20+ XML-based workflows and 100+ models (100+ columns each) into native Snowflake SQL, saving weeks of manual mapping work.
+    \item Led the architecture of multi-environment (dev, test, prod) Airflow orchestration running 850+ DAGs, with a custom library providing a source-agnostic config builder (strategy pattern), event-driven asset-based triggering and a state store between DAGs.
+    \item Joined client calls with GRDF's validation and data teams to investigate production anomalies in legacy data pipelines, explain the analysis and deliver fixes.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, SQL, XML, Snowflake, Airflow, dbt, Informatica, Jinja
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Dec 2025 – Aug 2026}
+\textbf{Lead Full-stack Engineer (Freelance, part-time)}, K-Rose -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built and deployed end to end the B2B ordering platform behind \href{https://www.kairouanrose.com/}{kairouanrose.com} with two other developers: one Next.js / React / TypeScript app with a public site, an authenticated client portal and a Payload CMS back office on PostgreSQL.
+    \item Kept quality up while shipping with Vitest unit tests and an integration test for the contact API, Playwright for end-to-end tests, and Sentry plus structured Axiom logging to debug production errors.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, React, Next.js, Payload CMS, PostgreSQL, Drizzle ORM, Vitest, Playwright, Sentry, Axiom, Vercel
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Feb 2025 – Oct 2025}
+\textbf{Software Engineering Intern}, Talan -- Tunis, TN\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the self-hosted data platform for an AI analytics app where LangGraph agents turn questions into SQL and charts: Airbyte, Airflow and dbt pipelines for ingestion, transformation and ML forecasting, run on Docker Compose behind an Nginx gateway with Keycloak IAM.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: Python, LangGraph, Airflow, Airbyte, dbt, Docker Compose, Nginx, Keycloak
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Nov 2024 – Feb 2025}
+\textbf{Freelance Job}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built the Nexits website's Payload CMS block-based page builder with live preview, and worked with the team on its AWS hosting with Terraform, GitHub OIDC deploy roles and S3 + CloudFront atomic releases with \textasciitilde{}10 s rollback.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Payload CMS, Astro.js, AWS, Terraform, GitHub Actions, Docker
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\entryspace
+
+\begin{twocolentry}{Aug 2023 – Sep 2024}
+\textbf{Full-stack Developer}, Nexits -- Paris, FR (Remote)\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Worked with the team on the SaaS deployment on AWS with Terraform and GitHub Actions: separate staging and prod accounts, images built once and promoted by digest through staging, tests and a manual approval gate, and zero-downtime API deploys on Docker Compose.
+    \item Implemented product state historization with an audit trail, enabling edits, rollbacks and time travel of product data.
+    \begin{highlightsforbulletentries}
+    \item Technologies used: TypeScript, Next.js, tRPC, PostgreSQL, AWS, Terraform, Docker, GitHub Actions
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Projects}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://github.com/IhebBelhadj/OpsForge}{OpsForge:}}    \begin{highlightsforbulletentries}
+    \item Built alone a multi-site WAN lab on one Linux host: one command provisions Incus containers across simulated sites with configurable latency, loss and bandwidth (tc/netem), NAT and a WireGuard site-to-site VPN, idling at 312 MiB.
+    \item Ran a K3s cluster stretched across sites, provisioned by idempotent Ansible roles (DNS, PKI) with GitOps rollouts through Flux; a partitioned site's pods are rescheduled and the node recovers on its own.
+    \item Wrote a Python CLI for fault injection (partition, link flap, MTU black hole) with scripted pass/fail scenarios, acceptance checks and Grafana dashboards of site-to-site latency.
+    \item Technologies used: Kubernetes, K3s, Ansible, Python, Linux, WireGuard, Flux, Grafana
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+\vspace{0.1 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{\href{https://ihebbelhadj.vercel.app/projects/torrent-streamer}{Playpex:}}    \begin{highlightsforbulletentries}
+    \item Built alone a self-hosted media server in Node.js with a spec-first versioned REST API (OpenAPI 3.1), version negotiation and a contract test checking every response against the spec.
+    \item Built the React / TypeScript admin dashboard (Vite, TanStack Query, Tailwind CSS, shadcn/ui) with live sessions, devices and logs over WebSocket.
+    \item Implemented device pairing with the OAuth 2.0 Device Flow on Better Auth, over a layered data access layer (repository contracts on SQLite with Drizzle ORM).
+    \item Technologies used: TypeScript, Node.js, React, OpenAPI, WebSocket, SQLite, Drizzle ORM, Better Auth
+    \end{highlightsforbulletentries}
+  \end{highlights}
+\end{onecolentry}
+
+\section{Education}
+\begin{twocolentry}{Sep 2022 – Sep 2025}
+\textbf{Master's in Software Engineering}, ESPRIT\end{twocolentry}
+\vspace{0.10 cm}
+\begin{twocolentry}{Sep 2020 – Jun 2022}
+\textbf{Pre-engineering Bachelor}, IPEIM\end{twocolentry}
+
+\end{document}

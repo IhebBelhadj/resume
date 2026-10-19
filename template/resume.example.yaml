@@ -23,6 +23,8 @@ summary: Software engineer specializing in backend systems, data pipelines, and 
 skills:                     # printed in this order
   - {label: Languages, items: [TypeScript, Python]}
 
+languages: [Arabic (native), English (C1)]   # copied by tailor from context/profile.yaml, printed under skills
+
 experiences:                # printed in this order (tailor writes them newest-first)
   - title: Data Engineer Intern
     company: Talan

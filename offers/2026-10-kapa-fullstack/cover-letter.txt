@@ -1,0 +1,10 @@
+Dear kapa.ai team,
+
+I'm applying for the Full-stack Software Engineer role. I build retrieval systems and LLM agents in Python, and I ship the React products around them. Your "RAG Gone Wrong" post says vector similarity alone isn't enough, and that is the exact problem I worked on in my last RAG system.
+
+At Talan, I built the agentic RAG behind a text-to-SQL agent: ChromaDB with Sentence Transformers embeddings, plus an LLM sub-agent that grades each retrieved result before it reaches the agent's context. I also integrated the LangGraph multi-agent system that turns questions into SQL and charts, shown in a Next.js frontend that updates live over WebSockets. As lead full-stack engineer (freelance) at K-Rose, I built the React client portal of their B2B platform: order wizard, filterable order tables, live notifications.
+
+I would bring someone who moves easily between the RAG engine, the data feeding it and the React surfaces your customers use. I'm open to relocation.
+
+Best regards,
+Iheb Belhadj

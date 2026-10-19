@@ -1,12 +1,30 @@
 ---
 id: talan-data-consultant
 company: Talan
-titles: [Data engineering Consultant, Data Engineering Consultant]
+titles:
+  [Data engineering Consultant, Data Engineering Consultant, Software Engineer]
 location: Tunis, TN
 start: 2025-10
-dates: Oct 2025 – currently
+dates: Oct 2025 – Present
 tags: [data, dbt, snowflake, airflow, ai, consulting]
-stack: [Python, FastAPI, React, LangGraph, Redis, dbt, Docker, Informatica, VTOM, Oracle DB, Snowflake, Airflow, Jinja, SQL, XML]
+stack:
+  [
+    Python,
+    FastAPI,
+    React,
+    LangGraph,
+    Redis,
+    dbt,
+    Docker,
+    Informatica,
+    VTOM,
+    Oracle DB,
+    Snowflake,
+    Airflow,
+    Jinja,
+    SQL,
+    XML,
+  ]
 ---
 
 <!-- Raw facts: never rendered. Resume bullets are generated from this text per offer and
@@ -22,7 +40,7 @@ stack: [Python, FastAPI, React, LangGraph, Redis, dbt, Docker, Informatica, VTOM
 
 ## XML ingestion tool on Snowflake (Informatica XML workflows → Snowflake SQL)
 
-My part: I helped Talan create this tool.
+My part: I alone built this tool.
 
 - Problem: workflows being migrated rely on old CRM and ERP tools that talk SOAP, so the data
   arrives as XML. Snowflake only offers basic native XML parsing, and the mapping logic lived
@@ -34,9 +52,9 @@ My part: I helped Talan create this tool.
   basically all an ingestion tool would offer for XML parsing, but natively on Snowflake,
   so no external ingestion tool is needed.
 - Written in Python; runs in Snowflake's native Python environment.
-  TODO: confirm whether this is Snowpark / Python stored procedures / a Snowflake Native App.
+  runs in Snowpark, with an available streamlit app available natively in snowflake for ease of use.
 - Users: the developers migrating the XML-based workflows from Informatica to Snowflake.
-- TODO: numbers (models/workflows migrated with it, time saved per mapping, team size).
+- migrated 20+ xml based workflows and 100+ models that utilise xml parsings into native snowflake sql code using this tool, saving weeks of manual typing and millions of tokens for ai based schema extration and code writing.
 
 ## Custom Airflow library and multi-environment orchestration
 
@@ -58,9 +76,13 @@ developers everything they need, so DAG code stays clean and reads as declarativ
 - State store: push and fetch state between DAGs, so variable state propagates from one DAG
   to another, with override hierarchy policies deciding which value wins.
 - Multi-environment: the orchestration runs across several environments.
-  TODO: which environments (dev/rec/prod?), Airflow version and hosting (MWAA, Astronomer,
-  self-hosted?), number of DAGs or teams using the library.
+  (dev , test and prod) Airflow version and hosting (MWAA), 850+ DAGS
+
+## CSV data ingestion and validation
+
+My part: helped in the creation of javascript python tasks that extract the schema of csv files , validate the csvs adherence to the schema and ingest the data from stages csv files into snowflake raw schema tables which handles data ingestion from s3 buckets (used by the stages in snowflake) into snowflake raw schema tables.
 
 ## Notes
 
-Client mentioned: GRDF. Scheduler: VTOM.
+Client mentioned: GRDF. Old stack: VTOM, informatica , on prem NAS servers , new stack : AWS services (files on s3, MWAA, sqs , sns, etc ..) , snowflake (with dbt running there , python jobs , javascript jobs etc ..) .
+Client contact and client calls and teams meetings with the validation team and the data team to gather informations about anomalies or to explain our analysis for delivations in the data. The validation team is responsible for validating the data and the data team is responsible for the data pipelines. The client is a large energy company in France.

@@ -51,11 +51,13 @@ def tex(s) -> str:
 
 # printed headings, by resume.yaml `lang`
 LABELS = {
-    "en": {"resume": "Resume", "summary": "Summary", "skills": "Technologies", "experience": "Experience",
-           "projects": "Projects", "education": "Education", "stack": "Technologies used"},
-    "fr": {"resume": "CV", "summary": "Profil", "skills": "Compétences techniques",
+    "en": {"resume": "Resume", "summary": "Summary", "skills": "Skills", "experience": "Experience",
+           "projects": "Projects", "education": "Education", "stack": "Technologies used", "languages": "Spoken languages",
+           "cover_letter": "Cover letter"},
+    "fr": {"resume": "CV", "summary": "Profil", "skills": "Compétences",
            "experience": "Expérience professionnelle", "projects": "Projets", "education": "Formation",
-           "stack": "Technologies utilisées"},
+           "stack": "Technologies utilisées", "languages": "Langues",
+           "cover_letter": "Lettre de motivation"},
 }
 
 
@@ -79,5 +81,5 @@ def _env() -> Environment:
     return env
 
 
-def render_tex(model: dict, source_path: str) -> str:
-    return _env().get_template("resume.tex.j2").render(**model, t=LABELS[model["lang"]], source_path=source_path)
+def render_tex(model: dict, source_path: str, template: str = "resume.tex.j2") -> str:
+    return _env().get_template(template).render(**model, t=LABELS[model["lang"]], source_path=source_path)

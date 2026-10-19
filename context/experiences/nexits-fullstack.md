@@ -4,7 +4,7 @@ company: Nexits
 titles: [Full-stack Developer, Software Engineer]
 location: Paris, FR (Remote)
 start: 2023-08
-dates: Aug 2023 - Sep 2024
+dates: Aug 2023 – Sep 2024
 tags: [fullstack, nextjs, trpc, aws, monorepo, devops, terraform]
 stack:
   - Next.js

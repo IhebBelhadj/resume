@@ -1,0 +1,166 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: Mistral
+  role: Software Engineer, Frontend
+  url: https://www.linkedin.com/jobs/
+  country: FR
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Full-stack engineer who ships TypeScript products end to end, from React and Next.js interfaces to their
+  backends, data models and deployment. Also builds LLM-based features (multi-agent systems, RAG) and
+  data platforms, with a steady focus on performance, observability and clean architecture.
+skills:
+- label: Frontend
+  items: [TypeScript, JavaScript, React, Next.js, Vue.js, Angular, Astro.js, TanStack Query, tRPC, Framer
+      Motion, GSAP, Tailwind CSS, shadcn/ui, Zustand, SWR, Zod, TanStack Table, RxJS, NgRx, Vite, Electron]
+- label: Backend & APIs
+  items:
+  - Node.js
+  - Express.js
+  - Payload CMS
+  - Python
+  - FastAPI
+  - OpenAPI
+  - WebSocket
+  - GraphQL
+  - Clerk
+  - Better Auth
+  - Relational databases (PostgreSQL, SQLite)
+  - Drizzle ORM
+  - Redis
+- label: AI & LLMs
+  items: [LangGraph, LangChain, ChromaDB, Sentence Transformers]
+- label: Monitoring & Testing
+  items: [Sentry, Axiom, Grafana, Prometheus, Vitest, Playwright, Jest, Jasmine]
+- label: Cloud & Tooling
+  items: [Vercel, AWS, Docker, Terraform, GitHub Actions, Turborepo, pnpm]
+languages: [Arabic (native), English (C1), French (B2)]
+experiences:
+- title: Data Engineering Consultant
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – Present
+  bullets:
+  - >-
+    Data engineering consultant for a large French energy company, contributing to an agentic AI system
+    that automates the migration of Informatica mappings to dbt models.
+  stack: [Python, LangGraph, dbt, Snowflake, Airflow, SQL]
+- title: Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Shipped end to end a B2B ordering platform for [kairouanrose.com](https://www.kairouanrose.com/):
+    trilingual public site (FR/EN/AR, right-to-left), client portal and back office in one Next.js 15
+    / React 19 / TypeScript app.
+  - >-
+    Built a three-step order wizard (react-hook-form, Zod) for three order types that steers clients toward
+    delivery days with a lighter production load, plus filterable order tables with TanStack Table.
+  - >-
+    Built an animated UI with GSAP timelines and Framer Motion, then tuned it for mobile and low-end devices
+    (lazy loading, lighter variants): Lighthouse 92 performance, 97 accessibility, 100 SEO.
+  - >-
+    Enforced the order lifecycle as a state machine with separate admin and client transitions in server
+    hooks, with a field-level audit log that drives client notifications (SWR, optimistic read/unread).
+  - >-
+    Set up monitoring with Sentry error tracking and structured Axiom logging, and worked test-first with
+    Vitest unit and integration tests, with Playwright in place for end-to-end tests.
+  stack: [Next.js, React, TypeScript, Payload CMS, PostgreSQL, Drizzle ORM, Clerk, Tailwind CSS, shadcn/ui,
+    GSAP, Framer Motion, SWR, TanStack Table, Zod, Vitest, Playwright, Sentry, Axiom, Vercel]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Integrated a LangGraph multi-agent system that turns natural-language questions into SQL and charts,
+    fed by an agentic RAG (ChromaDB, Sentence Transformers) that grades retrieved context.
+  - >-
+    Built the Next.js frontend with WebSockets for live chart updates, plus persisted state and optimistic
+    updates for faster, offline-capable viewing.
+  stack: [Next.js, Python, FastAPI, LangGraph, LangChain, ChromaDB, Sentence Transformers, WebSocket,
+    Redis, Docker]
+- title: Freelance Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built on my own the Nexits marketing site (Astro + React) and a Payload CMS block-based page builder
+    with live preview, so non-developers build whole pages without code.
+  - >-
+    Designed a dual rendering strategy (SSR for preview, SSG for production) with React islands hydrated
+    only when visible: Lighthouse 100 performance, 95 accessibility, 100 SEO.
+  stack: [Astro.js, React, TypeScript, Payload CMS, Next.js, Tailwind CSS, Turborepo, GitHub Actions,
+    AWS]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 – Sep 2024
+  bullets:
+  - >-
+    Contributed to migrating the SaaS product from Vue.js to Next.js, tRPC and a Turborepo monorepo deployed
+    on AWS.
+  - >-
+    Built reusable frontend components and a hybrid state management system (route-based state + Zustand)
+    to improve load times and UX.
+  - >-
+    Implemented product state history with an audit trail, so users can edit, roll back and time-travel
+    through product data.
+  stack: [Next.js, React, TypeScript, tRPC, Vue.js, Zustand, Node.js, PostgreSQL, Turborepo, GitHub Actions,
+    AWS, Sentry]
+- title: Software Engineering Intern
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Jun 2023 – Aug 2023
+  bullets: []
+  stack: []
+projects:
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Built on my own a self-hosted media server (Node.js) and its React admin dashboard (Vite, TanStack
+    Query, shadcn/ui) on a spec-first OpenAPI contract with generated TypeScript types, showing sessions
+    and logs live over WebSocket.
+  - >-
+    Designed LAN discovery (mDNS / DNS-SD with a custom UDP fallback) and OAuth 2.0 device-flow pairing,
+    so clients find and reconnect to servers by id across address and port changes.
+  stack: [TypeScript, Node.js, React, TanStack Query, Vite, Tailwind CSS, shadcn/ui, OpenAPI, WebSocket,
+    Angular, Electron, SQLite, Drizzle ORM]
+education:
+- degree: Engineering Degree in Software Engineering
+  school: ESPRIT
+  dates: Sep 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Preparatory Cycle
+  school: IPEIM
+  dates: Sep 2020 – Jun 2022
+  bullets: []
+gaps:
+- 'Remix: not used; closest is Next.js (App Router) and Astro.js'
+- 'Figma / UX design: not in context'
+- >-
+  B2C experience: K-Rose and Nexits are B2B; closest consumer-facing work is the Playpex personal project
+- >-
+  Monitoring/Alerting: Sentry, Axiom and Grafana are covered; no alerting setup is described for the frontend
+  roles
+- 'Relocation to Paris/London: profile notes say open to relocation; not stated in the resume'

@@ -1,0 +1,163 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: Phantasma Labs
+  role: Software Engineer
+  url: ''
+  country: DE
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Software engineer who builds and runs full-stack and data systems end to end, from APIs and React frontends
+  to the infrastructure they deploy on. Strongest at turning messy client data into reliable pipelines
+  with Python and TypeScript, and at automating deployments with Terraform.
+skills:
+- label: Languages
+  items: [TypeScript, Python, JavaScript, Java, SQL, Bash, XML]
+- label: Backend & APIs
+  items: [Node.js, FastAPI, Express.js, tRPC, OpenAPI, WebSocket, Spring Boot, Payload CMS]
+- label: Frontend
+  items: [React, Next.js, TanStack Query, Tailwind CSS, shadcn/ui, Vite, Angular]
+- label: DevOps & Cloud
+  items: [Kubernetes, K3s, Ansible, Docker, Docker Compose, Terraform, GitHub Actions, AWS, Linux, Flux,
+    Grafana, Nginx]
+- label: Data Integration & Storage
+  items: ['Data pipelines (Airflow, dbt, Airbyte)', Snowflake, Informatica, PostgreSQL, SQLite, Redis,
+    Drizzle ORM]
+- label: Testing & Observability
+  items: [Vitest, Playwright, Jest, Pytest, Sentry, Axiom]
+- label: AI
+  items: [LangGraph, LangChain]
+languages: [Arabic (native), English (C1), French (B2)]
+experiences:
+- title: Software Engineer
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – Present
+  bullets:
+  - >-
+    Built alone a Python tool, running natively in Snowflake, that converts the XML mappings in exported
+    Informatica workflows into Snowflake SQL parsing code for semi-structured data from SOAP-based CRM
+    and ERP systems, with an enforced XML schema, input validation and lineage.
+  - >-
+    Used the tool to migrate 20+ XML-based workflows and 100+ models (100+ columns each) into native Snowflake
+    SQL, saving weeks of manual mapping work.
+  - >-
+    Led the architecture of multi-environment (dev, test, prod) Airflow orchestration running 850+ DAGs,
+    with a custom library providing a source-agnostic config builder (strategy pattern), event-driven
+    asset-based triggering and a state store between DAGs.
+  - >-
+    Joined client calls with GRDF's validation and data teams to investigate production anomalies in legacy
+    data pipelines, explain the analysis and deliver fixes.
+  stack: [Python, SQL, XML, Snowflake, Airflow, dbt, Informatica, Jinja]
+- title: Lead Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Built and deployed end to end the B2B ordering platform behind [kairouanrose.com](https://www.kairouanrose.com/)
+    with two other developers: one Next.js / React / TypeScript app with a public site, an authenticated
+    client portal and a Payload CMS back office on PostgreSQL.
+  - >-
+    Kept quality up while shipping with Vitest unit tests and an integration test for the contact API,
+    Playwright for end-to-end tests, and Sentry plus structured Axiom logging to debug production errors.
+  stack: [TypeScript, React, Next.js, Payload CMS, PostgreSQL, Drizzle ORM, Vitest, Playwright, Sentry,
+    Axiom, Vercel]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Built the self-hosted data platform for an AI analytics app where LangGraph agents turn questions
+    into SQL and charts: Airbyte, Airflow and dbt pipelines for ingestion, transformation and ML forecasting,
+    run on Docker Compose behind an Nginx gateway with Keycloak IAM.
+  stack: [Python, LangGraph, Airflow, Airbyte, dbt, Docker Compose, Nginx, Keycloak]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built the Nexits website's Payload CMS block-based page builder with live preview, and worked with
+    the team on its AWS hosting with Terraform, GitHub OIDC deploy roles and S3 + CloudFront atomic releases
+    with ~10 s rollback.
+  stack: [TypeScript, Payload CMS, Astro.js, AWS, Terraform, GitHub Actions, Docker]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 – Sep 2024
+  bullets:
+  - >-
+    Worked with the team on the SaaS deployment on AWS with Terraform and GitHub Actions: separate staging
+    and prod accounts, images built once and promoted by digest through staging, tests and a manual approval
+    gate, and zero-downtime API deploys on Docker Compose.
+  - >-
+    Implemented product state historization with an audit trail, enabling edits, rollbacks and time travel
+    of product data.
+  stack: [TypeScript, Next.js, tRPC, PostgreSQL, AWS, Terraform, Docker, GitHub Actions]
+projects:
+- name: OpsForge
+  url: https://github.com/IhebBelhadj/OpsForge
+  bullets:
+  - >-
+    Built alone a multi-site WAN lab on one Linux host: one command provisions Incus containers across
+    simulated sites with configurable latency, loss and bandwidth (tc/netem), NAT and a WireGuard site-to-site
+    VPN, idling at 312 MiB.
+  - >-
+    Ran a K3s cluster stretched across sites, provisioned by idempotent Ansible roles (DNS, PKI) with
+    GitOps rollouts through Flux; a partitioned site's pods are rescheduled and the node recovers on its
+    own.
+  - >-
+    Wrote a Python CLI for fault injection (partition, link flap, MTU black hole) with scripted pass/fail
+    scenarios, acceptance checks and Grafana dashboards of site-to-site latency.
+  stack: [Kubernetes, K3s, Ansible, Python, Linux, WireGuard, Flux, Grafana]
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Built alone a self-hosted media server in Node.js with a spec-first versioned REST API (OpenAPI 3.1),
+    version negotiation and a contract test checking every response against the spec.
+  - >-
+    Built the React / TypeScript admin dashboard (Vite, TanStack Query, Tailwind CSS, shadcn/ui) with
+    live sessions, devices and logs over WebSocket.
+  - >-
+    Implemented device pairing with the OAuth 2.0 Device Flow on Better Auth, over a layered data access
+    layer (repository contracts on SQLite with Drizzle ORM).
+  stack: [TypeScript, Node.js, React, OpenAPI, WebSocket, SQLite, Drizzle ORM, Better Auth]
+education:
+- degree: Master's in Software Engineering
+  school: ESPRIT
+  dates: Sep 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sep 2020 – Jun 2022
+  bullets: []
+gaps:
+- 'Rust: not used; closest is backend work in TypeScript (Node.js), Python and Java'
+- >-
+  MES / manufacturing or industrial software: no experience; closest is mapping XML data from SOAP-based
+  CRM/ERP systems into Snowflake (Talan)
+- >-
+  Kubernetes on cloud infrastructure in production: not used; closest is a stretched K3s cluster in the
+  OpsForge personal lab and Docker Compose on AWS EC2 (Nexits)
+- >-
+  MLOps workflows: not used; closest is a data pipeline feeding ML forecasting (Airflow, dbt) and LangGraph
+  agents (Talan internship)

@@ -30,10 +30,16 @@ written for this offer.
 6. **Structure: a bullet budget, balanced across entries.** About 14–16 bullets in total
    (experiences + projects). At most 5 bullets for any experience, and only the single most
    relevant one gets 4–5; when it does, the others compensate: 2–3 for the next most
-   relevant, 0–1 for the rest (a title line alone is fine). Keep every experience that
+   relevant, 1 for the rest. **Every experience that lasted more than 4 months (listed after
+   the page budget) gets at least one bullet**, even when its work is unrelated to the offer:
+   a general line saying what the role was and what the candidate did in it, from its
+   CONTEXT body, phrased toward the transferable side (ownership, delivery, the kind of
+   system). A title line alone is fine only for shorter roles. Keep every experience that
    avoids an unexplained gap in the timeline; drop short side roles that overlap another
    role and add nothing for this offer. Projects: 0–2, only when they show something the
-   offer wants that the experiences don't, one line each. Include all degrees.
+   offer wants that the experiences don't; one line each by default, up to 3 bullets for a
+   project that is among the most relevant material for the offer (they count in the
+   budget). Include all degrees.
 7. **Summary**: 2 lines, about the candidate, not the offer: who they are across their
    career (a title CONTEXT supports) and the two or three strengths that run through their
    work. It should read the same for any offer in the same field; the offer only decides
@@ -52,6 +58,11 @@ written for this offer.
 9. **Link freelance work.** For a freelance experience or a project whose CONTEXT file gives
    the client's or product's public URL, put it in that entry's first bullet as
    `[domain](url)` (once, URL copied exactly from CONTEXT).
+   **Side work that overlaps a full-time role** (its dates fall inside another experience's)
+   stays under experiences, but its `title` must say how it was done: pick the title that
+   names it freelance and part-time when CONTEXT has one (e.g. "… (Freelance, part-time)"),
+   so a screener never reads two full-time jobs at once. Keep the bullets about the work,
+   not the arrangement; mention it alongside the other role only if CONTEXT says so.
 10. **Length follows the material, within the page budget.** One page when what is relevant
    to this offer fits on it; a second page only when there is enough relevant material to
    fill a good part of it. Never pad (no filler bullets, no irrelevant entries to fill
@@ -66,3 +77,10 @@ written for this offer.
     country where the job is (e.g. "TN", "FR", "NL"; "" if the offer doesn't say). Code uses
     it to name degrees (engineering-school names for TN/FR, bachelor/master elsewhere) and
     orders experiences (ongoing roles first, then newest first): don't do either yourself.
+13. **Revision.** When the message ends with PREVIOUS RESUME and REVIEWER FEEDBACK, a recruiter
+    has scored that resume against the offer. Return an improved selection: act on the
+    weaknesses and the suggested resume edits wherever these rules allow (better ordering,
+    sharper summary, the offer's vocabulary, cutting what doesn't serve the offer, fixing
+    weak bullets); keep what already works. The feedback never overrides CONTEXT or these
+    rules: anything that needs a fact CONTEXT doesn't have stays out and stays in `gaps`.
+    The candidate's requests in the offer's `notes` beat the reviewer's suggestions.

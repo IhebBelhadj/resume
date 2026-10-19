@@ -59,6 +59,19 @@ def to_markdown(out: dict, offer_name: str, model: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def feedback(out: dict) -> str:
+    """The reviewer's notes a revision may act on: verdict, weaknesses and resume edits (not
+    requests for new facts, which only the candidate can answer)."""
+    edits = [f"- [{i['impact']}] {i['action']}" for i in out["improvements"] if i["kind"] == "resume"]
+    others = [f"- {i['action']}" for i in out["improvements"] if i["kind"] != "resume"]
+    return "\n".join([
+        f"Score: {out['score']:g}/10. {out['verdict']}", "", "Weaknesses:", *(f"- {w}" for w in out["weaknesses"]),
+        "", "Resume edits suggested:", *(edits or ["- none"]),
+        "", "Asked of the candidate (needs facts not in CONTEXT; do NOT act on these, keep them as gaps):",
+        *(others or ["- none"]),
+    ])
+
+
 def score(offer_dir: Path, model: str | None = None) -> tuple[dict, dict]:
     """Write offer_dir/score.md; return (model output, run info)."""
     offer = (offer_dir / "offer.md").read_text(encoding="utf-8")

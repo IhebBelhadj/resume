@@ -105,6 +105,8 @@ def dump_context(ctx: Context) -> str:
                lambda e: f"{e['company']}, {e['location']} ({e['dates']}); titles: {e['titles']}")
     dump_items("PROJECTS", ctx.projects, lambda p: f"{p['name']} <{p.get('url', '')}>")
     dump_items("STUDIES", ctx.studies, lambda s: f"{s['school']} ({s['dates']}); degrees: {s['degrees']}")
+    if ctx.profile.get("languages"):
+        out.append("\n# LANGUAGES (printed by code)\n" + ", ".join(l["en"] for l in ctx.profile["languages"]))
     if ctx.profile.get("notes"):
         out.append("\n# PROFILE NOTES\n" + ctx.profile["notes"].strip())
     return "\n".join(out)

@@ -4,7 +4,7 @@ company: Nexits
 titles: [Software Engineering Intern]
 location: Paris, FR (Remote)
 start: 2023-06
-dates: June 2023 - Aug 2023
+dates: Jun 2023 – Aug 2023
 tags: [internship]
 ---
 

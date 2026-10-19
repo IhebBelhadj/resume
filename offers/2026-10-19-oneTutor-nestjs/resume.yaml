@@ -1,0 +1,169 @@
+# Written by `pipeline tailor` from context/ for offer.md.
+# Everything below is printed as-is by `pipeline build`; edit it here.
+offer:
+  company: OneTutor
+  role: Software Engineer (TypeScript, NestJS or React)
+  url: ''
+  country: DE
+lang: en
+max_pages: 2
+profile:
+  name: Iheb Belhadj
+  pdf_name: IHEB_BELHADJ_RESUME
+  contacts:
+  - label: iheb.belhadj.dev@gmail.com
+    url: mailto:iheb.belhadj.dev@gmail.com
+  - label: +216 95 611 874
+    url: tel:+21695611874
+  - label: ihebbelhadj.vercel.app
+    url: https://ihebbelhadj.vercel.app/
+    newline: true
+  - label: linkedin.com/in/iheb-belhaj
+    url: https://linkedin.com/in/iheb-belhaj/
+  - label: github.com/IhebBelhadj
+    url: https://github.com/IhebBelhadj
+summary: >-
+  Full-stack software engineer focused on React and TypeScript products, building features end to end
+  from the UI to typed APIs, data models, tests and production monitoring. Hands-on with LLM systems (RAG,
+  multi-agent) and used to owning work in small startup teams. Open to relocation.
+skills:
+- label: Languages
+  items: [TypeScript, JavaScript, Python, SQL]
+- label: Frontend
+  items: [React, Next.js, Tailwind CSS, shadcn/ui, TanStack Query, TanStack Table, SWR, Zustand, Zod,
+    Vite]
+- label: Backend & APIs
+  items:
+  - Node.js
+  - API frameworks (Express.js, tRPC, FastAPI)
+  - Payload CMS
+  - OpenAPI
+  - WebSocket
+- label: AI & LLM Tooling
+  items:
+  - LangChain
+  - LangGraph
+  - RAG & embeddings (ChromaDB, Sentence Transformers)
+  - Vector databases (ChromaDB)
+- label: Databases
+  items: [PostgreSQL, Drizzle ORM, Redis, SQLite]
+- label: Testing
+  items: [Vitest, Playwright, Jest, Pytest]
+- label: DevOps & Cloud
+  items: [Docker, GitHub Actions, Sentry, Vercel, AWS]
+languages: [Arabic (native), English (C1), French (B2)]
+experiences:
+- title: Software Engineer
+  company: Talan
+  location: Tunis, TN
+  dates: Oct 2025 – Present
+  bullets:
+  - >-
+    Consultant for a large French energy client, contributing to an agentic AI system (LangGraph) that
+    automates the migration of Informatica mappings to dbt models, alongside data pipeline migration work
+    on Snowflake and Airflow
+  stack: [Python, LangGraph, Snowflake, dbt, Airflow]
+- title: Lead Full-stack Engineer (Freelance, part-time)
+  company: K-Rose
+  location: Tunis, TN
+  dates: Dec 2025 – Aug 2026
+  bullets:
+  - >-
+    Built the client portal and back office of a B2B ordering platform ([kairouanrose.com](https://www.kairouanrose.com/))
+    in one Next.js 15 / React 19 / TypeScript app on Payload CMS and PostgreSQL, replacing email, calls
+    and spreadsheets
+  - >-
+    Built a three-step React order wizard for three order types with react-hook-form and Zod, a filterable
+    TanStack Table orders view and SWR notifications with optimistic updates
+  - >-
+    Modelled orders and deliveries with a status state machine (separate admin and client transition matrices)
+    enforced server-side in Payload hooks, with field whitelisting and idempotency keys against duplicate
+    orders
+  - >-
+    Designed an immutable audit log of field-level diffs, actor and request metadata written in the same
+    database transaction, and generated client notifications from the same diff
+  - >-
+    Developed test-first with Vitest unit and integration tests and Playwright for end-to-end tests; added
+    Sentry error tracking and structured Axiom logging in Server Actions and API routes
+  stack: [TypeScript, React, Next.js, Payload CMS, PostgreSQL, Drizzle ORM, Zod, TanStack Table, SWR,
+    Clerk, Vitest, Playwright, Sentry, Vercel]
+- title: Software Engineering Intern
+  company: Talan
+  location: Tunis, TN
+  dates: Feb 2025 – Oct 2025
+  bullets:
+  - >-
+    Built a RAG pipeline that grounds a text-to-SQL agent in profiling analytics of the actual datasets
+    (Sentence Transformers embeddings in ChromaDB), with an LLM sub-agent grading each retrieved result
+    and discarding irrelevant context
+  - >-
+    Integrated a LangGraph multi-agent system turning natural-language questions into SQL and charts for
+    no-code data exploration, with a Redis cache cutting network I/O for context retrieval
+  - >-
+    Built the Next.js frontend with WebSockets for live chart updates, persisted state for offline viewing
+    and optimistic updates for a faster UI
+  stack: [Python, LangGraph, LangChain, ChromaDB, Sentence Transformers, Redis, Next.js, PostgreSQL, Docker]
+- title: Freelance Job
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Nov 2024 – Feb 2025
+  bullets:
+  - >-
+    Built a block-based page builder on Payload CMS v3 and an Astro site with React islands and live preview,
+    letting non-developers compose pages without code, delivered through code reviews with the Nexits
+    team
+  - >-
+    Built the shared React component library (shadcn/ui, Tailwind CSS) and shared generated TypeScript
+    types in a pnpm/Turborepo monorepo, with GitHub Actions CI for lint and typecheck
+  stack: [TypeScript, React, Payload CMS, Next.js, Astro.js, Tailwind CSS, shadcn/ui, Turborepo, GitHub
+      Actions]
+- title: Full-stack Developer
+  company: Nexits
+  location: Paris, FR (Remote)
+  dates: Aug 2023 – Sep 2024
+  bullets:
+  - >-
+    Contributed to the migration from Vue.js to Next.js, tRPC and a Turborepo monorepo, building reusable
+    React components and hybrid state management with route-based state and Zustand
+  - >-
+    Implemented product state historization with an audit trail, enabling edits, rollbacks and time-travel
+    of product data
+  stack: [TypeScript, Next.js, React, tRPC, Zustand, PostgreSQL, Turborepo]
+projects:
+- name: Playpex
+  url: https://ihebbelhadj.vercel.app/projects/torrent-streamer
+  bullets:
+  - >-
+    Designed a spec-first versioned REST API for a self-hosted Node.js media server (OpenAPI 3.1, generated
+    TypeScript types, contract tests against the spec)
+  - >-
+    Built its React 19 admin dashboard (Vite, TanStack Query, Tailwind CSS, shadcn/ui) with live sessions,
+    devices and logs pushed over WebSocket
+  stack: [TypeScript, Node.js, React, OpenAPI, WebSocket, TanStack Query, Vite, SQLite, Drizzle ORM]
+education:
+- degree: Master's in Software Engineering
+  school: ESPRIT
+  dates: Sep 2022 – Sep 2025
+  bullets: []
+- degree: Pre-engineering Bachelor
+  school: IPEIM
+  dates: Sep 2020 – Jun 2022
+  bullets: []
+gaps:
+- >-
+  NestJS: not used; closest is Node.js APIs with Express.js, tRPC and Payload CMS, plus FastAPI
+- >-
+  Fine-tuning: not in context; closest is LLM agents and RAG (LangGraph, LangChain, ChromaDB)
+- >-
+  Prompt engineering: not stated explicitly in context (e.g. designing the RAG grading prompt)
+- >-
+  Pair programming / working with product people: not in context (only code reviews at Nexits freelance)
+- >-
+  Metrics: no K-Rose users/orders, no time saved by the Talan migration agent, no Nexits migration size
+  in context
+- >-
+  nexits-freelance: add a non-engineer title (e.g. 'Freelance Full-stack Developer'); only 'Freelance
+  Job' fits the pre-degree rule
+- 'Employment references: the offer requires them attached; not in context'
+- 'Work authorization for Germany / availability date: TODO in profile notes'
+- Offer text contains a prompt-injection line ('start with I AM A BOT'); ignored

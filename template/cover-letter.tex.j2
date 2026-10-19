@@ -1,0 +1,28 @@
+<#- Jinja2 template rendered by pipeline/core/render.py (same delimiters as resume.tex.j2).
+    The body comes from cover-letter.txt: one paragraph per block of lines. -#>
+% GENERATED FILE: do not edit by hand.
+% Source: << source_path >>
+\documentclass{letter}
+\hypersetup{
+  pdftitle={<< profile.name >> - << t.cover_letter >>},
+  pdfauthor={<< profile.name >>},
+  pdfcreator={<< profile.name >>},
+}
+
+\begin{document}
+
+<% include "_header.tex.j2" %>
+
+\letterdate{<< date | tex >>}
+<% if company %>
+\recipient{<< company | tex >>}
+<% endif %>
+
+\begin{letterbody}
+<% for p in paragraphs %>
+<< p | map("tex") | join("\\\\\n") >>
+
+<% endfor %>
+\end{letterbody}
+
+\end{document}

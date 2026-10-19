@@ -3,10 +3,11 @@
     python -m pipeline check                 validate context/
     python -m pipeline dump                  all of context/ in one document (for LLM prompts)
     python -m pipeline new <slug>            scaffold offers/<slug>/offer.md
-    python -m pipeline tailor <offer-dir>    context/ + offer.md -> resume.yaml (model), then build + score
-    python -m pipeline build <offer-dir>...  resume.yaml -> resume.tex -> PDF (deterministic, no model)
+    python -m pipeline tailor <offer-dir>    context/ + offer.md -> resume.yaml (model), build + score, then
+                                             one revision from the score's feedback (keeps the better)
+    python -m pipeline build <offer-dir>...  resume.yaml (+ cover-letter.txt) -> .tex -> PDFs (no model)
     python -m pipeline score <offer-dir>     offer.md + resume.yaml -> score.md (model: x/10 + what to improve)
-    python -m pipeline cover-letter <dir>    context/ + offer.md + web research -> cover-letter.md, company.md
+    python -m pipeline cover-letter <dir>    context/ + offer.md + web research -> cover-letter.txt + PDF, company.md
     python -m pipeline mark-sent <offer-dir> record as sent: commit offer files + PDF, tag sent/<slug>
 """
 
@@ -23,11 +24,11 @@ import yaml
 
 from .core.build import BuildError, compile_pdf
 from .core.context import ROOT, ContextError, dump_context, load_context
-from .core.cover_letter import cover_letter
+from .core.cover_letter import LETTER_FILE, cover_letter, letter_model
 from .core.llm import LLMError
 from .core.render import render_tex
 from .core.resume import ResumeError, load_resume, render_model
-from .core.score import score
+from .core.score import feedback, score
 from .core.tailor import tailor
 
 OFFERS_DIR = ROOT / "offers"
@@ -101,6 +102,30 @@ def build_one(offer_dir: Path, force: bool = False) -> int:
     if result.pages > max_pages:
         print(f"  FAIL: exceeds max_pages={max_pages}; drop or shorten bullets in resume.yaml", file=sys.stderr)
         return 2
+    if (offer_dir / LETTER_FILE).exists():
+        return build_letter(offer_dir, doc["profile"])
+    return 0
+
+
+def _letter_pdf_name(profile: dict) -> str:
+    return f"{profile.get('pdf_name', 'resume')}_COVER_LETTER"
+
+
+def build_letter(offer_dir: Path, profile: dict) -> int:
+    """cover-letter.txt -> cover-letter.tex -> PDF (one page)."""
+    model = letter_model(offer_dir, profile)
+    tex_path = offer_dir / "cover-letter.tex"
+    tex_path.write_text(render_tex(model, str((offer_dir / LETTER_FILE).relative_to(ROOT)), "cover-letter.tex.j2"),
+                        encoding="utf-8")
+    try:
+        result = compile_pdf(tex_path, _letter_pdf_name(model["profile"]))
+    except BuildError as e:
+        print(e, file=sys.stderr)
+        return 1
+    print(f"[{offer_dir.name}] {result.pdf.relative_to(ROOT)}: {result.pages} page(s)")
+    if result.pages > 1:
+        print(f"  FAIL: the cover letter must fit on one page; shorten {LETTER_FILE}", file=sys.stderr)
+        return 2
     return 0
 
 
@@ -125,11 +150,30 @@ def _run(info: dict) -> str:
     return f"{info['model']}, {info['seconds']:.0f}s"
 
 
-def _score(offer_dir: Path, model: str | None) -> int:
+def _score(offer_dir: Path, model: str | None) -> dict:
     print(f"[{offer_dir.name}] scoring resume.yaml against offer.md...", flush=True)
     out, info = score(offer_dir, model)
     print(f"[{offer_dir.name}] score {out['score']:g}/10 -> {(offer_dir / 'score.md').relative_to(ROOT)} ({_run(info)})")
-    return 0
+    return out
+
+
+def _write(offer_dir: Path, ctx, args, max_pages: int, notes: str | None = None) -> dict | None:
+    """One tailor call; prints gaps. None (errors printed) if the model's answer was rejected twice."""
+    what = "revising resume.yaml from the score's feedback" if notes else "writing resume.yaml"
+    print(f"[{offer_dir.name}] {what}...", flush=True)
+    try:
+        doc, info = tailor(offer_dir, ctx, args.model, max_pages, notes)
+    except ResumeError as e:
+        print(f"[{offer_dir.name}] the model's answer was rejected twice (re-run tailor):", file=sys.stderr)
+        for err in e.errors:
+            print(f"  - {err}", file=sys.stderr)
+        return None
+    print(f"[{offer_dir.name}] wrote {(offer_dir / 'resume.yaml').relative_to(ROOT)} ({_run(info)})")
+    if doc.get("gaps"):
+        print("  gaps (offer asks, context lacks; add to context/ if true, then re-run):")
+        for g in doc["gaps"]:
+            print(f"    - {g}")
+    return doc
 
 
 def cmd_tailor(args) -> int:
@@ -137,23 +181,29 @@ def cmd_tailor(args) -> int:
         return 1
     res_path = offer_dir / "resume.yaml"
     max_pages = args.max_pages or (load_resume(res_path).get("max_pages", 2) if res_path.exists() else 2)
-    print(f"[{offer_dir.name}] writing resume.yaml...", flush=True)
-    try:
-        doc, info = tailor(offer_dir, load_context(), args.model, max_pages)
-    except ResumeError as e:
-        print(f"[{offer_dir.name}] the model referenced things not in context/ (re-run tailor):", file=sys.stderr)
-        for err in e.errors:
-            print(f"  - {err}", file=sys.stderr)
+    ctx = load_context()
+    if _write(offer_dir, ctx, args, max_pages) is None:
         return 1
-    print(f"[{offer_dir.name}] wrote {res_path.relative_to(ROOT)} ({_run(info)})")
-    if doc.get("gaps"):
-        print("  gaps (offer asks, context lacks; add to context/ if true, then re-run):")
-        for g in doc["gaps"]:
-            print(f"    - {g}")
     status = build_one(offer_dir)
-    if status == 0 and not args.no_score:
-        status = _score(offer_dir, args.model)
-    return status
+    if status != 0 or args.no_score:
+        return status
+    first = _score(offer_dir, args.model)
+    if args.no_revise:
+        return 0
+
+    # One revision: the writer gets the reviewer's notes. Keep whichever version scores higher.
+    kept = {p: (offer_dir / p).read_text(encoding="utf-8") for p in ("resume.yaml", "score.md")}
+    revised = _write(offer_dir, ctx, args, max_pages, feedback(first))
+    status = build_one(offer_dir) if revised is not None else 1
+    second = _score(offer_dir, args.model) if status == 0 else None
+    if second is not None and second["score"] >= first["score"]:
+        print(f"[{offer_dir.name}] revision kept: {first['score']:g} -> {second['score']:g}/10")
+        return 0
+    why = f"it scored {second['score']:g} < {first['score']:g}" if second else "it failed"
+    print(f"[{offer_dir.name}] revision discarded ({why}); restoring the first version")
+    for p, text in kept.items():
+        (offer_dir / p).write_text(text, encoding="utf-8")
+    return build_one(offer_dir)
 
 
 def cmd_score(args) -> int:
@@ -162,17 +212,19 @@ def cmd_score(args) -> int:
     if not (offer_dir / "resume.yaml").exists():
         print(f"error: {offer_dir.name} has no resume.yaml; run `pipeline tailor` first", file=sys.stderr)
         return 1
-    return _score(offer_dir, args.model)
+    _score(offer_dir, args.model)
+    return 0
 
 
 def cmd_cover_letter(args) -> int:
     if not (offer_dir := _offer_dir(args.offer, "cover-letter")):
         return 1
     print(f"[{offer_dir.name}] researching the company and writing the cover letter...", flush=True)
-    out, info = cover_letter(offer_dir, load_context(), args.model)
-    print(f"[{offer_dir.name}] {(offer_dir / 'cover-letter.md').relative_to(ROOT)} "
+    ctx = load_context()
+    out, info = cover_letter(offer_dir, ctx, args.model)
+    print(f"[{offer_dir.name}] {(offer_dir / LETTER_FILE).relative_to(ROOT)} "
           f"({len(out['letter'].split())} words, {len(out['research'])} researched facts in company.md; {_run(info)})")
-    return 0
+    return build_letter(offer_dir, ctx.profile)
 
 
 def _git(*args: str) -> subprocess.CompletedProcess:
@@ -200,6 +252,12 @@ def cmd_mark_sent(args) -> int:
         print(f"error: tag {tag} already exists", file=sys.stderr)
         return 1
 
+    letter_pdf = offer_dir / f"{_letter_pdf_name(doc.get('profile') or {})}.pdf"
+    if (offer_dir / LETTER_FILE).exists() and (
+            not letter_pdf.exists() or (offer_dir / LETTER_FILE).stat().st_mtime > letter_pdf.stat().st_mtime):
+        print(f"error: {LETTER_FILE} is newer than its PDF; rebuild first so the PDF matches", file=sys.stderr)
+        return 1
+
     date = args.date or dt.date.today().isoformat()
     # Insert/replace a top-level `sent:` line without rewriting the file (keeps comments).
     text = res_path.read_text(encoding="utf-8")
@@ -211,7 +269,8 @@ def cmd_mark_sent(args) -> int:
     pdf.touch()  # keep the PDF newer than resume.yaml
 
     paths = [str(p.relative_to(ROOT)) for p in (offer_dir / "offer.md", res_path, offer_dir / "resume.tex", pdf,
-                                                     offer_dir / "cover-letter.md", offer_dir / "company.md", offer_dir / "score.md") if p.exists()]
+                                                     offer_dir / LETTER_FILE, offer_dir / "cover-letter.tex", letter_pdf,
+                                                     offer_dir / "company.md", offer_dir / "score.md") if p.exists()]
     company = (doc.get("offer") or {}).get("company") or slug
     steps = [
         ("add", "-f", "--", *paths),  # -f: offer PDFs are gitignored until sent
@@ -244,7 +303,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("offer", help="offer dir containing offer.md")
     p.add_argument("--model", help="claude model alias or id (default: $RESUME_MODEL or opus)")
     p.add_argument("--max-pages", type=int, help="page budget (default: the existing resume.yaml's, else 2)")
-    p.add_argument("--no-score", action="store_true", help="skip scoring after the build")
+    p.add_argument("--no-score", action="store_true", help="skip scoring after the build (implies --no-revise)")
+    p.add_argument("--no-revise", action="store_true", help="skip the revision from the score's feedback")
     p.set_defaults(fn=cmd_tailor)
     p = sub.add_parser("score")
     p.add_argument("offer", help="offer dir with offer.md and resume.yaml")

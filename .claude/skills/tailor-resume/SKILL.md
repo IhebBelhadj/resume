@@ -20,7 +20,8 @@ Follow the hard rules in the root CLAUDE.md.
    `--max-pages N` to change the ceiling; the resume is written in the offer's language;
    run in the background, it takes a few minutes). One model call
    writes `resume.yaml` from `context/` + the offer, it is built into the PDF, then a second
-   model call scores it into `score.md`.
+   model call scores it into `score.md`; `tailor` then revises once from that feedback and keeps
+   the higher-scoring version.
 4. **If it fails:** unknown ids/skills → re-run tailor. Over the page budget → drop or shorten
    bullets in `resume.yaml` (never add facts), `pipeline build offers/<slug>`, then
    `pipeline score offers/<slug>`. A `model error` usually means Claude Code needs `/login`.
@@ -30,5 +31,7 @@ Follow the hard rules in the root CLAUDE.md.
    - **gaps** printed by `tailor`: ask whether they have done those things. If yes, add their
      answer to the right `context/` file body (with their confirmation), then re-run step 3
 6. **Cover letter**, if the user wants one: `.venv/bin/python -m pipeline cover-letter
-   offers/<slug>` (background; it searches the web). Tell them to check `company.md`, the
-   facts the letter cites about the company, before sending.
+   offers/<slug>` (background; it searches the web). It writes the body to `cover-letter.txt`
+   and builds `<pdf_name>_COVER_LETTER.pdf` (one page). Tell them to check `company.md`, the
+   facts the letter cites about the company, before sending; hand edits go in the .txt,
+   then `pipeline build offers/<slug>`.

@@ -1,0 +1,10 @@
+Dear Oneleet team,
+
+Most compliance tools hand you a certificate and call it done. Bryan Onel calls that "compliance theater", and what pulled me to Oneleet is that you bundle real pentests and code scanning into the same platform, so the certificate means something.
+
+I want to work on a product like that. I like owning a feature from the API to the screen, and the offer's mix of dashboards, reporting and making complex data readable is the kind of work I enjoy most. At K-Rose I built a client portal and back office end to end, with audit logs and Axiom and Sentry monitoring.
+
+I know Go is your main backend language and I have not shipped it in production. I would rather say so now than in the interview.
+
+Best regards,
+Iheb Belhadj

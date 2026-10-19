@@ -19,3 +19,4 @@ pipeline/state/
 
 # Offer PDFs are committed only once sent (`pipeline mark-sent` force-adds them)
 offers/*/*.pdf
+git-readme/
